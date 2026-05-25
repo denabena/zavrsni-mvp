@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import umap; print\\('umap-learn', umap.__version__\\)\")",
+      "Bash(python -c \"import matplotlib; print\\('matplotlib', matplotlib.__version__\\)\")",
+      "Bash(python -c \"from sklearn.metrics import adjusted_rand_score; print\\('sklearn ari ok'\\)\")",
+      "Bash(PYTHONIOENCODING=utf-8 python analyze_clusters.py)",
+      "Bash(npm --version)",
+      "Bash(npm install *)",
+      "Bash(npm view *)",
+      "Bash(npx next *)",
+      "Bash(echo \"Started, pid=$!\")",
+      "Bash(curl -s -o /tmp/page.html -w \"HTTP %{http_code} bytes=%{size_download}\\\\n\" http://localhost:3000/)",
+      "Bash(curl -s -o /tmp/tasks.html -w \"tasks.json HTTP %{http_code} bytes=%{size_download}\\\\n\" http://localhost:3000/tasks.json)",
+      "Bash(curl -s -o /tmp/img.png -w \"image HTTP %{http_code} bytes=%{size_download}\\\\n\" http://localhost:3000/task-images/MI_p001.png)",
+      "Bash(awk '{print $2}')",
+      "Bash(xargs -r kill)"
+    ]
+  }
+}
