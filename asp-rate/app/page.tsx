@@ -1,9 +1,10 @@
 "use client";
 
-import { getRaterId } from "@/lib/rater-id";
+import { ensureSession } from "@/lib/auth";
 import { supabase } from "@/lib/supabase";
 import type { Task, TasksManifest, TimeEstMinutes } from "@/lib/types";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 import Onboarding, { clearOnboarded, isOnboarded } from "./onboarding";
 
 type RatingRow = { task_id: string; rater_uuid: string };
@@ -29,10 +30,13 @@ export default function Page() {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [ratings, setRatings] = useState<RatingRow[]>([]);
   const [raterId, setRaterId] = useState<string>("");
+  const [userEmail, setUserEmail] = useState<string | null>(null);
+  const [isAnon, setIsAnon] = useState(true);
   const [current, setCurrent] = useState<Task | null>(null);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [zoomed, setZoomed] = useState(false);
+  const [isTouch, setIsTouch] = useState(false);
 
   // Sequential rating state
   const [pickedDifficulty, setPickedDifficulty] = useState<number | null>(null);
@@ -42,14 +46,30 @@ export default function Page() {
 
   useEffect(() => {
     setOnboarded(isOnboarded());
-    setRaterId(getRaterId());
+    setIsTouch(window.matchMedia("(pointer: coarse)").matches);
 
     fetch("/tasks.json")
       .then((r) => r.json() as Promise<TasksManifest>)
       .then((m) => setTasks(m.tasks))
       .catch((e) => setError(`Ne mogu učitati zadatke: ${e.message}`));
 
-    refreshRatings();
+    ensureSession().then((user) => {
+      if (user) {
+        setRaterId(user.id);
+        setUserEmail(user.email ?? null);
+        setIsAnon(Boolean(user.is_anonymous));
+      }
+      refreshRatings();
+    });
+
+    const { data } = supabase.auth.onAuthStateChange((_event, session) => {
+      const u = session?.user ?? null;
+      setRaterId(u?.id ?? "");
+      setUserEmail(u?.email ?? null);
+      setIsAnon(Boolean(u?.is_anonymous));
+      refreshRatings();
+    });
+    return () => data.subscription.unsubscribe();
   }, []);
 
   const refreshRatings = useCallback(async () => {
@@ -182,7 +202,14 @@ export default function Page() {
   // Render onboarding until completed
   if (onboarded === null) return null; // SSR / first hydration
   if (!onboarded) {
-    return <Onboarding raterId={raterId} onDone={() => setOnboarded(true)} />;
+    return (
+      <Onboarding
+        onDone={() => {
+          setOnboarded(true);
+          refreshRatings();
+        }}
+      />
+    );
   }
 
   return (
@@ -333,7 +360,11 @@ export default function Page() {
       )}
 
       <footer className="mt-6 flex items-center justify-between text-xs text-gray-400">
-        <span>Anonimno</span>
+        <span>
+          {isAnon
+            ? "Anoniman/na (ovaj browser)"
+            : `Prijavljen/a: ${userEmail ?? ""}`}
+        </span>
         <button
           type="button"
           onClick={() => {
@@ -355,7 +386,51 @@ export default function Page() {
         </div>
       )}
 
-      {zoomed && current && (
+      {zoomed && current && isTouch && (
+        <div
+          className="fixed inset-0 z-50 bg-black/90"
+          role="dialog"
+          aria-modal="true"
+        >
+          <button
+            type="button"
+            onClick={() => setZoomed(false)}
+            className="fixed right-3 top-3 z-10 rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-gray-900 shadow-md"
+          >
+            Zatvori ✕
+          </button>
+          <p className="pointer-events-none fixed bottom-3 left-1/2 z-10 -translate-x-1/2 rounded-full bg-white/80 px-3 py-1 text-xs text-gray-700">
+            Pinch ili dvostruki dodir za zoom · povuci za pomak
+          </p>
+          <TransformWrapper
+            initialScale={1}
+            minScale={1}
+            maxScale={6}
+            centerOnInit
+            doubleClick={{ mode: "zoomIn", step: 1 }}
+            wheel={{ step: 0.2 }}
+          >
+            <TransformComponent
+              wrapperStyle={{ width: "100%", height: "100%" }}
+              contentStyle={{
+                width: "100%",
+                height: "100%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <img
+                src={current.image_path}
+                alt={`Stranica ${current.pdf_page} (${current.exam_type}), uvećano`}
+                className="max-h-screen max-w-full object-contain"
+              />
+            </TransformComponent>
+          </TransformWrapper>
+        </div>
+      )}
+
+      {zoomed && current && !isTouch && (
         <div
           className="fixed inset-0 z-50 overflow-auto bg-black/90"
           onClick={() => setZoomed(false)}

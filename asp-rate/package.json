@@ -9,10 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.46.1",
     "next": "15.5.18",
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "@supabase/supabase-js": "^2.46.1"
+    "react-zoom-pan-pinch": "^4.0.3"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

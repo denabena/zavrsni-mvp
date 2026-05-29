@@ -1,6 +1,6 @@
 "use client";
 
-import { supabase } from "@/lib/supabase";
+import { sendEmailCode, verifyEmailCode, type VerifyMode } from "@/lib/auth";
 import { useState } from "react";
 
 const ONBOARDED_KEY = "asp_rate_onboarded";
@@ -23,39 +23,65 @@ export function clearOnboarded(): void {
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 type Props = {
-  raterId: string;
   onDone: () => void;
 };
 
-export default function Onboarding({ raterId, onDone }: Props) {
+export default function Onboarding({ onDone }: Props) {
   const [email, setEmail] = useState("");
+  const [code, setCode] = useState("");
+  const [phase, setPhase] = useState<"email" | "code">("email");
+  const [mode, setMode] = useState<VerifyMode>("link");
   const [busy, setBusy] = useState(false);
-  const [emailError, setEmailError] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [info, setInfo] = useState<string | null>(null);
 
-  const submit = async () => {
+  const finishAnon = () => {
+    markOnboarded();
+    onDone();
+  };
+
+  const sendCode = async () => {
     if (busy) return;
     const trimmed = email.trim();
-    if (trimmed && !EMAIL_RE.test(trimmed)) {
-      setEmailError("Email ne izgleda valjano.");
+    if (!EMAIL_RE.test(trimmed)) {
+      setError("Email ne izgleda valjano.");
       return;
     }
     setBusy(true);
-    setEmailError(null);
+    setError(null);
     try {
-      if (raterId) {
-        await supabase
-          .from("raters")
-          .upsert(
-            { rater_uuid: raterId, email: trimmed || null },
-            { onConflict: "rater_uuid" },
-          );
-      }
-    } catch {
-      // ne blokiramo onboarding ako Supabase pukne, možeš se vratiti kasnije
+      const m = await sendEmailCode(trimmed);
+      setMode(m);
+      setPhase("code");
+      setInfo(
+        m === "signin"
+          ? "Ovaj email već ima račun. Poslali smo kod za prijavu, tvoj napredak će se vratiti."
+          : "Poslali smo ti 6-znamenkasti kod na email.",
+      );
+    } catch (e) {
+      setError(e instanceof Error ? e.message : String(e));
     } finally {
-      markOnboarded();
       setBusy(false);
+    }
+  };
+
+  const verify = async () => {
+    if (busy) return;
+    const c = code.trim();
+    if (!c) {
+      setError("Unesi kod iz emaila.");
+      return;
+    }
+    setBusy(true);
+    setError(null);
+    try {
+      await verifyEmailCode(email.trim(), c, mode);
+      markOnboarded();
       onDone();
+    } catch (e) {
+      setError(e instanceof Error ? e.message : String(e));
+    } finally {
+      setBusy(false);
     }
   };
 
@@ -122,40 +148,108 @@ export default function Onboarding({ raterId, onDone }: Props) {
         <label htmlFor="email" className="mb-1 block font-medium">
           Email (opcionalno)
         </label>
-        <p className="mb-2 text-xs text-gray-500">
-          Koristi se isključivo za kontakt ako želite pristup budućim verzijama.
-          Ostavite li prazno, ocjene su potpuno anonimne. Napredak se inače
-          pamti samo u ovom browseru, pa ako obrišete podatke stranice ili
-          pređete na drugi uređaj, počinjete iznova.
+        <p className="mb-3 text-xs text-gray-500">
+          Unosom emaila dobivaš kod na koji se prijavljuješ. To ti omogućuje da
+          sačuvaš napredak i nastaviš na drugom uređaju ili browseru, te da
+          budeš kontaktiran/a za nagradu. Ako preskočiš, ostaješ anoniman/na i
+          napredak se pamti samo u ovom browseru.
         </p>
-        <input
-          id="email"
-          type="email"
-          inputMode="email"
-          autoComplete="email"
-          placeholder="ime.prezime@fer.hr"
-          value={email}
-          onChange={(e) => {
-            setEmail(e.target.value);
-            if (emailError) setEmailError(null);
-          }}
-          className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm focus:border-gray-900 focus:outline-none"
-        />
-        {emailError && (
-          <p className="mt-1 text-xs text-red-700">{emailError}</p>
+
+        {phase === "email" && (
+          <>
+            <input
+              id="email"
+              type="email"
+              inputMode="email"
+              autoComplete="email"
+              placeholder="ime.prezime@fer.hr"
+              value={email}
+              disabled={busy}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                if (error) setError(null);
+              }}
+              className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm focus:border-gray-900 focus:outline-none disabled:opacity-50"
+            />
+            {error && <p className="mt-1 text-xs text-red-700">{error}</p>}
+            <div className="mt-3 flex items-center justify-between gap-2">
+              <button
+                type="button"
+                onClick={finishAnon}
+                disabled={busy}
+                className="text-xs text-gray-500 underline underline-offset-2 hover:text-gray-800 disabled:opacity-50"
+              >
+                Preskoči (ostani anoniman/na)
+              </button>
+              <button
+                type="button"
+                onClick={sendCode}
+                disabled={busy}
+                className="rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-black disabled:opacity-50"
+              >
+                {busy ? "Šaljem..." : "Pošalji kod"}
+              </button>
+            </div>
+          </>
+        )}
+
+        {phase === "code" && (
+          <>
+            {info && <p className="mb-2 text-xs text-emerald-700">{info}</p>}
+            <input
+              id="code"
+              type="text"
+              inputMode="numeric"
+              autoComplete="one-time-code"
+              placeholder="123456"
+              value={code}
+              disabled={busy}
+              onChange={(e) => {
+                setCode(e.target.value);
+                if (error) setError(null);
+              }}
+              className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-center text-lg tracking-widest focus:border-gray-900 focus:outline-none disabled:opacity-50"
+            />
+            {error && <p className="mt-1 text-xs text-red-700">{error}</p>}
+            <div className="mt-3 flex items-center justify-between gap-2">
+              <button
+                type="button"
+                onClick={() => {
+                  setPhase("email");
+                  setCode("");
+                  setError(null);
+                  setInfo(null);
+                }}
+                disabled={busy}
+                className="text-xs text-gray-500 underline underline-offset-2 hover:text-gray-800 disabled:opacity-50"
+              >
+                Natrag
+              </button>
+              <button
+                type="button"
+                onClick={verify}
+                disabled={busy}
+                className="rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-black disabled:opacity-50"
+              >
+                {busy ? "Provjeravam..." : "Potvrdi kod"}
+              </button>
+            </div>
+          </>
         )}
       </section>
 
-      <div className="mt-5 flex justify-end">
-        <button
-          type="button"
-          disabled={busy}
-          onClick={submit}
-          className="rounded-md bg-gray-900 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-black disabled:opacity-50"
-        >
-          {busy ? "Spremam..." : "Idemo →"}
-        </button>
-      </div>
+      {phase === "email" && (
+        <div className="mt-5 flex justify-end">
+          <button
+            type="button"
+            disabled={busy}
+            onClick={finishAnon}
+            className="rounded-md bg-gray-900 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-black disabled:opacity-50"
+          >
+            Idemo →
+          </button>
+        </div>
+      )}
     </main>
   );
 }

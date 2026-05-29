@@ -12,7 +12,13 @@ function getClient(): SupabaseClient {
       "Copy .env.local.example to .env.local and fill in values from your Supabase project."
     );
   }
-  _client = createClient(url, anon, { auth: { persistSession: false } });
+  _client = createClient(url, anon, {
+    auth: {
+      persistSession: true,
+      autoRefreshToken: true,
+      detectSessionInUrl: false,
+    },
+  });
   return _client;
 }
 

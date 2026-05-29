@@ -1,7 +1,9 @@
 # asp-rate
 
-Mini webapp za prikupljanje 1–5 difficulty ratinga na ASP exam zadacima.
-Anonimno (per-browser UUID), bez auth-a. Tasks se renderiraju kao slike stranica iz PDF-ova.
+Mini webapp za prikupljanje 1-5 difficulty ratinga na ASP exam zadacima.
+Anonimno po defaultu (Supabase anonymous sign-in), uz opcionalnu prijavu emailom
++ OTP kodom za spremanje napretka kroz uređaje. Tasks se renderiraju kao slike
+stranica iz PDF-ova.
 
 ## Setup (jednom)
 
@@ -10,6 +12,9 @@ Anonimno (per-browser UUID), bez auth-a. Tasks se renderiraju kao slike stranica
 1. Otvori https://supabase.com → New Project
 2. SQL Editor → run `supabase/schema.sql`
 3. Settings → API → kopiraj **Project URL** i **anon public key**
+4. Authentication → Sign In / Providers: uključi **Anonymous sign-ins** i **Email**
+5. Authentication → Email Templates: u **Magic Link** i **Change Email Address**
+   templateima dodaj kod `{{ .Token }}` (koristimo OTP kod, ne magic link)
 
 ### 2. Env varijable
 
@@ -54,12 +59,14 @@ npm run dev
 ## Arhitektura
 
 - `app/page.tsx`: jedini ekran. Učitava `public/tasks.json`, dohvaća sve ratinge iz Supabasea, bira sljedeći zadatak (najmanje ocjena, koji rater još nije ocijenio), spremma ratinge.
-- `lib/supabase.ts`: Supabase JS klijent s anon ključem (sigurno u browseru zbog RLS-a).
-- `lib/rater-id.ts`: UUID u localStorage.
-- `supabase/schema.sql`: jedna tablica `ratings` + RLS politike za anon.
+- `lib/supabase.ts`: Supabase JS klijent s anon ključem (sigurno u browseru zbog RLS-a), sesija se persistira.
+- `lib/auth.ts`: osigurava sesiju (anonimnu ako treba), te email + OTP kod flow (link na anonimni račun ili prijava na postojeći).
+- `app/onboarding.tsx`: prvi posjet, opcionalni email -> kod.
+- `supabase/schema.sql`: tablica `ratings` keyirana na `auth.uid()` + RLS politike.
 
 ## Sigurnost
 
-- RLS na `ratings` tablici dopušta anon SELECT (potrebno za brojanje) i INSERT (s difficulty 1–5).
-- UPDATE/DELETE zabranjeni za anon.
-- `unique (task_id, rater_uuid)` sprječava duple ratinge.
+- Identitet je `auth.uid()`: anonimni i trajni (email) korisnici dijele isti model.
+- RLS: `authenticated` smiju čitati sve ratinge (potrebno za brojanje), a INSERT samo vlastite (`rater_uuid = auth.uid()`).
+- `unique (task_id, rater_uuid)` sprječava duple ratinge istog ratera.
+- Anonimni -> trajni upgrade (`updateUser({ email })` + OTP) zadržava isti `auth.uid()`, pa se ratinzi ne gube.
