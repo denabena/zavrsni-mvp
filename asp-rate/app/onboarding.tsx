@@ -133,7 +133,7 @@ export default function Onboarding({ raterId, onDone }: Props) {
           type="email"
           inputMode="email"
           autoComplete="email"
-          placeholder="ime.prezime@fer.unizg.hr"
+          placeholder="ime.prezime@fer.hr"
           value={email}
           onChange={(e) => {
             setEmail(e.target.value);
