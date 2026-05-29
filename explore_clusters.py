@@ -144,7 +144,7 @@ def plot_all(emb_2d, df, ks, inertias, silhouettes):
 
     fig.canvas.mpl_connect("motion_notify_event", on_move)
 
-    # Legenda — samo klastere, ne MI/ZI
+    # Legenda: samo klastere, ne MI/ZI
     handles = [mpatches.Patch(color=COLORS[i % len(COLORS)],
                                label=CLEAN_LABELS.get(i, f"K{i}"))
                for i in sorted(set(cluster_ids))]
@@ -199,7 +199,7 @@ def plot_all(emb_2d, df, ks, inertias, silhouettes):
         fontsize=9, color="#D85A30", fontweight="bold"
     )
 
-    plt.suptitle("ASP — Analiza klastera zadataka", fontsize=13, fontweight="500", y=1.01)
+    plt.suptitle("ASP: Analiza klastera zadataka", fontsize=13, fontweight="500", y=1.01)
     plt.tight_layout()
 
     print(f"\nRezultat:")

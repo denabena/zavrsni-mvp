@@ -1,6 +1,6 @@
 # Pipeline workflow
 
-Kratki overview kako PDF → embeddings → klasteri → asp-rate vizualizacija
+Kratki overview kako PDF -> embeddings -> klasteri -> asp-rate vizualizacija
 funkcionira u ovom projektu. Cilj: brzo se podsjetiti što-radi-što bez čitanja
 koda.
 
@@ -11,17 +11,17 @@ koda.
 ```
 zavrsni-mvp/
 ├── static/                       # ULAZ: PDF-ovi ispita (MI, ZI)
-├── data/                         # ULAZ: CSV s metapodacima (points, type, …)
+├── data/                         # ULAZ: CSV s metapodacima (points, type, ...)
 ├── pipeline/                     # Python paket s logikom
 │   ├── config.py                 # env-var-driven config
-│   ├── parsing.py                # PDF → tekst → segmentirani zadaci
+│   ├── parsing.py                # PDF -> tekst -> segmentirani zadaci
 │   ├── merge.py                  # spajanje zadataka s CSV-om
-│   ├── embedding.py              # sentence-transformers → vektori
+│   ├── embedding.py              # sentence-transformers -> vektori
 │   ├── clustering.py             # UMAP + K-means + outlier scoring
 │   └── labeling.py               # Ollama imenuje klastere
 ├── embed_pipeline.py             # CLI: orkestrira sve korake
 ├── analyze_clusters.py           # CLI: dijagnostika + preporuka k
-├── render_task_images.py         # CLI: PDF stranice → PNG-ovi za asp-rate
+├── render_task_images.py         # CLI: PDF stranice -> PNG-ovi za asp-rate
 ├── embeddings/                   # IZLAZ: .npy, .csv, .json, plotovi
 └── asp-rate/                     # Next.js webapp (zasebni dio)
 ```
@@ -30,41 +30,41 @@ zavrsni-mvp/
 
 ## Workflow (korak po korak)
 
-### 1. Parsing — `pipeline/parsing.py`
+### 1. Parsing: `pipeline/parsing.py`
 - `fitz` (PyMuPDF) izvlači tekst po stranicama.
 - Cijeli PDF se spaja u jedan string + tablica offseta za svaku stranicu
-  (omogućava da svaki zadatak zna iz koje je stranice došao → `pdf_page`).
+  (omogućava da svaki zadatak zna iz koje je stranice došao -> `pdf_page`).
 - Regex `_EXAM_HEADER` dijeli na ispite (jedan PDF = više ispita).
 - Regex `_TASK_MARKER` dijeli ispit na zadatke.
 - `_clean_task_text` makne "JMBAG", "IME I PREZIME", napomene o bodovima itd.
 - Output: `list[dict]` s `{exam_type, exam_date, task_no, task_text, pdf_page}`.
 
-### 2. Merge — `pipeline/merge.py`
-- Učitava `data/asp_index_last3_mi_last3_zi.csv` (`points`, `time_est`, `type`, …).
+### 2. Merge: `pipeline/merge.py`
+- Učitava `data/asp_index_last3_mi_last3_zi.csv` (`points`, `time_est`, `type`, ...).
 - Left-join s parsiranim zadacima po `(exam_type, exam_date, task_no)`.
 - Konstruira `task_id` u obliku `MI|2025-11-28|1`.
-- Trenutno se podudara samo ~28/196 zadataka — CSV nije potpun, ostali zadaci
+- Trenutno se podudara samo ~28/196 zadataka. CSV nije potpun, ostali zadaci
   jednostavno nemaju metapodatke (ne kvari ostatak pipelinea).
 
-### 3. Embedding — `pipeline/embedding.py`
+### 3. Embedding: `pipeline/embedding.py`
 - Model: `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2`
   (multilingual, 384D, podržava hrvatski).
-- `normalize_embeddings=True` → vektori su L2-normalizirani (cosine ≈ euclidean).
+- `normalize_embeddings=True` -> vektori su L2-normalizirani (cosine ≈ euclidean).
 - Sprema u `embeddings/embeddings.npy`, shape `(N, 384)`.
 
-### 4. Clustering — `pipeline/clustering.py`
+### 4. Clustering: `pipeline/clustering.py`
 - **Bitno**: prvo UMAP redukcija u 10D (`reduce_with_umap`), pa K-means.
-  Sirovi 384D prostor je previše rijedak za stabilan K-means — UMAP zgusne
+  Sirovi 384D prostor je previše rijedak za stabilan K-means. UMAP zgusne
   klastere i daje znatno bolje silhouette + ARI rezultate.
-- `n_init=50` → svaki K-means uzima najbolji od 50 inicijalizacija.
+- `n_init=50` -> svaki K-means uzima najbolji od 50 inicijalizacija.
 - `compute_outlier_scores`: prosječna cosine udaljenost do 5 najbližih susjeda.
-  Visok score = task ne pripada nigdje → kandidat za reviziju klastera.
+  Visok score = task ne pripada nigdje -> kandidat za reviziju klastera.
 
-### 5. Labeling — `pipeline/labeling.py`
+### 5. Labeling: `pipeline/labeling.py`
 - Za svaki klaster uzima 5 uzoraka i šalje ih lokalnom Ollami (`llama3.1`).
 - Prompt s few-shot primjerima traži 2-4 riječi.
 - `_clean_label` post-processira (makne navodnike, numeriranje, parenteze).
-- Ako Ollama nije dostupan → fallback `Klaster N`.
+- Ako Ollama nije dostupan -> fallback `Klaster N`.
 
 ---
 
@@ -80,10 +80,10 @@ python analyze_clusters.py
 - Sweepa `k = 5..25` u UMAP-reduciranom prostoru.
 - Za svaki k pokreće K-means 10 puta s različitim seedovima.
 - Mjeri:
-  - **silhouette** — koliko su klasteri dobro separirani
-  - **ARI** (Adjusted Rand Index) između parova runova — koliko je rezultat
+  - **silhouette**: koliko su klasteri dobro separirani
+  - **ARI** (Adjusted Rand Index) između parova runova: koliko je rezultat
     stabilan između različitih inicijalizacija
-  - **inertia** — za elbow plot
+  - **inertia**: za elbow plot
 - Spremaa: `embeddings/cluster_sweep.{png,csv}` + `cluster_umap_2d.png`.
 - Ispiše preporučeni k (max z-score(silhouette) + z-score(ARI), s rubnim
   penaltyjem).

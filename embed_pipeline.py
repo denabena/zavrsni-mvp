@@ -2,7 +2,7 @@
 embed_pipeline.py
 -----------------
 CLI driver: parsira PDF-ove, embedding, klasteriranje, LLM labeling.
-Logika je u `pipeline/` paketu — ovaj fajl samo orkestrira.
+Logika je u `pipeline/` paketu, ovaj fajl samo orkestrira.
 
 Pokretanje:
   pip install sentence-transformers scikit-learn numpy pandas requests pymupdf umap-learn
@@ -21,7 +21,7 @@ import sys
 import json
 import numpy as np
 
-# Windows konzola (cp1252) ne može printati hrvatske znakove — forsiraj UTF-8
+# Windows konzola (cp1252) ne može printati hrvatske znakove, forsiraj UTF-8
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
@@ -61,7 +61,7 @@ def main():
     print("  Top 10 outliera:")
     for _, row in top_outliers.iterrows():
         preview = row["task_text"][:60].replace("\n", " ")
-        print(f"    [{row['outlier_score']:.3f}] {row['task_id']} — {preview}")
+        print(f"    [{row['outlier_score']:.3f}] {row['task_id']}: {preview}")
 
     print("\n[6/6] LLM labeling klastera...")
     cluster_labels = label_clusters(df, N_CLUSTERS)

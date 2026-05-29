@@ -45,7 +45,7 @@ def _ollama_label(cluster_id: int, sample_texts: list[str]) -> str:
 Tvoj jedini zadatak je napisati kratku etiketu od 2 do 4 hrvatske riječi koja opisuje što ovi zadaci imaju zajedničko.
 
 PRAVILA (obavezna):
-- Odgovori ISKLJUČIVO etiketom — ništa drugo
+- Odgovori ISKLJUČIVO etiketom, ništa drugo
 - 2 do 4 riječi, bez točke na kraju
 - Bez navodnika, bez boldiranja, bez numeriranja
 - Bez objašnjenja, bez uvoda, bez napomena

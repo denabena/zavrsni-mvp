@@ -53,10 +53,10 @@ npm run dev
 
 ## Arhitektura
 
-- `app/page.tsx` — jedini ekran. Učitava `public/tasks.json`, dohvaća sve ratinge iz Supabasea, bira sljedeći zadatak (najmanje ocjena, koji rater još nije ocijenio), spremma ratinge.
-- `lib/supabase.ts` — Supabase JS klijent s anon ključem (sigurno u browseru zbog RLS-a).
-- `lib/rater-id.ts` — UUID u localStorage.
-- `supabase/schema.sql` — jedna tablica `ratings` + RLS politike za anon.
+- `app/page.tsx`: jedini ekran. Učitava `public/tasks.json`, dohvaća sve ratinge iz Supabasea, bira sljedeći zadatak (najmanje ocjena, koji rater još nije ocijenio), spremma ratinge.
+- `lib/supabase.ts`: Supabase JS klijent s anon ključem (sigurno u browseru zbog RLS-a).
+- `lib/rater-id.ts`: UUID u localStorage.
+- `supabase/schema.sql`: jedna tablica `ratings` + RLS politike za anon.
 
 ## Sigurnost
 

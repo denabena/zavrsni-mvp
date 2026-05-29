@@ -1,9 +1,10 @@
 "use client";
 
 import { getRaterId } from "@/lib/rater-id";
-import { getSupabaseAnonKey, getSupabaseUrl, supabase } from "@/lib/supabase";
-import type { Task, TasksManifest } from "@/lib/types";
+import { supabase } from "@/lib/supabase";
+import type { Task, TasksManifest, TimeEstMinutes } from "@/lib/types";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import Onboarding, { clearOnboarded, isOnboarded } from "./onboarding";
 
 type RatingRow = { task_id: string; rater_uuid: string };
 
@@ -16,38 +17,15 @@ const DIFFICULTY_LABELS = [
   "Vrlo težak",
 ];
 
-function describeSupabaseError(err: unknown): string {
+const TIME_OPTIONS: TimeEstMinutes[] = [15, 30, 45, 60];
+
+function userFacingError(err: unknown): string {
   const msg = err instanceof Error ? err.message : String(err);
-  const url = getSupabaseUrl();
-  const keySet = getSupabaseAnonKey().length > 0;
-  let host = "(nije postavljen)";
-  try {
-    if (url) host = new URL(url).host;
-  } catch {
-    host = `(neispravan URL: "${url}")`;
-  }
-  const hints: string[] = [];
-  if (!url || !keySet)
-    hints.push(
-      "NEXT_PUBLIC_SUPABASE_URL / ANON_KEY nisu postavljeni u .env.local",
-    );
-  if (msg.toLowerCase().includes("failed to fetch")) {
-    hints.push(
-      "Failed to fetch obično znači jedno od: pogrešan URL, projekt pauziran, ad-blocker, ili CORS.",
-    );
-    hints.push(
-      "Otvori DevTools → Network, klikni neuspješni request prema " +
-        host +
-        " i vidi status / response.",
-    );
-    hints.push(
-      "Ako si tek editirao .env.local — restartaj `npm run dev` (env varijable se peku u bundle).",
-    );
-  }
-  return `Supabase greška (${host}): ${msg}\n• ` + hints.join("\n• ");
+  return `Greška kod spremanja. Pokušaj ponovno za par sekundi. (${msg})`;
 }
 
 export default function Page() {
+  const [onboarded, setOnboarded] = useState<boolean | null>(null);
   const [tasks, setTasks] = useState<Task[]>([]);
   const [ratings, setRatings] = useState<RatingRow[]>([]);
   const [raterId, setRaterId] = useState<string>("");
@@ -55,10 +33,15 @@ export default function Page() {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [zoomed, setZoomed] = useState(false);
-  const [pulseValue, setPulseValue] = useState<number | null>(null);
+
+  // Sequential rating state
+  const [pickedDifficulty, setPickedDifficulty] = useState<number | null>(null);
+  const [pulseDifficulty, setPulseDifficulty] = useState<number | null>(null);
+  const [pulseTime, setPulseTime] = useState<TimeEstMinutes | null>(null);
   const [toastKey, setToastKey] = useState(0);
 
   useEffect(() => {
+    setOnboarded(isOnboarded());
     setRaterId(getRaterId());
 
     fetch("/tasks.json")
@@ -75,13 +58,13 @@ export default function Page() {
         .from("ratings")
         .select("task_id, rater_uuid");
       if (error) {
-        setError(describeSupabaseError(error));
+        setError(userFacingError(error));
         return;
       }
       setRatings((data ?? []) as RatingRow[]);
       setError(null);
     } catch (e) {
-      setError(describeSupabaseError(e));
+      setError(userFacingError(e));
     }
   }, []);
 
@@ -111,6 +94,7 @@ export default function Page() {
     if (!raterId || tasks.length === 0) return;
     setCurrent(pickNext(tasks, ratings, raterId));
     setZoomed(false);
+    setPickedDifficulty(null);
   }, [tasks, ratings, raterId, pickNext]);
 
   const myCount = useMemo(
@@ -118,26 +102,27 @@ export default function Page() {
     [ratings, raterId],
   );
 
+  const progressPct = tasks.length > 0 ? (myCount / tasks.length) * 100 : 0;
+
   const submit = useCallback(
-    async (difficulty: number) => {
+    async (difficulty: number, time_est_minutes: TimeEstMinutes) => {
       if (!current || submitting) return;
       setSubmitting(true);
       setError(null);
-      setPulseValue(difficulty);
+      setPulseTime(time_est_minutes);
       try {
         const { error } = await supabase.from("ratings").insert({
           task_id: current.task_id,
           rater_uuid: raterId,
           difficulty,
+          time_est_minutes,
         });
         if (error) {
-          setError(describeSupabaseError(error));
+          setError(userFacingError(error));
           setSubmitting(false);
-          setPulseValue(null);
+          setPulseTime(null);
           return;
         }
-        // Toast + small delay so the user sees the rating registered before
-        // the next card slides in.
         setToastKey((k) => k + 1);
         await new Promise((r) => setTimeout(r, 240));
         setRatings((prev) => [
@@ -145,14 +130,21 @@ export default function Page() {
           { task_id: current.task_id, rater_uuid: raterId },
         ]);
       } catch (e) {
-        setError(describeSupabaseError(e));
+        setError(userFacingError(e));
       } finally {
         setSubmitting(false);
-        setPulseValue(null);
+        setPulseTime(null);
+        setPickedDifficulty(null);
       }
     },
     [current, raterId, submitting],
   );
+
+  const pickDifficulty = useCallback((n: number) => {
+    setPulseDifficulty(n);
+    setPickedDifficulty(n);
+    window.setTimeout(() => setPulseDifficulty(null), 360);
+  }, []);
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
@@ -161,18 +153,41 @@ export default function Page() {
         return;
       }
       if (!current || zoomed) return;
-      if (e.key >= "1" && e.key <= "5") {
+
+      // Escape: undo difficulty selection
+      if (pickedDifficulty !== null && e.key === "Escape") {
         e.preventDefault();
-        submit(Number(e.key));
+        setPickedDifficulty(null);
+        return;
+      }
+
+      // Phase 1: difficulty selection (1-5)
+      if (pickedDifficulty === null && e.key >= "1" && e.key <= "5") {
+        e.preventDefault();
+        pickDifficulty(Number(e.key));
+        return;
+      }
+
+      // Phase 2: time selection (1-4 -> 15/30/45/60)
+      if (pickedDifficulty !== null && e.key >= "1" && e.key <= "4") {
+        e.preventDefault();
+        const idx = Number(e.key) - 1;
+        submit(pickedDifficulty, TIME_OPTIONS[idx]);
       }
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [current, submit, zoomed]);
+  }, [current, submit, zoomed, pickedDifficulty, pickDifficulty]);
+
+  // Render onboarding until completed
+  if (onboarded === null) return null; // SSR / first hydration
+  if (!onboarded) {
+    return <Onboarding raterId={raterId} onDone={() => setOnboarded(true)} />;
+  }
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-6">
-      <header className="mb-4 flex items-baseline justify-between">
+      <header className="mb-3 flex items-baseline justify-between">
         <h1 className="text-2xl font-semibold tracking-tight">asp-rate</h1>
         <div className="text-sm text-gray-600">
           Ocijenjenih: <span className="font-mono">{myCount}</span> /{" "}
@@ -180,40 +195,15 @@ export default function Page() {
         </div>
       </header>
 
-      <aside className="mb-5 rounded-lg border border-blue-200 bg-blue-50 px-4 py-3 text-sm leading-relaxed text-blue-900">
-        <p className="mb-1 font-medium">O čemu se radi</p>
-        <ul className="list-inside list-disc space-y-1">
-          <li>
-            Prikupljaju se ocjene težine zadataka iz kolegija "Algoritmi i
-            strukture podataka" za potrebe završnog rada.
-          </li>
-          <li>
-            Podaci se koriste za izgradnju recommendera koji predlaže zadatke za
-            vježbu.
-          </li>
-          <li>Sve je anonimno.</li>
-          <li>
-            Nema fiksne kvote ni roka - ocijeni koliko želiš i možeš se vratiti
-            kad god.
-          </li>
-          <li>
-            Postoji mogućnost da će se sličan alat napraviti i za druge
-            predmete. Osobe koje ocijene više od 50% zadataka imat će pristup
-            svim budućim verzijama.
-          </li>
-          <li>
-            Kad ocjenjujete težinu, ne morate previše razmišljati, dovoljno je
-            uzeti prvi okvirni broj koji vam padne na pamet. Nažalost vam ne
-            mogu reć da bi, primjerice, bilo prirodno da quick sort dobije manju
-            težinu od nekog zadatka s rekurzijom jer je ovo sve subjektivno i ne
-            smijem u uputama sugestirat ni na koji način.
-          </li>
-          <li>Što se tiče estimacije vremena, također, </li>
-          <li>
-            Ocjena <strong>i samo jednog zadatka</strong> stvarno pomaže. Hvala!
-          </li>
-        </ul>
-      </aside>
+      <div
+        className="mb-5 h-2 w-full overflow-hidden rounded-full bg-gray-200"
+        aria-label="Napredak"
+      >
+        <div
+          className="h-full bg-emerald-500 transition-all duration-500 ease-out"
+          style={{ width: `${progressPct}%` }}
+        />
+      </div>
 
       {error && (
         <div className="mb-4 whitespace-pre-line rounded-md border border-red-300 bg-red-50 p-3 text-sm text-red-800">
@@ -263,24 +253,32 @@ export default function Page() {
             Klikni sliku za zoom · na mobitelu pinch-to-zoom unutar zoom prikaza
           </p>
 
+          {/* Phase 1: difficulty */}
           <div className="mt-4">
             <p className="mb-2 text-sm text-gray-700">
-              Koliko je <strong>zadatak {current.task_no}</strong> težak prema
-              tvojoj procjeni?
+              1. Koliko je <strong>zadatak {current.task_no}</strong> težak
+              prema tvojoj procjeni?
             </p>
             <div className="grid grid-cols-5 gap-2">
               {[1, 2, 3, 4, 5].map((n) => {
-                const isPulsing = pulseValue === n;
+                const isPulsing = pulseDifficulty === n;
+                const isPicked = pickedDifficulty === n;
+                const isLocked = pickedDifficulty !== null && !isPicked;
                 return (
                   <button
                     key={n}
-                    disabled={submitting}
-                    onClick={() => submit(n)}
+                    disabled={pickedDifficulty !== null || submitting}
+                    onClick={() => pickDifficulty(n)}
                     className={
-                      "rounded-md border border-gray-300 bg-white px-3 py-3 text-center text-sm font-medium text-gray-900 transition hover:border-gray-900 hover:bg-gray-900 hover:text-white disabled:opacity-50 " +
-                      (isPulsing ? "animate-btn-pulse" : "")
+                      "rounded-md border px-3 py-3 text-center text-sm font-medium transition " +
+                      (isPicked
+                        ? "border-emerald-600 bg-emerald-600 text-white"
+                        : isLocked
+                          ? "border-gray-200 bg-gray-50 text-gray-400"
+                          : "border-gray-300 bg-white text-gray-900 hover:border-gray-900 hover:bg-gray-900 hover:text-white") +
+                      (isPulsing ? " animate-btn-pulse" : "")
                     }
-                    aria-label={`Ocjena ${n} — ${DIFFICULTY_LABELS[n]}`}
+                    aria-label={`Ocjena ${n}: ${DIFFICULTY_LABELS[n]}`}
                   >
                     <div className="text-lg font-semibold">{n}</div>
                     <div className="text-xs font-normal opacity-75">
@@ -291,14 +289,61 @@ export default function Page() {
               })}
             </div>
             <p className="mt-2 text-xs text-gray-500">
-              Tipke 1–5 funkcioniraju kao prečaci.
+              {pickedDifficulty === null
+                ? "Tipke 1-5 funkcioniraju kao prečaci."
+                : "Ocjena spremljena. Esc za promjenu."}
             </p>
           </div>
+
+          {/* Phase 2: time estimate */}
+          {pickedDifficulty !== null && (
+            <div className="mt-5 animate-card-in">
+              <p className="mb-2 text-sm text-gray-700">
+                2. Procijeni vrijeme: koliko bi otprilike trebalo da se prođe
+                kroz ovaj zadatak (rješavanje + proučavanje rješenja)?
+              </p>
+              <div className="grid grid-cols-4 gap-2">
+                {TIME_OPTIONS.map((t, i) => {
+                  const isPulsing = pulseTime === t;
+                  return (
+                    <button
+                      key={t}
+                      disabled={submitting}
+                      onClick={() => submit(pickedDifficulty, t)}
+                      className={
+                        "rounded-md border border-gray-300 bg-white px-3 py-3 text-center text-sm font-medium text-gray-900 transition hover:border-gray-900 hover:bg-gray-900 hover:text-white disabled:opacity-50 " +
+                        (isPulsing ? "animate-btn-pulse" : "")
+                      }
+                      aria-label={`${t} minuta`}
+                    >
+                      <div className="text-lg font-semibold">{t} min</div>
+                      <div className="text-xs font-normal opacity-60">
+                        ({i + 1})
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+              <p className="mt-2 text-xs text-gray-500">
+                Tipke 1-4 funkcioniraju kao prečaci za 15 / 30 / 45 / 60 min.
+              </p>
+            </div>
+          )}
         </section>
       )}
 
-      <footer className="mt-6 text-center text-xs text-gray-400">
-        Anonimno · ratings idu u Supabase · {raterId.slice(0, 8) || "..."}
+      <footer className="mt-6 flex items-center justify-between text-xs text-gray-400">
+        <span>Anonimno</span>
+        <button
+          type="button"
+          onClick={() => {
+            clearOnboarded();
+            setOnboarded(false);
+          }}
+          className="underline underline-offset-2 hover:text-gray-700"
+        >
+          Info / upute
+        </button>
       </footer>
 
       {toastKey > 0 && (
@@ -334,7 +379,7 @@ export default function Page() {
           >
             <img
               src={current.image_path}
-              alt={`Stranica ${current.pdf_page} (${current.exam_type}) — uvećano`}
+              alt={`Stranica ${current.pdf_page} (${current.exam_type}), uvećano`}
               className="block h-auto w-full cursor-zoom-out"
               onClick={() => setZoomed(false)}
             />

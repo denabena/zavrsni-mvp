@@ -52,7 +52,7 @@ def cluster_embeddings(
 
 
 def compute_outlier_scores(embeddings: np.ndarray) -> np.ndarray:
-    """Prosječna cosine udaljenost do 5 najbližih susjeda — viša = outlier."""
+    """Prosječna cosine udaljenost do 5 najbližih susjeda. Viša = outlier."""
     from sklearn.neighbors import NearestNeighbors
 
     nn = NearestNeighbors(n_neighbors=6, metric="cosine")
@@ -74,8 +74,8 @@ def kmeans_stability_score(
     i izračunaj prosječni Adjusted Rand Index između svih parova rezultata.
 
     Vraća: (mean_ari, mean_silhouette, best_labels)
-      - mean_ari ∈ [-1, 1] — viši = stabilnije (1.0 = identični rezultati)
-      - mean_silhouette ∈ [-1, 1] — viši = bolja separacija klastera
+      - mean_ari ∈ [-1, 1]: viši = stabilnije (1.0 = identični rezultati)
+      - mean_silhouette ∈ [-1, 1]: viši = bolja separacija klastera
       - best_labels = labele iz najnižeg-inertia run-a
     """
     from sklearn.cluster import KMeans

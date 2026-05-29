@@ -9,9 +9,9 @@ Pokretanje:
   python analyze_clusters.py
 
 Output:
-  embeddings/cluster_sweep.png       — elbow + silhouette + ARI vs k
-  embeddings/cluster_umap_2d.png     — UMAP scatter colored by best clustering
-  embeddings/cluster_sweep.csv       — raw numbers za paper
+  embeddings/cluster_sweep.png       : elbow + silhouette + ARI vs k
+  embeddings/cluster_umap_2d.png     : UMAP scatter colored by best clustering
+  embeddings/cluster_sweep.csv       : raw numbers za paper
   + ispis preporučenog k na stdout
 """
 
@@ -45,7 +45,7 @@ def load_or_compute_embeddings() -> tuple[np.ndarray, pd.DataFrame]:
         df = pd.read_csv(csv)
         if len(df) == embeddings.shape[0]:
             return embeddings, df
-        print("  [WARN] Cache neusklađen — recomputeam...")
+        print("  [WARN] Cache neusklađen, recomputeam...")
 
     from pipeline import parse_exam_file, load_and_merge, compute_embeddings
 

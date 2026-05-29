@@ -6,34 +6,77 @@
   color-scheme: light;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
   background: #f6f7f9;
   color: #14171a;
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
 }
 
 @keyframes card-in {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes button-pulse {
-  0%   { transform: scale(1);    background-color: #111827; color: #fff; }
-  50%  { transform: scale(1.06); background-color: #10b981; color: #fff; }
-  100% { transform: scale(1);    background-color: #111827; color: #fff; }
+  0% {
+    transform: scale(1);
+    background-color: #111827;
+    color: #fff;
+  }
+  50% {
+    transform: scale(1.06);
+    background-color: #10b981;
+    color: #fff;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #111827;
+    color: #fff;
+  }
 }
 
 @keyframes toast-pop {
-  0%   { opacity: 0; transform: translateY(-6px) scale(0.95); }
-  20%  { opacity: 1; transform: translateY(0)    scale(1); }
-  80%  { opacity: 1; transform: translateY(0)    scale(1); }
-  100% { opacity: 0; transform: translateY(-6px) scale(0.95); }
+  0% {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.95);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.95);
+  }
 }
 
-.animate-card-in   { animation: card-in 240ms ease-out both; }
-.animate-btn-pulse { animation: button-pulse 360ms ease-out; }
-.animate-toast     { animation: toast-pop 900ms ease-out both; }
+.animate-card-in {
+  animation: card-in 240ms ease-out both;
+}
+.animate-btn-pulse {
+  animation: button-pulse 360ms ease-out;
+}
+.animate-toast {
+  animation: toast-pop 900ms ease-out both;
+}

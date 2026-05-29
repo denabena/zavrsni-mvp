@@ -11,6 +11,7 @@ Pokretanje:
 
 import sys
 import json
+import csv
 import fitz
 from pathlib import Path
 
@@ -25,10 +26,35 @@ DPI = 130
 OUT_DIR    = Path("asp-rate/public/task-images")
 MANIFEST   = Path("asp-rate/public/tasks.json")
 
+CLUSTERS_CSV    = Path("embeddings/tasks_with_clusters.csv")
+CLUSTER_LABELS  = Path("embeddings/cluster_labels.json")
+
 PDF_BY_TYPE = {
     "MI": MI_PDF_PATH,
     "ZI": ZI_PDF_PATH,
 }
+
+
+def load_cluster_map() -> dict[str, tuple[int | None, str | None]]:
+    """task_id -> (cluster_id, cluster_label). Prazno ako pipeline nije pokrenut."""
+    if not CLUSTERS_CSV.exists() or not CLUSTER_LABELS.exists():
+        print(f"  (preskačem klastere: {CLUSTERS_CSV} ili {CLUSTER_LABELS} ne postoji)")
+        return {}
+    with open(CLUSTER_LABELS, encoding="utf-8") as f:
+        labels = json.load(f)
+    out: dict[str, tuple[int | None, str | None]] = {}
+    with open(CLUSTERS_CSV, encoding="utf-8", newline="") as f:
+        for row in csv.DictReader(f):
+            tid = row.get("task_id")
+            cid_raw = row.get("cluster_id")
+            if not tid or cid_raw in (None, ""):
+                continue
+            try:
+                cid = int(cid_raw)
+            except ValueError:
+                continue
+            out[tid] = (cid, labels.get(str(cid)))
+    return out
 
 
 def render_page(pdf_path: str, page_1based: int, out_path: Path) -> None:
@@ -67,18 +93,28 @@ def main():
     print(f"  Renderirano: {rendered}, preskočeno (cached): {skipped}")
 
     print(f"\n[3/3] Pišem manifest u {MANIFEST}...")
+    cluster_map = load_cluster_map()
     tasks_out = []
+    matched_clusters = 0
     for r in records:
         image_name = f"{r['exam_type']}_p{r['pdf_page']:03d}.png"
+        task_id    = f"{r['exam_type']}|{r['exam_date']}|{r['task_no']}"
+        cid, clabel = cluster_map.get(task_id, (None, None))
+        if cid is not None:
+            matched_clusters += 1
         tasks_out.append({
-            "task_id":      f"{r['exam_type']}|{r['exam_date']}|{r['task_no']}",
-            "exam_type":    r["exam_type"],
-            "exam_date":    r["exam_date"],
-            "task_no":      r["task_no"],
-            "pdf_page":     r["pdf_page"],
-            "image_path":   f"/task-images/{image_name}",
-            "text_preview": r["task_text"][:240],
+            "task_id":       task_id,
+            "exam_type":     r["exam_type"],
+            "exam_date":     r["exam_date"],
+            "task_no":       r["task_no"],
+            "pdf_page":      r["pdf_page"],
+            "image_path":    f"/task-images/{image_name}",
+            "text_preview":  r["task_text"][:240],
+            "cluster_id":    cid,
+            "cluster_label": clabel,
         })
+    if cluster_map:
+        print(f"  Klasteri pridruženi: {matched_clusters}/{len(tasks_out)} zadataka")
 
     with open(MANIFEST, "w", encoding="utf-8") as f:
         json.dump({"tasks": tasks_out}, f, ensure_ascii=False, indent=2)

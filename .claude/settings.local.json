@@ -14,7 +14,10 @@
       "Bash(curl -s -o /tmp/tasks.html -w \"tasks.json HTTP %{http_code} bytes=%{size_download}\\\\n\" http://localhost:3000/tasks.json)",
       "Bash(curl -s -o /tmp/img.png -w \"image HTTP %{http_code} bytes=%{size_download}\\\\n\" http://localhost:3000/task-images/MI_p001.png)",
       "Bash(awk '{print $2}')",
-      "Bash(xargs -r kill)"
+      "Bash(xargs -r kill)",
+      "Bash(python render_task_images.py)",
+      "Bash(python *)",
+      "Bash(npx tsc *)"
     ]
   }
 }
