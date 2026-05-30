@@ -1,6 +1,6 @@
 "use client";
 
-import { ensureSession } from "@/lib/auth";
+import { ensureSession, isConfirmedUser, signOut } from "@/lib/auth";
 import { supabase } from "@/lib/supabase";
 import type { Task, TasksManifest, TimeEstMinutes } from "@/lib/types";
 import { useCallback, useEffect, useMemo, useState } from "react";
@@ -31,7 +31,7 @@ export default function Page() {
   const [ratings, setRatings] = useState<RatingRow[]>([]);
   const [raterId, setRaterId] = useState<string>("");
   const [userEmail, setUserEmail] = useState<string | null>(null);
-  const [isAnon, setIsAnon] = useState(true);
+  const [isConfirmed, setIsConfirmed] = useState(false);
   const [current, setCurrent] = useState<Task | null>(null);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -57,16 +57,20 @@ export default function Page() {
       if (user) {
         setRaterId(user.id);
         setUserEmail(user.email ?? null);
-        setIsAnon(Boolean(user.is_anonymous));
+        setIsConfirmed(isConfirmedUser(user));
       }
       refreshRatings();
     });
 
-    const { data } = supabase.auth.onAuthStateChange((_event, session) => {
-      const u = session?.user ?? null;
+    const { data } = supabase.auth.onAuthStateChange(async (_event, session) => {
+      let u = session?.user ?? null;
+      if (!u) {
+        // Sesija je nestala (signOut). Kreiraj svježu anonimnu da rater UI radi.
+        u = await ensureSession();
+      }
       setRaterId(u?.id ?? "");
       setUserEmail(u?.email ?? null);
-      setIsAnon(Boolean(u?.is_anonymous));
+      setIsConfirmed(isConfirmedUser(u));
       refreshRatings();
     });
     return () => data.subscription.unsubscribe();
@@ -199,9 +203,10 @@ export default function Page() {
     return () => window.removeEventListener("keydown", onKey);
   }, [current, submit, zoomed, pickedDifficulty, pickDifficulty]);
 
-  // Render onboarding until completed
-  if (onboarded === null) return null; // SSR / first hydration
-  if (!onboarded) {
+  // Render nothing dok sesija nije utvrđena, da confirmed user ne vidi
+  // onboarding flash prije redirecta na rating.
+  if (onboarded === null || !raterId) return null;
+  if (!onboarded && !isConfirmed) {
     return (
       <Onboarding
         onDone={() => {
@@ -359,22 +364,50 @@ export default function Page() {
         </section>
       )}
 
-      <footer className="mt-6 flex items-center justify-between text-xs text-gray-400">
+      <footer className="mt-6 flex flex-wrap items-center justify-between gap-2 text-xs text-gray-400">
         <span>
-          {isAnon
-            ? "Anoniman/na (ovaj browser)"
-            : `Prijavljen/a: ${userEmail ?? ""}`}
+          {isConfirmed
+            ? `Prijavljen/a: ${userEmail ?? ""}`
+            : "Anoniman/na (ovaj browser)"}
         </span>
-        <button
-          type="button"
-          onClick={() => {
-            clearOnboarded();
-            setOnboarded(false);
-          }}
-          className="underline underline-offset-2 hover:text-gray-700"
-        >
-          Info / upute
-        </button>
+        <div className="flex items-center gap-3">
+          {isConfirmed ? (
+            <button
+              type="button"
+              onClick={async () => {
+                // Optimistic flip: prebaci UI na onboarding odmah. Async
+                // signOut + ensureSession traju u pozadini, listener i handler
+                // dijele isti pendingAnon promise (lock u auth.ts).
+                setIsConfirmed(false);
+                setOnboarded(false);
+                clearOnboarded();
+                setError(null);
+                await signOut();
+                const u = await ensureSession();
+                if (u) {
+                  setRaterId(u.id);
+                  setUserEmail(u.email ?? null);
+                  setIsConfirmed(isConfirmedUser(u));
+                }
+                refreshRatings();
+              }}
+              className="underline underline-offset-2 hover:text-gray-700"
+            >
+              Odjavi se
+            </button>
+          ) : (
+            <button
+              type="button"
+              onClick={() => {
+                clearOnboarded();
+                setOnboarded(false);
+              }}
+              className="underline underline-offset-2 hover:text-gray-700"
+            >
+              Info / upute
+            </button>
+          )}
+        </div>
       </footer>
 
       {toastKey > 0 && (

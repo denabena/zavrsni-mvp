@@ -55,8 +55,8 @@ export default function Onboarding({ onDone }: Props) {
       setPhase("code");
       setInfo(
         m === "signin"
-          ? "Ovaj email već ima račun. Poslali smo kod za prijavu, tvoj napredak će se vratiti."
-          : "Poslali smo ti 6-znamenkasti kod na email.",
+          ? "Ovaj email već ima račun. Poslali smo kod za prijavu, tvoj napredak će se vratiti. Ako ne stigne u Inbox, provjeri spam/junk."
+          : "Poslali smo ti 6-znamenkasti kod na email. Ako ne stigne u Inbox, provjeri spam/junk.",
       );
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e));

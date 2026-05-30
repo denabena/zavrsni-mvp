@@ -1,6 +1,11 @@
 import type { User } from "@supabase/supabase-js";
 import { supabase } from "./supabase";
 
+// Concurrent-call lock: bez ovoga, Odjavi handler i onAuthStateChange listener
+// oba reagiraju na signOut i oba pozovu signInAnonymously paralelno. Supabase
+// uslužuje jedan, drugog odbije s 422. S lockom dijele istu in-flight obecanu.
+let pendingAnon: Promise<User | null> | null = null;
+
 // Osigurava da uvijek postoji sesija. Ako nema, kreira anonimnog korisnika
 // (bez signupa). Vraća trenutnog usera ili null ako anon sign-in padne.
 export async function ensureSession(): Promise<User | null> {
@@ -9,16 +14,40 @@ export async function ensureSession(): Promise<User | null> {
   } = await supabase.auth.getSession();
   if (session?.user) return session.user;
 
-  const { data, error } = await supabase.auth.signInAnonymously();
-  if (error) {
-    console.error("Anonymous sign-in failed:", error.message);
-    return null;
-  }
-  return data.user ?? null;
+  if (pendingAnon) return pendingAnon;
+
+  pendingAnon = (async () => {
+    try {
+      const { data, error } = await supabase.auth.signInAnonymously();
+      if (error) {
+        console.error("Anonymous sign-in failed:", error.message);
+        return null;
+      }
+      return data.user ?? null;
+    } finally {
+      pendingAnon = null;
+    }
+  })();
+  return pendingAnon;
 }
 
 export function isAnonymous(user: User | null): boolean {
   return Boolean(user?.is_anonymous);
+}
+
+// Korisnik je "potvrđen" tek kad ima verificirani email (nije anoniman i
+// email_confirmed_at je postavljen). Updaterana e-pošta bez OTP potvrde se ne
+// računa kao prijava.
+export function isConfirmedUser(user: User | null): boolean {
+  if (!user) return false;
+  if (user.is_anonymous) return false;
+  return Boolean(user.email_confirmed_at);
+}
+
+// Odjavljuje trenutnog korisnika i ostavlja stranicu spremnu za fresh anon
+// sesiju (ensureSession kreira novu pri sljedećem mountu / pozivu).
+export async function signOut(): Promise<void> {
+  await supabase.auth.signOut();
 }
 
 export type VerifyMode = "link" | "signin";
@@ -54,43 +83,37 @@ export async function verifyEmailCode(
 ): Promise<User | null> {
   const type = mode === "link" ? "email_change" : "email";
 
-  // U "signin" modu prelazimo na postojeći račun, pa anonimni user ostaje iza.
-  // Zapamti njegov id prije prebacivanja da prebacimo njegove ratinge.
+  // Uvijek zapamti trenutni anon UID prije verifyOtp, neovisno o mode-u.
+  // Supabase u nekim slučajevima i u "link" modu (updateUser nije erroral)
+  // svejedno završi prebacivanjem sesije na postojeći račun s tim emailom,
+  // pa se anon user ostavlja iza. Ako se UID promijeni nakon verifyOtp,
+  // prebacujemo ratinge.
   let priorAnonId: string | null = null;
-  if (mode === "signin") {
-    const {
-      data: { user },
-    } = await supabase.auth.getUser();
-    if (user?.is_anonymous) priorAnonId = user.id;
-  }
+  const {
+    data: { user: priorUser },
+  } = await supabase.auth.getUser();
+  if (priorUser?.is_anonymous) priorAnonId = priorUser.id;
 
   const { data, error } = await supabase.auth.verifyOtp({ email, token, type });
   if (error) throw error;
 
   const newUser = data.user ?? null;
   if (priorAnonId && newUser && priorAnonId !== newUser.id) {
-    await migrateRatings(priorAnonId, newUser.id);
+    await migrateRatings(priorAnonId);
   }
   return newUser;
 }
 
-// Prebacuje ratinge s napuštenog anonimnog usera na račun u koji se korisnik
-// upravo prijavio. Duplikati (zadatak već ocijenjen na tom računu) se preskaču.
-async function migrateRatings(fromUid: string, toUid: string): Promise<void> {
-  const { data, error } = await supabase
-    .from("ratings")
-    .select("task_id, difficulty, time_est_minutes")
-    .eq("rater_uuid", fromUid);
-  if (error || !data || data.length === 0) return;
-
-  const rows = data.map((r) => ({
-    task_id: r.task_id,
-    rater_uuid: toUid,
-    difficulty: r.difficulty,
-    time_est_minutes: r.time_est_minutes,
-  }));
-
-  await supabase
-    .from("ratings")
-    .upsert(rows, { onConflict: "task_id,rater_uuid", ignoreDuplicates: true });
+// Prebacuje ratinge s napuštenog anonimnog usera na trenutno prijavljenog.
+// Atomski Postgres RPC: insert with ON CONFLICT DO NOTHING + delete starih
+// anon redaka, da ne ostanu duplikati pod mrtvim UID-om.
+async function migrateRatings(fromUid: string): Promise<void> {
+  const { data, error } = await supabase.rpc("merge_anon_ratings", {
+    p_anon_uid: fromUid,
+  });
+  if (error) {
+    console.error("merge_anon_ratings failed:", error.message);
+    return;
+  }
+  console.info("merge_anon_ratings ok, inserted:", data);
 }
