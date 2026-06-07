@@ -61,6 +61,49 @@ def compute_outlier_scores(embeddings: np.ndarray) -> np.ndarray:
     return distances[:, 1:].mean(axis=1)
 
 
+def compute_centroid_outlier_scores(
+    embeddings: np.ndarray,
+    cluster_labels: np.ndarray,
+) -> np.ndarray:
+    """
+    Kontinuirani outlier score po klasteru: kosinusna udaljenost svakog
+    zadatka od centroida svojeg klastera, normalizirana percentilskim rangom
+    unutar tog klastera.
+
+    0.0 = u centru klastera (najtipičniji predstavnik)
+    1.0 = najudaljeniji član klastera (najveći outlier u skupini)
+
+    Normalizacija je per-cluster jer klasteri imaju različit raspršaj, pa
+    apsolutna distanca nije usporediva. Recommender koristi cutoff na ovom
+    rangu (npr. ciljana ocjena < 60%: izbaci tasksove iznad 0.8).
+    """
+    n = embeddings.shape[0]
+    scores = np.zeros(n, dtype=np.float64)
+
+    for cid in np.unique(cluster_labels):
+        mask = cluster_labels == cid
+        cluster_emb = embeddings[mask]
+        centroid = cluster_emb.mean(axis=0)
+
+        # Kosinusna distanca svih članova klastera do centroida.
+        centroid_norm = np.linalg.norm(centroid) + 1e-12
+        member_norms = np.linalg.norm(cluster_emb, axis=1) + 1e-12
+        cos_sim = (cluster_emb @ centroid) / (member_norms * centroid_norm)
+        distances = 1.0 - cos_sim
+
+        # Percentilski rang unutar klastera: 0 = najbliži centroidu, 1 = najdalji.
+        n_in_cluster = len(distances)
+        if n_in_cluster > 1:
+            ranks = distances.argsort().argsort()
+            percentiles = ranks / (n_in_cluster - 1)
+        else:
+            percentiles = np.zeros(n_in_cluster, dtype=np.float64)
+
+        scores[mask] = percentiles
+
+    return scores
+
+
 # ── Stability analiza ─────────────────────────────────────────────────────────
 
 def kmeans_stability_score(

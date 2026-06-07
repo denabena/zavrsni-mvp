@@ -19,6 +19,8 @@ Env varijable (opcionalno):
 
 import sys
 import json
+from pathlib import Path
+
 import numpy as np
 
 # Windows konzola (cp1252) ne može printati hrvatske znakove, forsiraj UTF-8
@@ -33,6 +35,7 @@ from pipeline import (
     parse_exam_file, load_and_merge, compute_embeddings,
     cluster_embeddings, compute_outlier_scores, label_clusters,
 )
+from pipeline.text_clean import strip_code
 
 
 def main():
@@ -41,13 +44,28 @@ def main():
     print("\n[1/6] Parsiranje PDF-ova...")
     records  = parse_exam_file(MI_PDF_PATH, "MI")
     records += parse_exam_file(ZI_PDF_PATH, "ZI")
-    print(f"  Ukupno: {len(records)} zadataka")
+    print(f"  Ukupno: {len(records)} zadataka prije filtra")
+
+    # Filtriraj ručno označene stranice rješenja.
+    blacklist_path = Path("data/blacklist_solution_pages.json")
+    if blacklist_path.exists():
+        with open(blacklist_path, encoding="utf-8") as f:
+            bl = json.load(f)
+        bad_pages = {(p["exam_type"], int(p["pdf_page"])) for p in bl.get("solution_pages", [])}
+        n_before = len(records)
+        records = [r for r in records if (r["exam_type"], r["pdf_page"]) not in bad_pages]
+        print(f"  Filtrirano stranica rješenja: {n_before - len(records)} (ostalo {len(records)})")
 
     print("\n[2/6] Spajanje s CSV metapodacima...")
     df = load_and_merge(records, CSV_PATH)
 
     print("\n[3/6] Računanje embeddings...")
-    texts      = df["task_text"].fillna("").tolist()
+    # Stripamo C/C++ kod prije embeddinga: embedding model preferra natural-jezik,
+    # syntax noise (templates, prototipi, struct) razvodnjava topic signal.
+    df["embedding_text"] = df["task_text"].fillna("").map(strip_code)
+    n_shortened = (df["embedding_text"].str.len() < df["task_text"].fillna("").str.len()).sum()
+    print(f"  Code-stripped {n_shortened}/{len(df)} task texts before embedding")
+    texts      = df["embedding_text"].tolist()
     embeddings = compute_embeddings(texts)
     np.save(OUT_DIR / "embeddings.npy", embeddings)
     print(f"  Saved: embeddings/embeddings.npy  shape={embeddings.shape}")

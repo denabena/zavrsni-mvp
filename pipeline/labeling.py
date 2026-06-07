@@ -1,66 +1,111 @@
-"""LLM labeling klastera preko Ollama."""
+"""
+LLM labeling klastera preko Ollame.
 
+Stari pristup (po-klaster) je davao kolapsne labele jer su isti few-shot
+primjeri u promptu sidrili model na "Rasuto adresiranje" za većinu klastera.
+Sada se svi klasteri šalju u jednom pozivu uz hard zahtjev za međusobno
+različitim labelama; LLM tako vidi kontekst i mora razlučiti teme.
+"""
+
+import json
 import re
-import requests
+
 import pandas as pd
+import requests
 
-from pipeline.config import OLLAMA_URL, OLLAMA_MODEL
-
-
-def _clean_label(raw: str, cluster_id: int) -> str:
-    """Izvuci čistu etiketu iz LLM odgovora."""
-    raw = re.sub(r"\*{1,2}(.+?)\*{1,2}", r"\1", raw)
-    raw = re.sub(r'["`‘’]', "", raw)
-    raw = re.sub(r"\s*\(.*?\)", "", raw)
-    raw = re.sub(r"(?i)^(label|etiketa|klaster\s*\d*)\s*[:–-]\s*", "", raw, flags=re.MULTILINE)
-    raw = re.sub(r"^\s*\d+\.\s*", "", raw, flags=re.MULTILINE)
-
-    lines = [l.strip().rstrip(".") for l in raw.splitlines() if l.strip()]
-    skip = ("note", "zadatak", "ovdje", "ovo", "here", "klaster oznac")
-
-    candidates = []
-    for line in lines:
-        words = line.split()
-        if 2 <= len(words) <= 6 and not any(line.lower().startswith(p) for p in skip):
-            line = re.split(r"[,;]", line)[0].strip()
-            candidates.append(line)
-
-    if candidates:
-        candidates.sort(key=lambda x: len(x.split()))
-        return candidates[0]
-
-    if lines:
-        words = lines[0].split()
-        return " ".join(words[:4]) if len(words) > 4 else lines[0]
-
-    return f"Klaster {cluster_id}"
+from pipeline.config import OLLAMA_MODEL, OLLAMA_URL
 
 
-def _ollama_label(cluster_id: int, sample_texts: list[str]) -> str:
-    """Poziva Ollamu da imenuje klaster na temelju 5 uzoraka zadataka."""
-    samples_fmt = "\n\n".join(
-        f"Zadatak {i+1}:\n{t[:300]}" for i, t in enumerate(sample_texts[:5])
-    )
-    prompt = f"""Ti si asistent koji imenuje grupe zadataka s ispita iz algoritama i struktura podataka.
-Tvoj jedini zadatak je napisati kratku etiketu od 2 do 4 hrvatske riječi koja opisuje što ovi zadaci imaju zajedničko.
+def _build_batch_prompt(samples_per_cluster: dict[int, list[str]]) -> str:
+    """Jedan prompt za sve klastere s eksplicitnim "must be distinct" zahtjevom."""
+    blocks = []
+    for cid in sorted(samples_per_cluster.keys()):
+        samples = samples_per_cluster[cid]
+        sample_block = "\n".join(
+            f"  - {t[:180].strip()}" for t in samples[:3]
+        )
+        blocks.append(f"Klaster {cid}:\n{sample_block}")
 
-PRAVILA (obavezna):
-- Odgovori ISKLJUČIVO etiketom, ništa drugo
-- 2 do 4 riječi, bez točke na kraju
-- Bez navodnika, bez boldiranja, bez numeriranja
-- Bez objašnjenja, bez uvoda, bez napomena
+    clusters_text = "\n\n".join(blocks)
+    n = len(samples_per_cluster)
+    return f"""Imenuj svaki od {n} klastera ispitnih zadataka iz Algoritama i struktura podataka kratkom hrvatskom etiketom (2-4 riječi).
 
-PRIMJERI ispravnih odgovora:
-Rasuto adresiranje
-Implementacija binarnog stabla
-Analiza složenosti funkcija
-Rekurzivni algoritmi na stablima
-Operacije nad stogom
+PRAVILA:
+- SVAKA etiketa mora biti različita od svih ostalih.
+- Ne koristi generika ("Razno", "Mješovito").
+- Mogući primjeri tema: Sortiranje, Raspršeno adresiranje, Binarno stablo, Povezana lista, Stog, Red, Graf, Rekurzija, Složenost algoritama, Niz, KMP, Hash tablica, Pretraga, Dinamička alokacija.
+- Etikete u nominativu, prvo slovo veliko.
 
-Evo zadataka za koje trebaš napisati etiketu:
-{samples_fmt}
+FORMAT: točno {n} redova, svaki oblika "N: Etiketa" gdje je N broj klastera. Bez dodatnog teksta.
 
-Etiketa (samo 2-4 riječi):"""
+PRIMJER FORMATA:
+0: Sortiranje
+1: Binarno stablo
+2: Stog operacije
+
+UZORCI:
+
+{clusters_text}
+
+ODGOVOR ({n} redova, "N: Etiketa"):"""
+
+
+def _parse_batch_response(raw: str, n_clusters: int) -> dict[int, str]:
+    """Izvuci {cid: label} iz LLM line-based odgovora ("N: Label")."""
+    result: dict[int, str] = {}
+    for line in raw.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        m = re.match(r"^\**\s*(\d+)\s*[:.\-]\s*(.+?)\s*\**$", line)
+        if not m:
+            continue
+        try:
+            cid = int(m.group(1))
+        except ValueError:
+            continue
+        if cid < 0 or cid >= n_clusters:
+            continue
+        label = m.group(2).strip().strip('"').strip("'").rstrip(".")
+        # Otresi sufikse poput "(2-4 riječi)" iz primjera
+        label = re.sub(r"\s*\([^)]*\)\s*$", "", label).strip()
+        if label and cid not in result:
+            result[cid] = label
+    return result
+
+
+def _force_distinct(labels: dict[int, str], n_clusters: int) -> dict[int, str]:
+    """
+    Post-processing safety net: ako LLM svejedno proizvede duplikate, sufiksiraj
+    drugu (i kasnije) pojavu rednim brojem klastera da je svaka labela jedinstvena.
+    """
+    seen: dict[str, int] = {}
+    out: dict[int, str] = {}
+    for cid in range(n_clusters):
+        label = labels.get(cid)
+        if not label:
+            out[cid] = f"Klaster {cid}"
+            continue
+        key = label.lower()
+        if key in seen:
+            out[cid] = f"{label} (klaster {cid})"
+        else:
+            seen[key] = cid
+            out[cid] = label
+    return out
+
+
+def label_clusters(df: pd.DataFrame, n_clusters: int) -> dict[int, str]:
+    """Vraća {cluster_id: label} za sve klastere u jednom batch pozivu Ollame."""
+    print(f"  Generiram labele za {n_clusters} klastera u jednom batch pozivu...")
+
+    samples_per_cluster: dict[int, list[str]] = {}
+    for cid in range(n_clusters):
+        mask = df["cluster_id"] == cid
+        texts = df.loc[mask, "task_text"].tolist()
+        samples_per_cluster[cid] = texts
+
+    prompt = _build_batch_prompt(samples_per_cluster)
 
     try:
         r = requests.post(
@@ -69,27 +114,25 @@ Etiketa (samo 2-4 riječi):"""
                 "model": OLLAMA_MODEL,
                 "messages": [{"role": "user", "content": prompt}],
                 "stream": False,
-                "options": {"temperature": 0.0}
+                "options": {"temperature": 0.0},
             },
-            timeout=60
+            timeout=180,
         )
         r.raise_for_status()
         raw = r.json()["message"]["content"].strip()
-        label = _clean_label(raw, cluster_id)
-        return label or f"Klaster {cluster_id}"
     except Exception as e:
-        print(f"    [WARN] Ollama greška za klaster {cluster_id}: {e}")
-        return f"Klaster {cluster_id}"
+        print(f"    [WARN] Ollama greška: {e}")
+        return {cid: f"Klaster {cid}" for cid in range(n_clusters)}
 
+    parsed = _parse_batch_response(raw, n_clusters)
+    if len(parsed) < n_clusters // 2:
+        print("    [DEBUG] LLM raw output (parsing weak):")
+        print(raw[:1500])
+        print("    [...]" if len(raw) > 1500 else "")
+    labels = _force_distinct(parsed, n_clusters)
 
-def label_clusters(df: pd.DataFrame, n_clusters: int) -> dict[int, str]:
-    """Vraća {cluster_id: label} za sve klastere."""
-    print(f"  Generiram labele za {n_clusters} klastera via Ollama...")
-    labels = {}
     for cid in range(n_clusters):
-        mask    = df["cluster_id"] == cid
-        samples = df.loc[mask, "task_text"].tolist()
-        label   = _ollama_label(cid, samples)
-        labels[cid] = label
-        print(f"    Klaster {cid:2d}: {label}  ({mask.sum()} zadataka)")
+        n_tasks = int((df["cluster_id"] == cid).sum())
+        print(f"    Klaster {cid:2d}: {labels[cid]}  ({n_tasks} zadataka)")
+
     return labels

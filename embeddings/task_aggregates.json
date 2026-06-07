@@ -1,0 +1,891 @@
+[
+  {
+    "task_id": "MI|2011-05-02|6",
+    "n_ratings": 4,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 2.75
+  },
+  {
+    "task_id": "MI|2012-04-25|1",
+    "n_ratings": 4,
+    "median_difficulty": 3.5,
+    "median_time_minutes": 45,
+    "mean_difficulty": 3.5
+  },
+  {
+    "task_id": "MI|2012-04-25|2",
+    "n_ratings": 4,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 37,
+    "mean_difficulty": 3.0
+  },
+  {
+    "task_id": "MI|2012-04-25|3",
+    "n_ratings": 4,
+    "median_difficulty": 2.5,
+    "median_time_minutes": 22,
+    "mean_difficulty": 2.5
+  },
+  {
+    "task_id": "MI|2012-04-25|4",
+    "n_ratings": 4,
+    "median_difficulty": 3.5,
+    "median_time_minutes": 45,
+    "mean_difficulty": 3.5
+  },
+  {
+    "task_id": "MI|2012-04-25|5",
+    "n_ratings": 4,
+    "median_difficulty": 2.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 2.0
+  },
+  {
+    "task_id": "MI|2013-04-23|1",
+    "n_ratings": 3,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 3.0
+  },
+  {
+    "task_id": "MI|2013-04-23|2",
+    "n_ratings": 3,
+    "median_difficulty": 2.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 2.3333333333333335
+  },
+  {
+    "task_id": "MI|2013-04-23|3",
+    "n_ratings": 3,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 2.3333333333333335
+  },
+  {
+    "task_id": "MI|2013-04-23|4",
+    "n_ratings": 3,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 45,
+    "mean_difficulty": 3.3333333333333335
+  },
+  {
+    "task_id": "MI|2013-04-23|5",
+    "n_ratings": 3,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 2.6666666666666665
+  },
+  {
+    "task_id": "MI|2014-04-23|1",
+    "n_ratings": 3,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 3.3333333333333335
+  },
+  {
+    "task_id": "MI|2014-04-23|2",
+    "n_ratings": 4,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 37,
+    "mean_difficulty": 2.75
+  },
+  {
+    "task_id": "MI|2014-04-23|3",
+    "n_ratings": 3,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 3.0
+  },
+  {
+    "task_id": "MI|2014-04-23|4",
+    "n_ratings": 4,
+    "median_difficulty": 3.5,
+    "median_time_minutes": 30,
+    "mean_difficulty": 3.5
+  },
+  {
+    "task_id": "MI|2014-04-23|5",
+    "n_ratings": 4,
+    "median_difficulty": 3.5,
+    "median_time_minutes": 30,
+    "mean_difficulty": 3.25
+  },
+  {
+    "task_id": "MI|2015-04-21|1",
+    "n_ratings": 4,
+    "median_difficulty": 4.0,
+    "median_time_minutes": 52,
+    "mean_difficulty": 3.5
+  },
+  {
+    "task_id": "MI|2015-04-21|2",
+    "n_ratings": 4,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 3.0
+  },
+  {
+    "task_id": "MI|2015-04-21|3",
+    "n_ratings": 4,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 2.75
+  },
+  {
+    "task_id": "MI|2015-04-21|4",
+    "n_ratings": 4,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 45,
+    "mean_difficulty": 2.5
+  },
+  {
+    "task_id": "MI|2015-04-21|5",
+    "n_ratings": 4,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 45,
+    "mean_difficulty": 2.5
+  },
+  {
+    "task_id": "MI|2016-04-26|1",
+    "n_ratings": 3,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 3.0
+  },
+  {
+    "task_id": "MI|2016-04-26|2",
+    "n_ratings": 3,
+    "median_difficulty": 2.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 2.0
+  },
+  {
+    "task_id": "MI|2016-04-26|3",
+    "n_ratings": 3,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 2.6666666666666665
+  },
+  {
+    "task_id": "MI|2016-04-26|4",
+    "n_ratings": 3,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 2.6666666666666665
+  },
+  {
+    "task_id": "MI|2016-04-26|5",
+    "n_ratings": 3,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 3.0
+  },
+  {
+    "task_id": "MI|2017-04-19|1",
+    "n_ratings": 3,
+    "median_difficulty": 4.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 3.6666666666666665
+  },
+  {
+    "task_id": "MI|2017-04-19|2",
+    "n_ratings": 3,
+    "median_difficulty": 2.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 2.6666666666666665
+  },
+  {
+    "task_id": "MI|2017-04-19|3",
+    "n_ratings": 3,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 2.6666666666666665
+  },
+  {
+    "task_id": "MI|2017-04-19|4",
+    "n_ratings": 3,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 3.0
+  },
+  {
+    "task_id": "MI|2019-11-25|1",
+    "n_ratings": 3,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 3.0
+  },
+  {
+    "task_id": "MI|2019-11-25|2",
+    "n_ratings": 3,
+    "median_difficulty": 2.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 2.0
+  },
+  {
+    "task_id": "MI|2019-11-25|3",
+    "n_ratings": 3,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 2.6666666666666665
+  },
+  {
+    "task_id": "MI|2019-11-25|4",
+    "n_ratings": 3,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 2.6666666666666665
+  },
+  {
+    "task_id": "MI|2019-11-25|5",
+    "n_ratings": 3,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 2.3333333333333335
+  },
+  {
+    "task_id": "MI|2020-11-24|1",
+    "n_ratings": 4,
+    "median_difficulty": 3.5,
+    "median_time_minutes": 45,
+    "mean_difficulty": 3.25
+  },
+  {
+    "task_id": "MI|2020-11-24|2",
+    "n_ratings": 4,
+    "median_difficulty": 2.5,
+    "median_time_minutes": 22,
+    "mean_difficulty": 2.75
+  },
+  {
+    "task_id": "MI|2020-11-24|3",
+    "n_ratings": 4,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 22,
+    "mean_difficulty": 3.0
+  },
+  {
+    "task_id": "MI|2020-11-24|4",
+    "n_ratings": 4,
+    "median_difficulty": 2.5,
+    "median_time_minutes": 15,
+    "mean_difficulty": 2.25
+  },
+  {
+    "task_id": "MI|2020-11-24|5",
+    "n_ratings": 4,
+    "median_difficulty": 2.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 2.25
+  },
+  {
+    "task_id": "MI|2021-11-28|1",
+    "n_ratings": 4,
+    "median_difficulty": 3.5,
+    "median_time_minutes": 37,
+    "mean_difficulty": 3.25
+  },
+  {
+    "task_id": "MI|2021-11-28|2",
+    "n_ratings": 4,
+    "median_difficulty": 2.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 2.0
+  },
+  {
+    "task_id": "MI|2021-11-28|3",
+    "n_ratings": 4,
+    "median_difficulty": 2.5,
+    "median_time_minutes": 30,
+    "mean_difficulty": 2.25
+  },
+  {
+    "task_id": "MI|2021-11-28|4",
+    "n_ratings": 4,
+    "median_difficulty": 3.5,
+    "median_time_minutes": 45,
+    "mean_difficulty": 3.25
+  },
+  {
+    "task_id": "MI|2021-11-29|1",
+    "n_ratings": 4,
+    "median_difficulty": 3.5,
+    "median_time_minutes": 45,
+    "mean_difficulty": 3.5
+  },
+  {
+    "task_id": "MI|2021-11-29|2",
+    "n_ratings": 4,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 3.0
+  },
+  {
+    "task_id": "MI|2021-11-29|3",
+    "n_ratings": 4,
+    "median_difficulty": 2.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 1.75
+  },
+  {
+    "task_id": "MI|2021-11-29|4",
+    "n_ratings": 4,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 37,
+    "mean_difficulty": 3.0
+  },
+  {
+    "task_id": "MI|2021-11-29|5",
+    "n_ratings": 4,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 3.0
+  },
+  {
+    "task_id": "MI|2023-11-27|1",
+    "n_ratings": 4,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 37,
+    "mean_difficulty": 2.75
+  },
+  {
+    "task_id": "MI|2023-11-27|2",
+    "n_ratings": 4,
+    "median_difficulty": 2.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 2.0
+  },
+  {
+    "task_id": "MI|2023-11-27|3",
+    "n_ratings": 4,
+    "median_difficulty": 2.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 2.25
+  },
+  {
+    "task_id": "MI|2023-11-27|4",
+    "n_ratings": 4,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 3.0
+  },
+  {
+    "task_id": "MI|2023-11-27|5",
+    "n_ratings": 4,
+    "median_difficulty": 1.5,
+    "median_time_minutes": 15,
+    "mean_difficulty": 1.5
+  },
+  {
+    "task_id": "MI|2024-11-29|1",
+    "n_ratings": 4,
+    "median_difficulty": 2.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 2.25
+  },
+  {
+    "task_id": "MI|2024-11-29|2",
+    "n_ratings": 4,
+    "median_difficulty": 2.5,
+    "median_time_minutes": 30,
+    "mean_difficulty": 2.75
+  },
+  {
+    "task_id": "MI|2024-11-29|3",
+    "n_ratings": 4,
+    "median_difficulty": 4.5,
+    "median_time_minutes": 45,
+    "mean_difficulty": 4.0
+  },
+  {
+    "task_id": "MI|2024-11-29|4",
+    "n_ratings": 4,
+    "median_difficulty": 1.5,
+    "median_time_minutes": 22,
+    "mean_difficulty": 2.0
+  },
+  {
+    "task_id": "MI|2025-11-28|1",
+    "n_ratings": 4,
+    "median_difficulty": 1.5,
+    "median_time_minutes": 15,
+    "mean_difficulty": 1.75
+  },
+  {
+    "task_id": "MI|2025-11-28|2",
+    "n_ratings": 4,
+    "median_difficulty": 2.5,
+    "median_time_minutes": 30,
+    "mean_difficulty": 2.5
+  },
+  {
+    "task_id": "MI|2025-11-28|3",
+    "n_ratings": 4,
+    "median_difficulty": 4.0,
+    "median_time_minutes": 37,
+    "mean_difficulty": 3.75
+  },
+  {
+    "task_id": "MI|2025-11-28|4",
+    "n_ratings": 4,
+    "median_difficulty": 1.5,
+    "median_time_minutes": 15,
+    "mean_difficulty": 1.5
+  },
+  {
+    "task_id": "ZI|2010-07-02|6",
+    "n_ratings": 4,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 2.5
+  },
+  {
+    "task_id": "ZI|2011-06-13|5",
+    "n_ratings": 4,
+    "median_difficulty": 2.5,
+    "median_time_minutes": 22,
+    "mean_difficulty": 2.5
+  },
+  {
+    "task_id": "ZI|2012-06-20|1",
+    "n_ratings": 4,
+    "median_difficulty": 2.5,
+    "median_time_minutes": 22,
+    "mean_difficulty": 2.25
+  },
+  {
+    "task_id": "ZI|2012-06-20|2",
+    "n_ratings": 4,
+    "median_difficulty": 3.5,
+    "median_time_minutes": 37,
+    "mean_difficulty": 3.25
+  },
+  {
+    "task_id": "ZI|2012-06-20|3",
+    "n_ratings": 4,
+    "median_difficulty": 1.5,
+    "median_time_minutes": 15,
+    "mean_difficulty": 1.75
+  },
+  {
+    "task_id": "ZI|2012-06-20|4",
+    "n_ratings": 4,
+    "median_difficulty": 4.5,
+    "median_time_minutes": 45,
+    "mean_difficulty": 4.25
+  },
+  {
+    "task_id": "ZI|2013-06-18|1",
+    "n_ratings": 4,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 37,
+    "mean_difficulty": 3.25
+  },
+  {
+    "task_id": "ZI|2013-06-18|2",
+    "n_ratings": 4,
+    "median_difficulty": 3.5,
+    "median_time_minutes": 30,
+    "mean_difficulty": 3.25
+  },
+  {
+    "task_id": "ZI|2013-06-18|3",
+    "n_ratings": 4,
+    "median_difficulty": 2.5,
+    "median_time_minutes": 30,
+    "mean_difficulty": 2.25
+  },
+  {
+    "task_id": "ZI|2013-06-18|4",
+    "n_ratings": 4,
+    "median_difficulty": 2.0,
+    "median_time_minutes": 22,
+    "mean_difficulty": 2.25
+  },
+  {
+    "task_id": "ZI|2013-06-18|5",
+    "n_ratings": 4,
+    "median_difficulty": 4.0,
+    "median_time_minutes": 45,
+    "mean_difficulty": 3.5
+  },
+  {
+    "task_id": "ZI|2014-06-17|1",
+    "n_ratings": 4,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 3.0
+  },
+  {
+    "task_id": "ZI|2014-06-17|2",
+    "n_ratings": 4,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 3.25
+  },
+  {
+    "task_id": "ZI|2014-06-17|4",
+    "n_ratings": 4,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 37,
+    "mean_difficulty": 3.0
+  },
+  {
+    "task_id": "ZI|2014-06-17|5",
+    "n_ratings": 4,
+    "median_difficulty": 1.5,
+    "median_time_minutes": 22,
+    "mean_difficulty": 1.75
+  },
+  {
+    "task_id": "ZI|2015-06-16|1",
+    "n_ratings": 4,
+    "median_difficulty": 3.5,
+    "median_time_minutes": 37,
+    "mean_difficulty": 3.75
+  },
+  {
+    "task_id": "ZI|2015-06-16|2",
+    "n_ratings": 4,
+    "median_difficulty": 1.5,
+    "median_time_minutes": 15,
+    "mean_difficulty": 2.0
+  },
+  {
+    "task_id": "ZI|2015-06-16|3",
+    "n_ratings": 4,
+    "median_difficulty": 3.5,
+    "median_time_minutes": 37,
+    "mean_difficulty": 3.25
+  },
+  {
+    "task_id": "ZI|2015-06-16|5",
+    "n_ratings": 4,
+    "median_difficulty": 2.0,
+    "median_time_minutes": 22,
+    "mean_difficulty": 2.0
+  },
+  {
+    "task_id": "ZI|2016-06-21|1",
+    "n_ratings": 4,
+    "median_difficulty": 1.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 1.0
+  },
+  {
+    "task_id": "ZI|2016-06-21|2",
+    "n_ratings": 4,
+    "median_difficulty": 2.5,
+    "median_time_minutes": 30,
+    "mean_difficulty": 2.75
+  },
+  {
+    "task_id": "ZI|2016-06-21|3",
+    "n_ratings": 4,
+    "median_difficulty": 2.5,
+    "median_time_minutes": 30,
+    "mean_difficulty": 2.5
+  },
+  {
+    "task_id": "ZI|2016-06-21|4",
+    "n_ratings": 4,
+    "median_difficulty": 2.5,
+    "median_time_minutes": 30,
+    "mean_difficulty": 2.5
+  },
+  {
+    "task_id": "ZI|2016-06-21|5",
+    "n_ratings": 4,
+    "median_difficulty": 2.5,
+    "median_time_minutes": 37,
+    "mean_difficulty": 2.25
+  },
+  {
+    "task_id": "ZI|2017-06-13|1",
+    "n_ratings": 4,
+    "median_difficulty": 2.0,
+    "median_time_minutes": 22,
+    "mean_difficulty": 2.0
+  },
+  {
+    "task_id": "ZI|2017-06-13|2",
+    "n_ratings": 4,
+    "median_difficulty": 1.5,
+    "median_time_minutes": 15,
+    "mean_difficulty": 1.75
+  },
+  {
+    "task_id": "ZI|2017-06-13|3",
+    "n_ratings": 4,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 37,
+    "mean_difficulty": 3.0
+  },
+  {
+    "task_id": "ZI|2017-06-13|4",
+    "n_ratings": 4,
+    "median_difficulty": 2.5,
+    "median_time_minutes": 37,
+    "mean_difficulty": 2.5
+  },
+  {
+    "task_id": "ZI|2020-01-31|1",
+    "n_ratings": 4,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 37,
+    "mean_difficulty": 2.75
+  },
+  {
+    "task_id": "ZI|2020-01-31|2",
+    "n_ratings": 4,
+    "median_difficulty": 1.5,
+    "median_time_minutes": 22,
+    "mean_difficulty": 1.75
+  },
+  {
+    "task_id": "ZI|2020-01-31|3",
+    "n_ratings": 3,
+    "median_difficulty": 2.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 2.0
+  },
+  {
+    "task_id": "ZI|2020-01-31|4",
+    "n_ratings": 3,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 3.6666666666666665
+  },
+  {
+    "task_id": "ZI|2020-01-31|5",
+    "n_ratings": 3,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 2.3333333333333335
+  },
+  {
+    "task_id": "ZI|2020-01-31|6",
+    "n_ratings": 3,
+    "median_difficulty": 4.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 3.6666666666666665
+  },
+  {
+    "task_id": "ZI|2021-01-29|1",
+    "n_ratings": 3,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 2.6666666666666665
+  },
+  {
+    "task_id": "ZI|2021-01-29|2",
+    "n_ratings": 3,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 3.3333333333333335
+  },
+  {
+    "task_id": "ZI|2021-01-29|3",
+    "n_ratings": 3,
+    "median_difficulty": 2.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 2.0
+  },
+  {
+    "task_id": "ZI|2021-01-29|4",
+    "n_ratings": 3,
+    "median_difficulty": 4.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 3.6666666666666665
+  },
+  {
+    "task_id": "ZI|2021-01-29|5",
+    "n_ratings": 3,
+    "median_difficulty": 2.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 1.6666666666666667
+  },
+  {
+    "task_id": "ZI|2022-01-28|1",
+    "n_ratings": 3,
+    "median_difficulty": 4.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 3.3333333333333335
+  },
+  {
+    "task_id": "ZI|2022-01-28|2",
+    "n_ratings": 3,
+    "median_difficulty": 2.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 1.6666666666666667
+  },
+  {
+    "task_id": "ZI|2022-01-28|3",
+    "n_ratings": 3,
+    "median_difficulty": 2.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 1.6666666666666667
+  },
+  {
+    "task_id": "ZI|2022-01-28|4",
+    "n_ratings": 3,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 3.3333333333333335
+  },
+  {
+    "task_id": "ZI|2022-01-28|5",
+    "n_ratings": 3,
+    "median_difficulty": 1.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 1.0
+  },
+  {
+    "task_id": "ZI|2022-01-28|6",
+    "n_ratings": 3,
+    "median_difficulty": 4.0,
+    "median_time_minutes": 45,
+    "mean_difficulty": 4.0
+  },
+  {
+    "task_id": "ZI|2023-01-27|1",
+    "n_ratings": 3,
+    "median_difficulty": 4.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 3.6666666666666665
+  },
+  {
+    "task_id": "ZI|2023-01-27|2",
+    "n_ratings": 3,
+    "median_difficulty": 2.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 1.6666666666666667
+  },
+  {
+    "task_id": "ZI|2023-01-27|3",
+    "n_ratings": 3,
+    "median_difficulty": 2.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 1.6666666666666667
+  },
+  {
+    "task_id": "ZI|2023-01-27|4",
+    "n_ratings": 3,
+    "median_difficulty": 4.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 4.0
+  },
+  {
+    "task_id": "ZI|2023-01-27|5",
+    "n_ratings": 3,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 2.6666666666666665
+  },
+  {
+    "task_id": "ZI|2023-02-02|1",
+    "n_ratings": 3,
+    "median_difficulty": 4.0,
+    "median_time_minutes": 45,
+    "mean_difficulty": 3.6666666666666665
+  },
+  {
+    "task_id": "ZI|2023-02-02|2",
+    "n_ratings": 3,
+    "median_difficulty": 2.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 1.6666666666666667
+  },
+  {
+    "task_id": "ZI|2023-02-02|3",
+    "n_ratings": 3,
+    "median_difficulty": 2.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 2.0
+  },
+  {
+    "task_id": "ZI|2023-02-02|4",
+    "n_ratings": 3,
+    "median_difficulty": 4.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 4.0
+  },
+  {
+    "task_id": "ZI|2023-02-02|5",
+    "n_ratings": 3,
+    "median_difficulty": 1.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 1.0
+  },
+  {
+    "task_id": "ZI|2025-02-07|1",
+    "n_ratings": 3,
+    "median_difficulty": 4.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 3.6666666666666665
+  },
+  {
+    "task_id": "ZI|2025-02-07|2",
+    "n_ratings": 3,
+    "median_difficulty": 2.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 1.6666666666666667
+  },
+  {
+    "task_id": "ZI|2025-02-07|3",
+    "n_ratings": 3,
+    "median_difficulty": 3.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 2.3333333333333335
+  },
+  {
+    "task_id": "ZI|2025-02-07|4",
+    "n_ratings": 3,
+    "median_difficulty": 4.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 4.0
+  },
+  {
+    "task_id": "ZI|2025-02-07|5",
+    "n_ratings": 3,
+    "median_difficulty": 1.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 1.0
+  },
+  {
+    "task_id": "ZI|2026-02-06|1",
+    "n_ratings": 3,
+    "median_difficulty": 4.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 4.0
+  },
+  {
+    "task_id": "ZI|2026-02-06|2",
+    "n_ratings": 3,
+    "median_difficulty": 4.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 3.6666666666666665
+  },
+  {
+    "task_id": "ZI|2026-02-06|3",
+    "n_ratings": 3,
+    "median_difficulty": 2.0,
+    "median_time_minutes": 30,
+    "mean_difficulty": 1.6666666666666667
+  },
+  {
+    "task_id": "ZI|2026-02-06|4",
+    "n_ratings": 3,
+    "median_difficulty": 4.0,
+    "median_time_minutes": 45,
+    "mean_difficulty": 3.6666666666666665
+  },
+  {
+    "task_id": "ZI|2026-02-06|5",
+    "n_ratings": 3,
+    "median_difficulty": 1.0,
+    "median_time_minutes": 15,
+    "mean_difficulty": 1.3333333333333333
+  }
+]

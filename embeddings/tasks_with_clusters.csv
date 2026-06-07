@@ -3,7 +3,7 @@ MI|2025-11-28|1,MI,2025-11-28,1,"RJEŠENJA UPISATI NA OVOME PAPIRU
 
  
 Za funkciju f odredite, ako je moguće, vrijeme izvođenja u Θ notaciji, a ako nije moguće, odredite vrijeme izvođenja u 
-O i Ω notaciji. Rješenje upišite u pravokutnik pored zadataka.",12,Analiza složenosti algoritama,0.09370972,MI_svi_do_2026.pdf,1.0,5.0,10.0,0.5,2.0,detail,6.0,complexity|queue,Zadatak 1. (5 bodova) – RJEŠENJA UPISATI NA OVOME PAPIRU...
+O i Ω notaciji. Rješenje upišite u pravokutnik pored zadataka.",6,Hash tablice,0.027299142,MI_svi_do_2026.pdf,1.0,5.0,10.0,0.5,2.0,detail,6.0,complexity|queue,Zadatak 1. (5 bodova) – RJEŠENJA UPISATI NA OVOME PAPIRU...
 MI|2025-11-28|2,MI,2025-11-28,2,"Potrebno je implementirati metode Count, Reverse i RemoveLast jednostruko povezane linearne liste 
 implementirane pokazivačima. Lista treba biti ostvarena korištenjem predložaka (eng. templates). Metoda Count broji 
 i vraća ukupan broj elemenata u listi, metoda Reverse obrće redoslijed elemenata u listi (zadnji element postaje glava, 
@@ -56,11 +56,11 @@ Red q je adekvatno stvoren i inicijaliziran prije poziva funkcije, te ga se u fu
 Queue<T> dozvoljeno je koristiti samo funkcije enqueue i dequeue: 
 Prilikom izrade funkcije reorder_by_size, dozvoljeno je pretpostaviti da će red sadržavati barem jedan element. 
 Dozvoljeno je koristiti pomoćne redove ili polja. 
-Nije dozvoljeno korištenje ni pomoćnih funkcija niti članskih varijabli koje se koriste za implementaciju reda!",3,Implementacija lista,0.27754092,MI_svi_do_2026.pdf,1.0,10.0,30.0,0.3333333333,3.0,core,6.0,linked_list|queue,Zadatak 2. (10 bodova) Potrebno je implementirati metode Count...
+Nije dozvoljeno korištenje ni pomoćnih funkcija niti članskih varijabli koje se koriste za implementaciju reda!",2,Linearne liste,0.089165196,MI_svi_do_2026.pdf,1.0,10.0,30.0,0.3333333333,3.0,core,6.0,linked_list|queue,Zadatak 2. (10 bodova) Potrebno je implementirati metode Count...
 MI|2025-11-28|4,MI,2025-11-28,4,"U cjelobrojnom polju pohranjen je sljedeći niz brojeva: 
 5, 8, 5, 2, 7, 4, 8, 9 
 Ilustrirajte uzlazno sortiranje algoritmom Shell sort uz korake k = 5, 3, 1. Ispišite polje nakon svake promjene i 
-podcrtajte sve brojeve relevantne za sljedeći korak.",6,Rasuto adresiranje,0.099809386,MI_svi_do_2026.pdf,2.0,10.0,30.0,0.3333333333,1.0,core,3.0,sorting,Zadatak 4. (10 bodova) U cjelobrojnom polju pohranjen je...
+podcrtajte sve brojeve relevantne za sljedeći korak.",4,Uzlazno sortiranje,0.072271705,MI_svi_do_2026.pdf,2.0,10.0,30.0,0.3333333333,1.0,core,3.0,sorting,Zadatak 4. (10 bodova) U cjelobrojnom polju pohranjen je...
 MI|2025-11-28|3,MI,2025-11-28,3,"template<typename T> 
 class Queue{ 
  private: 
@@ -250,14 +250,14 @@ korak = 1
 2 4 5 7 8 8 8 9 
 2 4 5 7 7 8 8 9 
 2 4 5 5 7 8 8 9 
-2 4 5 5 7 8 8 9",7,Rasuto adresiranje stoga,0.2964331,MI_svi_do_2026.pdf,2.0,10.0,30.0,0.3333333333,4.0,core,6.0,queue,Zadatak 3. (10 bodova) template<typename T> class Queue...
+2 4 5 5 7 8 8 9",5,Red i stog,0.12817673,MI_svi_do_2026.pdf,2.0,10.0,30.0,0.3333333333,4.0,core,6.0,queue,Zadatak 3. (10 bodova) template<typename T> class Queue...
 MI|2024-11-29|1,MI,2024-11-29,1,"RJEŠENJA UPISATI NA OVOME PAPIRU 
 
  
 Za funkciju f u a) dijelu zadatka te za odsječak koda u b) dijelu zadatku odredite, ako je moguće, vrijeme izvođenja u Θ 
 notaciji, a ako nije moguće, odredite vrijeme izvođenja u O i Ω notaciji. Rješenja upišite u pravokutnike pored zadataka. 
 U a) dijelu zadatka polja A i B sadrže n prirodnih brojeva (|A| = n, |B| = n). Članovi polja A i B mogu, ali i ne moraju biti 
-sortirani (ne znamo unaprijed).",12,Analiza složenosti algoritama,0.120426856,MI_svi_do_2026.pdf,6.0,10.0,30.0,0.3333333333,2.0,core,6.0,complexity|queue,Zadatak 1. (10 bodova) – RJEŠENJA UPISATI NA OVOME PAPIRU...
+sortirani (ne znamo unaprijed).",6,Hash tablice,0.048448466,MI_svi_do_2026.pdf,6.0,10.0,30.0,0.3333333333,2.0,core,6.0,complexity|queue,Zadatak 1. (10 bodova) – RJEŠENJA UPISATI NA OVOME PAPIRU...
 MI|2024-11-29|2,MI,2024-11-29,2,"Potrebno je implementirati metodu AddUnique, Contains i Remove jednostruko povezane linearne liste 
 implementirane pokazivačima. Lista treba biti ostvarena korištenjem predložaka (eng. templates). Metoda AddUnique 
 dodaje novi element na kraj liste samo ako element već ne postoji, metoda Remove uklanja prvi element liste sa 
@@ -304,7 +304,7 @@ class MyList{
  void AddUnique(T val){ //vaš kod za AddUnique } 
  void Remove(T val){ // vaš kod za Remove } 
  bool Contains(T val){ // vaš kod za Contains } 
-};",3,Implementacija lista,0.20300157,MI_svi_do_2026.pdf,6.0,10.0,30.0,0.3333333333,3.0,core,6.0,linked_list|queue,Zadatak 2. (10 bodova) Potrebno je implementirati metodu AddUnique...
+};",2,Linearne liste,0.08072601,MI_svi_do_2026.pdf,6.0,10.0,30.0,0.3333333333,3.0,core,6.0,linked_list|queue,Zadatak 2. (10 bodova) Potrebno je implementirati metodu AddUnique...
 MI|2024-11-29|3,MI,2024-11-29,3,"Napisati rekurzivnu funkciju koja u zadanom izvorišnom stogu (s) uklanja sve višestruke elemente koji se pojavljuju 
 zaredom na način da ih se zamjenjuje samo jednom pojavom tog istog elementa. Funkcija mora imati prototip: 
 template<typename T> 
@@ -313,7 +313,7 @@ Stog s je adekvatno stvoren i inicijaliziran prije poziva funkcije, te ga se u f
 Stack<T> dozvoljeno je koristiti samo funkcije push i pop: 
 Prilikom izrade funkcije remove_multiple, dozvoljeno je pretpostaviti da će stog sadržavati barem jedan element. 
 Nije dozvoljeno je korištenje pomoćnih funkcija! Korištenje članskih varijabli koje se koriste za implementaciju stoga 
-podataka nije dozvoljeno.",7,Rasuto adresiranje stoga,0.28482324,MI_svi_do_2026.pdf,7.0,10.0,30.0,0.3333333333,4.0,core,6.0,queue|stack,Zadatak 3. (10 bodova) Napisati rekurzivnu funkciju...
+podataka nije dozvoljeno.",3,Rekurzija,0.12136358,MI_svi_do_2026.pdf,7.0,10.0,30.0,0.3333333333,4.0,core,6.0,queue|stack,Zadatak 3. (10 bodova) Napisati rekurzivnu funkciju...
 MI|2024-11-29|4,MI,2024-11-29,4,"U cjelobrojnom polju pohranjen je sljedeći niz brojeva: 
 8, 6, 5, 4, 7, 2, 3, 1 
 Ilustrirajte uzlazno sortiranje algoritmom quicksort. Stožer se odabire metodom aproksimacije medijana temeljem 
@@ -444,7 +444,7 @@ T remove_multiple(Stack<T> &s) {
 1 2 3 4 6 5 7 8 -> skrivanje stožera 
 1 2 3 4 6 5 7 8 -> stožer se „mijenja sa samim sobom“ 
 1 2 3 4 6 5 7 8 -> Quicksort završava zbog cutoffa, sortiraju se 6 i 5 za kraj 
-1 2 3 4 5 6 7 8 -> Quicksort završava zbog cutoffa, sortiraju se 6 i 5 za kraj",6,Rasuto adresiranje,0.1262238,MI_svi_do_2026.pdf,7.0,10.0,30.0,0.3333333333,1.0,core,6.0,queue|sorting,Zadatak 4. (10 bodova) U cjelobrojnom polju pohranjen je...
+1 2 3 4 5 6 7 8 -> Quicksort završava zbog cutoffa, sortiraju se 6 i 5 za kraj",5,Red i stog,0.07050039,MI_svi_do_2026.pdf,7.0,10.0,30.0,0.3333333333,1.0,core,6.0,queue|sorting,Zadatak 4. (10 bodova) U cjelobrojnom polju pohranjen je...
 MI|2023-11-27|1,MI,2023-11-27,1,"Potrebno je napisati rekurzivnu funkciju brojIzStringa koja će za zadani argument niz vratiti nenegativni cijeli broj 
 sastavljen od znamenki na parnim mjestima u stringu niz (parna mjesta/indeksi su 0, 2, …), ali u suprotnom smjeru od 
 redoslijeda znamenki u ulaznom nizu. To znači da će znamenka s najvećim parnim indeksom u ulaznom nizu biti na 
@@ -467,7 +467,7 @@ mjestu jedinica)
 0 (znamenke 0 i 0 su na nultom i drugom mjestu u ulaznom nizu; 0 će biti na mjestu desetica i jedinica) 
 ""12345678"" 
 7531 (znamenke 1, 3, 5, 7 na parnim mjestima u ulaznom nizu; 7 na mjestu tisućica, 5 na mjestu stotica, itd.) 
-Napomena: nerekurzivna rješenja neće biti priznata.",2,Rekurzivni algoritmi,0.3075258,MI_svi_do_2026.pdf,10.0,8.0,20.0,0.4,4.0,core,6.0,queue,Zadatak 1. (8 bodova) Potrebno je napisati rekurzivnu funkciju...
+Napomena: nerekurzivna rješenja neće biti priznata.",9,Pretraga u nizu,0.11174027,MI_svi_do_2026.pdf,10.0,8.0,20.0,0.4,4.0,core,6.0,queue,Zadatak 1. (8 bodova) Potrebno je napisati rekurzivnu funkciju...
 MI|2023-11-27|2,MI,2023-11-27,2,"RJEŠENJA UPISATI NA OVOME PAPIRU 
 
  
@@ -513,11 +513,11 @@ s += g(k - 1);
 return s; 
 } 
 Rješenje a): 
-Rješenje b):",12,Analiza složenosti algoritama,0.08688146,MI_svi_do_2026.pdf,10.0,8.0,20.0,0.4,2.0,core,6.0,complexity|queue,Zadatak 2. (8 bodova) – RJEŠENJA UPISATI NA OVOME PAPIRU...
+Rješenje b):",6,Hash tablice,0.032092024,MI_svi_do_2026.pdf,10.0,8.0,20.0,0.4,2.0,core,6.0,complexity|queue,Zadatak 2. (8 bodova) – RJEŠENJA UPISATI NA OVOME PAPIRU...
 MI|2023-11-27|3,MI,2023-11-27,3,"Potrebno je implementirati metodu AddSorted, Print i destruktor jednostruko povezane linearne liste 
 implementirane pokazivačima. Lista treba biti ostvarena korištenjem predložaka (eng. templates). Metoda AddSorted 
 dodaje novi element u uzlazno sortiranu listu, metoda Print ispisuje listu, a destruktor oslobađa memoriju svih 
-elemenata liste. Atom liste ListElement i prototipovi funkcija zadani su odsječcima koda u nastavku.",3,Implementacija lista,0.22242041,MI_svi_do_2026.pdf,11.0,8.0,20.0,0.4,3.0,core,6.0,linked_list|queue|sorting,Zadatak 3. (8 bodova) Potrebno je implementirati metodu AddSorted...
+elemenata liste. Atom liste ListElement i prototipovi funkcija zadani su odsječcima koda u nastavku.",2,Linearne liste,0.08551955,MI_svi_do_2026.pdf,11.0,8.0,20.0,0.4,3.0,core,6.0,linked_list|queue|sorting,Zadatak 3. (8 bodova) Potrebno je implementirati metodu AddSorted...
 MI|2023-11-27|4,MI,2023-11-27,4,"Napisati rekurzivnu funkciju copy_reverse koja ulazni stog s kopira u novi stog o na način da sadržaj ulaznog stoga 
 s ostaje očuvan nakon završetka funkcije. Elementi na novom stogu o, koji funkcija vraća, trebaju biti u obrnutom 
 redoslijedu u odnosu na elemente stoga s. Funkcija copy_reverse mora imati složenost O(n^2) i mora imati prototip: 
@@ -526,7 +526,7 @@ Stack<T>* copy_reverse(Stack<T>& s);
 Stog s je adekvatno stvoren i inicijaliziran prije poziva funkcije, te ga se u funkciji može koristiti. Pri radu sa stogom 
 Stack<T> dozvoljeno je koristiti samo funkcije push i pop te funkciju insert_bottom: 
 Nije dozvoljeno korištenje pomoćnih funkcija osim push, pop i insert_bottom. Korištenje članskih varijabli koje se 
-koriste za implementaciju stoga podataka nije dozvoljeno. Promjena prototipa funkcije copy_reverse nije dozvoljena!",7,Rasuto adresiranje stoga,0.38654622,MI_svi_do_2026.pdf,11.0,8.0,20.0,0.4,4.0,core,6.0,complexity|queue|stack,Zadatak 4. (8 bodova) Napisati rekurzivnu funkciju copy_reverse...
+koriste za implementaciju stoga podataka nije dozvoljeno. Promjena prototipa funkcije copy_reverse nije dozvoljena!",9,Pretraga u nizu,0.1157998,MI_svi_do_2026.pdf,11.0,8.0,20.0,0.4,4.0,core,6.0,complexity|queue|stack,Zadatak 4. (8 bodova) Napisati rekurzivnu funkciju copy_reverse...
 MI|2023-11-27|5,MI,2023-11-27,5,"Zadano je polje brojeva s elementima: 
 8,6,6,7,9,3,4,0 
 Ilustrirajte uzlazno sortiranje zadanog niza brojeva (ispišite polje nakon svake promjene i podcrtajte sve brojeve 
@@ -770,7 +770,7 @@ Hk=1
 0 4 4 6 6 7 9 8 
 0 3 4 6 6 7 9 8 
 0 3 4 6 6 7 9 9 
-0 3 4 6 6 7 8 9",6,Rasuto adresiranje,0.26581225,MI_svi_do_2026.pdf,11.0,8.0,20.0,0.4,1.0,core,3.0,sorting,Zadatak 5. (8 bodova) Zadano je polje brojeva...
+0 3 4 6 6 7 8 9",5,Red i stog,0.06630607,MI_svi_do_2026.pdf,11.0,8.0,20.0,0.4,1.0,core,3.0,sorting,Zadatak 5. (8 bodova) Zadano je polje brojeva...
 MI|2021-11-28|1,MI,2021-11-28,1,"a) Zadano je polje prirodnih brojeva A, koje ima n članova (n ≥ 1). Potrebno je napisati rekurzivnu funkciju koja će u 
 polju A obrnuti redoslijed parnih brojeva u polju. Naputak: potrebno je zamijeniti k-ti parni broj slijeva s k-tim parnim 
 brojem zdesna (npr. prvi parni broj slijeva treba zamijeniti s prvim parnim brojem zdesna; vidjeti primjere). Neparni 
@@ -796,7 +796,7 @@ A = {12}
 0 
  
 Napomena: nerekurzivna rješenja neće biti priznata. 
-b) Odredite složenost funkcije koju ste implementirali u a) dijelu zadatka u O, Ω i Θ notaciji.",4,Rekurzivni algoritmi,0.22315812,,,,,,,,,,
+b) Odredite složenost funkcije koju ste implementirali u a) dijelu zadatka u O, Ω i Θ notaciji.",9,Pretraga u nizu,0.0942996,,,,,,,,,,
 MI|2021-11-28|2,MI,2021-11-28,2,"RJEŠENJA UPISATI NA OVOME PAPIRU 
 
  
@@ -819,11 +819,11 @@ a) int f(int A[], int n) { // n >= 0, pom(A, n) = Θ(log2n)
  return zbroj; 
  } 
 } 
-Rješenje:",12,Analiza složenosti algoritama,0.08844725,,,,,,,,,,
+Rješenje:",6,Hash tablice,0.029843176,,,,,,,,,,
 MI|2021-11-28|3,MI,2021-11-28,3,"Potrebno je implementirati metode AddFirst, Find i destruktor dvostruko povezane linearne liste implementirane 
 pokazivačima. Lista treba biti ostvarena korištenjem predložaka (eng. templates). Metoda AddFirst dodaje novi 
 element na početak liste, metoda Find dojavljuje nalazi li se element u listi, a destruktor oslobađa memoriju svih 
-elemenata liste. Atom liste ListElement i prototipovi funkcija zadani su odsječcima koda u nastavku.",3,Implementacija lista,0.2080067,,,,,,,,,,
+elemenata liste. Atom liste ListElement i prototipovi funkcija zadani su odsječcima koda u nastavku.",2,Linearne liste,0.08504872,,,,,,,,,,
 MI|2021-11-28|4,MI,2021-11-28,4,"Napisati rekurzivnu funkciju koja izvorišni red (sourceq) razdvaja u dva nova reda na način da se svi članovi na parnim 
 pozicijama stavljaju u prvi red (queue1), a svi članovi na neparnim pozicijama u drugi red (queue2). Nakon izvršavanja 
 funkcije izvorišni red ostaje prazan. Funkcija mora imati prototip: 
@@ -1037,7 +1037,7 @@ void split(Queue<T>* sourceq, Queue<T>* queue1, Queue<T>* queue2){
  queue1->enqueue(val); 
  split(sourceq, queue2, queue1); 
  } 
-}",7,Rasuto adresiranje stoga,0.31796068,,,,,,,,,,
+}",9,Pretraga u nizu,0.10697837,,,,,,,,,,
 MI|2021-11-29|1,MI,2021-11-29,1,"Zadani su razredi Stack<T> i Queue<T> za koji su definirani konstruktor, članske funkcije za dodavanje elementa te 
 skidanje elementa. Definicije razreda i prototipovi navedenih funkcija su: 
 template <class T> class Stack { 
@@ -1079,7 +1079,7 @@ Red prije preuređenja: IZLAZ -- 4, 1, 5, 7, 8, 2, 3, 9 -- ULAZ
  
 Za v = 5, red nakon preuređenja treba biti: IZLAZ -- 4, 1, 2, 3, 5, 7, 8, 9 -- ULAZ 
 Red prije preuređenja: IZLAZ -- 14, 11, 5, 7, 8, 9 -- ULAZ 
-Za v = 5, red ostaje nepromijenjen nakon poziva funkcije preurediRed: IZLAZ -- 14, 11, 5, 7, 8, 9 -- ULAZ",7,Rasuto adresiranje stoga,0.24057385,,,,,,,,,,
+Za v = 5, red ostaje nepromijenjen nakon poziva funkcije preurediRed: IZLAZ -- 14, 11, 5, 7, 8, 9 -- ULAZ",4,Uzlazno sortiranje,0.13886571,,,,,,,,,,
 MI|2021-11-29|2,MI,2021-11-29,2,"Zadani su nizovi A i B duljine m i n, koji predstavljaju skupove cijelih brojeva (m je broj elemenata skupa A, a n je broj 
 elemenata skupa B). Brojevi unutar nizova uzlazno su poredani. Napišite rekurzivnu funkciju jestPodskup koja će 
 provjeriti je li skup B podskup skupa A. Ako je B prazan skup (tj. ako je n = 0), funkcija treba vratiti logičku istinu. Ako 
@@ -1088,12 +1088,12 @@ Prototip funkcije je:
 bool jestPodskup(int A[], int B[], int m, int n); 
 Primjeri: 
 A = {1, 2, 4, 6, 7, 9}, B = {1, 4, 9} → B je podskup skupa A (funkcija treba vratiti logičku istinu) 
-A = {1, 2, 4, 6, 7, 9}, B = {1, 4, 10} → B nije podskup skupa A (funkcija treba vratiti logičku laž)",4,Rekurzivni algoritmi,0.25396013,,,,,,,,,,
+A = {1, 2, 4, 6, 7, 9}, B = {1, 4, 10} → B nije podskup skupa A (funkcija treba vratiti logičku laž)",9,Pretraga u nizu,0.1144037,,,,,,,,,,
 MI|2021-11-29|3,MI,2021-11-29,3,"RJEŠENJA UPISATI NA OVOME PAPIRU 
 
  
 Za funkciju f odredite vrijeme izvođenja u O i Ω notaciji i, ako je moguće, vrijeme izvođenja u Θ notaciji. Rješenje 
-upišite u pravokutnik pored zadatka.",12,Analiza složenosti algoritama,0.10122062,,,,,,,,,,
+upišite u pravokutnik pored zadatka.",6,Hash tablice,0.030930554,,,,,,,,,,
 MI|2021-11-29|4,MI,2021-11-29,4,"Napisati rekurzivnu funkciju JumpSearchRec kojom se obavlja rekurzivno blokovsko traženje (eng. jump search) 
 elementa u polju. Prototip funkcije JumpSearchRec i pozivajuća funkcija JumpSearch su zadani kôdom: 
 bool JumpSearchRec(int A[], const size_t n, const size_t blockSize, const int &item); 
@@ -1105,7 +1105,7 @@ treba ju zasebno implementirati) zadanu prototipom:
 bool LinearSearch(int A[], const size_t n, const int &item); 
 Funkcija JumpSearchRec treba biti ostvarena u složenosti O(n1/2), pri čemu je n broj elemenata polja u kojem se traži. 
 Napomena: Funkcija mora biti implementirana rekurzivno; iterativna rješenja se neće priznavati. Funkcije 
-JumpSearch i LinearSearch ne treba pisati, već ih se samo koristi.",9,Implementacija stoga,0.35471267,,,,,,,,,,
+JumpSearch i LinearSearch ne treba pisati, već ih se samo koristi.",9,Pretraga u nizu,0.13228038,,,,,,,,,,
 MI|2021-11-29|5,MI,2021-11-29,5,"Zadana je dinamička jednostruka lista koja ima pokazivače na glavu (head) i rep (tail): 
 template <typename T> class List{ 
  private: 
@@ -1152,185 +1152,7 @@ Rješenje:
  
 
  
-RJEŠENJA",7,Rasuto adresiranje stoga,0.26098818,,,,,,,,,,
-MI|2021-11-29|1,MI,2021-11-29,1,"template <class T> void preurediRed(Queue<T>* q, T v) { 
- Stack<T> Sm, Sv, Spom; 
- T elem; 
- while (q->dequeue(elem)) { 
- 
- 
- if (elem < v) Sm.push(elem); 
- else Sv.push(elem); 
- } 
- while (Sm.pop(elem)) 
- 
- 
- 
- Spom.push(elem); 
- while (Spom.pop(elem)) 
- 
- 
- 
- q->enqueue(elem); 
- 
- while (Sv.pop(elem)) 
- 
- 
- 
- Spom.push(elem); 
- while (Spom.pop(elem)) 
- 
- 
- 
- q->enqueue(elem); 
-} 
- 
-int main(void) { 
- 
- 
- 
- 
- 
- Queue<int> q; 
- // … 
- 
- 
- 
- 
- 
- 
- preurediRed(&q, 15); 
-}",7,Rasuto adresiranje stoga,0.36541784,,,,,,,,,,
-MI|2021-11-29|2,MI,2021-11-29,2,"//Provjeriti je li skup B podskup skupa A. |A| = m, |B| = n 
-//Ako je B prazan skup (tj.ako je n = 0), funkcija treba vratiti logičku istinu. 
-//Ako je skup A prazan (tj.ako je m = 0), funkcija treba vratiti logičku laž. 
-bool jestPodskup(int A[], int B[], int m, int n) { 
- 
-if (n == 0) return true; 
- 
- 
- 
- 
-else if (m == 0) return false; 
- 
- 
-else if (n > m) return false; 
- 
- 
- 
- 
-if (B[n - 1] > A[m - 1]) 
- 
- 
-return false; 
- 
- 
- 
- 
- 
-else if (B[n - 1] == A[m - 1]) 
- 
- 
- 
- 
-return jestPodskup(A, B, m - 1, n - 1); 
- 
-else if (n < m) 
- 
- 
- 
- 
- 
- 
- 
-return jestPodskup(A, B, m - 1, n); 
-} 
- 
- 
-Drugo moguće rješenje: 
-bool jestPodskup(int A[], int B[], int m, int n) { 
- if (n == 0) { 
- return true; 
- } else if (m == 0) { 
- return false; 
- } 
- 
- if (A[m - 1] == B[n - 1]) { 
- return jestPodskup(A, B, m - 1, n - 1); 
- } else { 
- return jestPodskup(A, B, m - 1, n); 
- } 
-}",4,Rekurzivni algoritmi,0.31120834,,,,,,,,,,
-MI|2021-11-29|3,MI,2021-11-29,3,"Rješenje: f(n) = Ω(n) = O(n) = Θ(n) 
- 
-Objašnjenje rješenja: 
-Općenito, petlja se obavlja k = ⌊𝑙𝑜𝑔10 𝑛⌋ + 1 puta. Npr. ako je n = 10^k, gdje je k prirodni broj, tada je broj prolaza 
-kroz petlju k + 1. Npr. za n = 100, petlju prolazimo za i = 1, 10, 100, tj. ukupno 3 puta (3 = ⌊𝑙𝑜𝑔10 100⌋ + 1) 
- 
-Pretpostavimo zbog jednostavnosti da je n = 10^k, gdje je k prirodni broj, pa vrijedi: 
-za i = 1: Θ(1) + Θ(1) 
-za i = 10: Θ(1) + Θ(10) 
-za i = 100: Θ(1) + Θ(100) 
-… 
-za i = n = 10^k: Θ(1) + Θ(10^k) 
-Ukupno: (k+1) ∙ Θ(1) + Θ(1 + 10 + … + 10^k) = Θ(k) + Θ(10^k) = Θ(log n) + Θ(n) = Θ(n) 
-------- 
-Usporedbe radi, primjer programskog odsječka za koji bi vrijeme izvođenja bilo Θ(n∙log n): 
-}",4,Rekurzivni algoritmi,0.29779246,,,,,,,,,,
-MI|2021-11-29|4,MI,2021-11-29,4,"bool JumpSearchRec (int A[], const size_t n, const size_t blockSize, const int &item) { 
- int next = std::min((int)blockSize, (int)n - 1); 
- // find the right block 
- if (next < n - 1 && A[next] <= item) { 
- return JumpSearchRec (((int *)A) + blockSize, n - blockSize, blockSize, item); 
- } 
- // search the block 
- if (next == n - 1) { 
- ++next; 
- } 
- return LinearSearch (A, next, item); 
-} 
- 
- 
- 
- 
- 
-int f(int n) { // n >= 0, g(n) = Θ(n) 
- 
-if (n == 0) return 1; 
- 
-else { 
- 
- 
-int umnozak = 1; 
- 
- 
-for (int i = 1; i <= n; i *= 10) 
- 
- 
- 
-umnozak *= g(5) + g(n); 
- 
- 
-return umnozak; 
- 
-}",9,Implementacija stoga,0.3798466,,,,,,,,,,
-MI|2021-11-29|5,MI,2021-11-29,5,"bool RemoveFirst(){ 
- if(head != nullptr){ 
- ListElement<T> *pom = head; 
- head = head->next; 
- delete pom; 
- if(head == nullptr) 
- tail = nullptr; 
- return true; 
- } 
- return false; 
- } 
- 
-template <typename T> bool RemoveAllFromList(List<T> *lista){ 
- bool hasRemoved = false; 
- while(lista->RemoveFirst()) {hasRemoved = true; }; 
- return hasRemoved; 
-}",7,Rasuto adresiranje stoga,0.3810705,,,,,,,,,,
+RJEŠENJA",2,Linearne liste,0.1141514,,,,,,,,,,
 MI|2020-11-24|1,MI,2020-11-24,1,"Za zadane nizove A i B duljine m i n napišite rekurzivnu funkciju koja počevši od zadnjeg elementa (tj. elementa s 
 najvećim indeksom) ispisuje vrijednosti elemenata oba niza na nekoj poziciji i dodatno vrijednost većega od ta dva 
 elementa. Ako je jedan niz dulji, tada za elemente kraćeg niza koji nisu definirani ispisati ""-"". Pretpostaviti da su 
@@ -1358,7 +1180,7 @@ treba izgledati ovako:
  
 Prototip funkcije je: 
 void ispisiVeci(int A[], int m, int B[], int n); 
-Napomena: Nerekurzivno rješenje se neće priznati.",4,Rekurzivni algoritmi,0.2996675,,,,,,,,,,
+Napomena: Nerekurzivno rješenje se neće priznati.",9,Pretraga u nizu,0.11036535,,,,,,,,,,
 MI|2020-11-24|2,MI,2020-11-24,2,"ISPUNITI NA OVOM PAPIRU 
 
 Zadan je razred Stack<T> kojim je implementiran stog. Stog ima 
@@ -1394,7 +1216,7 @@ template <class T> class Stack {
  public: 
  bool push(T data); 
  bool pop(T &data); 
-};",7,Rasuto adresiranje stoga,0.34118515,,,,,,,,,,
+};",8,Dinamička alokacija,0.106987834,,,,,,,,,,
 MI|2020-11-24|3,MI,2020-11-24,3,"Zadana je jednostruko povezana lista cijelih brojeva. Lista 
 ima strukturu prikazanu okvirom desno. 
 Napišite člansku funkciju sljedećeg prototipa: 
@@ -1403,7 +1225,7 @@ koja će sve parne elemente iz liste nad kojom je pozvana
 prebaciti u listu dstList. Poredak elemenata u dstList mora 
 biti isti kao i poredak u originalnoj listi, npr.: 
 srcList: HEAD -> 5 -> 4 -> 7 -> 1 -> 6 -> 8 -> 2 -> 3 -> NULLPTR 
-dstList: HEAD -> 4 -> 6 -> 8 -> 2 -> NULLPTR",3,Implementacija lista,0.2765834,,,,,,,,,,
+dstList: HEAD -> 4 -> 6 -> 8 -> 2 -> NULLPTR",2,Linearne liste,0.11453104,,,,,,,,,,
 MI|2020-11-24|4,MI,2020-11-24,4,"ISPUNITI NA OVOM PAPIRU 
 
 Za funkcije f i g odredite, ako je moguće, vrijeme izvođenja u Θ notaciji, a ako nije moguće, odredite vrijeme 
@@ -1440,7 +1262,7 @@ int g(int n) { // n >= 0
  } 
 } 
  
-Rješenje:",12,Analiza složenosti algoritama,0.08237783,,,,,,,,,,
+Rješenje:",6,Hash tablice,0.029987764,,,,,,,,,,
 MI|2020-11-24|5,MI,2020-11-24,5,"ISPUNITI NA OVOM PAPIRU 
 
 Zadano je polje cijelih brojeva s elementima 8, 2, 6, 4, 1, 3, 5, 7. Ilustrirajte uzlazno sortiranje polja algoritmom 
@@ -1652,7 +1474,7 @@ Nije bilo promjene za i==4, kraj.
 
  
  
-Okrenite stranicu",6,Rasuto adresiranje,0.27687544,,,,,,,,,,
+Okrenite stranicu",5,Red i stog,0.08320089,,,,,,,,,,
 MI|2019-11-25|1,MI,2019-11-25,1,"a) Napišite rekurzivnu funkciju koja provjerava nalazi li se niz podniz unutar niza niz počevši s pozicijom pocetak. 
 Ako je to istina, funkcija treba vratiti logičku istinu, a inače logičku laž. Prototip funkcije je: 
 bool podnizUNizu(string niz, string podniz, int pocetak); 
@@ -1661,7 +1483,7 @@ dan!"", podniz ""dan"" i pocetak 6, funkcija treba vratiti logičku istinu.
 Napomene: Prazan podniz uvijek postoji unutar zadanog niza niz. Ako je niz niz prazan, funkcija treba vratiti 
 logičku laž. Nerekurzivno rješenje se neće priznati. 
 b) Napišite odsječak glavnog programa u kojemu se poziva funkcija iz a) dijela zadatka. 
-c) Odredite složenost vaše implementacije funkcije iz a) dijela zadatka u O, Ω i, ako je moguće, Θ notaciji.",8,Rekurzivne funkcije na strukturama podataka,0.26375055,,,,,,,,,,
+c) Odredite složenost vaše implementacije funkcije iz a) dijela zadatka u O, Ω i, ako je moguće, Θ notaciji.",3,Rekurzija,0.12722856,,,,,,,,,,
 MI|2019-11-25|2,MI,2019-11-25,2,"Odredite vrijeme izvođenja u O, Ω i, gdje je moguće, Θ notaciji za funkcije f1 i f2. Ako se vrijeme izvođenja u Θ 
 notaciji ne može odrediti, navedite tako u rješenju. Rješenja upišite u tablice pored zadataka. 
 a) 
@@ -1700,7 +1522,7 @@ void f2(int n) { // n >= 0
  
 O 
 Ω 
-Θ",12,Analiza složenosti algoritama,0.10275321,,,,,,,,,,
+Θ",6,Hash tablice,0.031279087,,,,,,,,,,
 MI|2019-11-25|3,MI,2019-11-25,3,"Zadan je razred List<T> kojim se implementira dinamička lista (lista realizirana pokazivačima). 
  template <typename T> 
  class List { 
@@ -1718,7 +1540,7 @@ od elementa item zadanog argumentom funkcije. Za usporedbu elemenata tipa T mož
 >=, <= ili != (nije ih potrebno implementirati). Članska funkcija treba imati prototip: 
 void removeGreaterThan(T item); 
 Napomena: u izradi funkcije removeGreaterThan nije dozvoljeno koristiti gotove funkcije za rad s listom (insert, delete 
-i sl).",7,Rasuto adresiranje stoga,0.2157332,,,,,,,,,,
+i sl).",2,Linearne liste,0.1163187,,,,,,,,,,
 MI|2019-11-25|4,MI,2019-11-25,4,"Zadan je razred Queue<T> kojim se implementira red. 
 template <class T> class Queue { 
 public: 
@@ -1735,7 +1557,7 @@ poredak članova ulaznog reda q) i tako formirani novi red vraća u pozivajuću 
 b) Svaki član na parnoj poziciji gledano s izlaza iz reda (2. član, 4. član, 6. član itd.) ostavlja u ulaznom redu (uz zadržani 
 poredak članova ulaznog reda q). 
 Napomena: U funkciji split nije dozvoljeno koristiti i/ili mijenjati internu implementaciju reda (polja ili pokazivače iz 
-razreda Queue<T>), već je potrebno koristiti članske funkcije enqueue i dequeue.",7,Rasuto adresiranje stoga,0.23600006,,,,,,,,,,
+razreda Queue<T>), već je potrebno koristiti članske funkcije enqueue i dequeue.",8,Dinamička alokacija,0.14644317,,,,,,,,,,
 MI|2019-11-25|5,MI,2019-11-25,5,"Zadano je polje cijelih brojeva s elementima: 3, 9, 1, 6, 8, 5, 3, 7, 2. Ilustrirajte uzlazno sortiranje zadanog niza brojeva 
 (ispišite polje nakon svake promjene i podcrtajte sve brojeve relevantne za sljedeći korak) algoritmom shellsort uz 
 korake K = {4, 3, 1}. 
@@ -2016,7 +1838,7 @@ rješenje
 
  
  
-Okrenite stranicu",6,Rasuto adresiranje,0.12393546,,,,,,,,,,
+Okrenite stranicu",5,Red i stog,0.0694715,,,,,,,,,,
 MI|2017-04-19|1,MI,2017-04-19,1,"a) Napišite rekurzivnu funkciju koja za znakovni niz (string) proizvoljne duljine provjerava ima li svaka otvorena uglata 
 zagrada u nizu (znak '[') pripadajuću zatvorenu uglatu zagradu (znak ']') i obratno. Funkcija treba vratiti 1, ako svaka 
 otvorena zagrada u nizu ima pripadajuću zatvorenu zagradu, a 0 inače. 
@@ -2031,7 +1853,7 @@ Napomena: nerekurzivno rješenje se neće priznati.
 b) Napišite odsječak glavnog programa u kojem se poziva funkcija iz a) dijela zadatka za niz ""[[]"". 
 Komentar uz zadatak: uparenost zagrada znači da svaka otvorena uglata zagrada (znak '[') ima pripadajuću zatvorenu 
 uglatu zagradu (znak ']'), gdje nije bitno da je redoslijed zagrada matematički ispravan, tj. i niz "" []"" i niz ""]["" su 
-ispravno zadani.",8,Rekurzivne funkcije na strukturama podataka,0.29749674,,,,,,,,,,
+ispravno zadani.",9,Pretraga u nizu,0.11320577,,,,,,,,,,
 MI|2017-04-19|2,MI,2017-04-19,2,"Odredite vrijeme izvođenja u O, Ω i, gdje je moguće, Θ notaciji za funkcije f1 i f2. Ako se vrijeme izvođenja u Θ 
 notaciji ne može odrediti, navedite tako u rješenju. Rješenja upišite u tablice pored zadataka. 
 a) 
@@ -2060,12 +1882,12 @@ void f2(int n) {
  
 O 
 Ω 
-Θ",12,Analiza složenosti algoritama,0.117883965,,,,,,,,,,
+Θ",6,Hash tablice,0.031279135,,,,,,,,,,
 MI|2017-04-19|3,MI,2017-04-19,3,"U polje cijelih brojeva pohranjen je sljedeći niz brojeva: 2, 1, 4, 5, 9, 3, 6, 7, 8. Ilustrirati uzlazno sortiranje 
 algoritmom Quicksort. Stožer za quicksort odabrati metodom aproksimacije medijana temeljem prvog, središnjeg i 
 zadnjeg člana. Polja s manje ili točno cutoff = 3 elementa sortirati insertion sortom. Navesti korake u sortiranju kod 
 kojih je došlo do zamjene pojedinih članova polja te označiti zamjene članova polja. Također, detaljno prikazati korake 
-zamjene kod sortiranja insertion sortom.",6,Rasuto adresiranje,0.07959316,,,,,,,,,,
+zamjene kod sortiranja insertion sortom.",4,Uzlazno sortiranje,0.056111157,,,,,,,,,,
 MI|2017-04-19|4,MI,2017-04-19,4,"U jednostruko povezanu nesortiranu listu spremljeni su cijeli brojevi. Lista je zadana sljedećom strukturom: 
 struct at { 
  int element; 
@@ -2315,7 +2137,7 @@ glava_izlaz = &((*glava_izlaz)->sljed);
 
  
  
-Okrenite stranicu",3,Implementacija lista,0.18954936,,,,,,,,,,
+Okrenite stranicu",5,Red i stog,0.08911625,,,,,,,,,,
 MI|2016-04-26|1,MI,2016-04-26,1,"Napišite rekurzivnu funkciju prototipa: 
 int PascalovTrokut (int redak, int stupac); 
 koja određuje i vraća cijeli broj koji se nalazi u retku redak i stupcu stupac u Pascalovom trokutu. Prikaz Pascalovog 
@@ -2343,7 +2165,7 @@ za poziv PascalovTrokut(1, 1), funkcija treba vratiti 1
 za poziv PascalovTrokut(2, 1), funkcija treba vratiti 2 
  
 za poziv PascalovTrokut(4, 2), funkcija treba vratiti 6 (primjer sa slike) 
-Napomena: nerekurzivno rješenje se neće priznati.",8,Rekurzivne funkcije na strukturama podataka,0.3073017,,,,,,,,,,
+Napomena: nerekurzivno rješenje se neće priznati.",9,Pretraga u nizu,0.11900395,,,,,,,,,,
 MI|2016-04-26|2,MI,2016-04-26,2,"Odredite vrijeme izvođenja u O, Ω i, ako je moguće, Θ notaciji za programski odsječak u a) dijelu zadatka i za funkciju 
 rekurzija u b) dijelu zadatka. Ako se vrijeme izvođenja u Θ notaciji ne može odrediti, navedite tako u rješenju. 
 Rješenja upišite u tablice pored zadatka. 
@@ -2378,7 +2200,7 @@ O
 Ω 
 Θ 
  
-6 = 3 + 3",12,Analiza složenosti algoritama,0.1476265,,,,,,,,,,
+6 = 3 + 3",6,Hash tablice,0.05722636,,,,,,,,,,
 MI|2016-04-26|3,MI,2016-04-26,3,"Za zadani program prikažite sadržaj sistemskog stoga počevši s pozivom funkcije f1 iz glavnog programa (linija 20) te 
 sve do neposredno prije izvođenja naredbe return 0; u funkciji f2 (linija 8). Uz svaku stavku napišite broj okteta (byte-
 ova) koje stavka zauzima na stogu. 
@@ -2416,10 +2238,10 @@ int f2(int *a, int *b) {
 21 return 0; 
 22 } 
  
-Sadržaj stoga:",8,Rekurzivne funkcije na strukturama podataka,0.36652964,,,,,,,,,,
+Sadržaj stoga:",0,Stog operacije,0.12698716,,,,,,,,,,
 MI|2016-04-26|4,MI,2016-04-26,4,"Zadano je polje brojeva s elementima: 8, 7, 2, 1, 4, 6, 8, 1. Ilustrirajte uzlazno sortiranje zadanog niza brojeva 
 (ispišite polje nakon svake promjene i podcrtajte sve brojeve relevantne za sljedeći korak) algoritmom shellsort uz 
-korake k = {4, 3, 1}.",6,Rasuto adresiranje,0.08706144,,,,,,,,,,
+korake k = {4, 3, 1}.",4,Uzlazno sortiranje,0.05750053,,,,,,,,,,
 MI|2016-04-26|5,MI,2016-04-26,5,"Napišite funkciju stvori_matricu koja stvara odredišnu cjelobrojnu matricu veličine n x n temeljem ulaznog polja 
 cijelih brojeva veličine n. Svaki redak odredišne matrice jednak je ulaznom polju, uz iznimku da elementi dijagonale 
 matrice trebaju biti 0. 
@@ -2621,7 +2443,7 @@ printf(""\n"");
 free(rez); 
  
 return 0; 
-}",8,Rekurzivne funkcije na strukturama podataka,0.22030039,,,,,,,,,,
+}",0,Stog operacije,0.11420091,,,,,,,,,,
 MI|2015-04-21|1,MI,2015-04-21,1,"Svaki zapis datoteke organizirane po načelu raspršenog adresiranja sadrži podatke o jednom studentu i njegovoj 
 ocjeni na predmetu Algoritmi i strukture podataka. Zapis je zadan strukturom: 
 typedef struct { 
@@ -2636,7 +2458,7 @@ Napišite funkciju koja će sve neprazne zapise iz datoteke kopirati u jednodime
 vratiti pokazivač na prvi element polja te ukupan broj studenata za koje su iskopirani zapisi. Prototip funkcije je: 
 student *hashUPolje(char *nazivDatoteke, int *brStudenata); 
 Parametar nazivDatoteke sadrži naziv datoteke organizirane po načelu raspršenog adresiranja iz koje je potrebno 
-pročitati podatke o studentima.",13,Raspršeno adresiranje datoteka,0.14664933,,,,,,,,,,
+pročitati podatke o studentima.",1,Binarno stablo,0.06994436,,,,,,,,,,
 MI|2015-04-21|2,MI,2015-04-21,2,"Napisati funkciju split prototipa: 
  
 int split(char *recenica, char delimiter, char **rijeci) 
@@ -2683,10 +2505,10 @@ free(rijeci[i]);
 return 0; 
  
 } 
-Očekivani ispis ovog programa je riječ „Ovo“ u prvom retku, zatim „je“ u drugom i „recenica“ u trećem.",8,Rekurzivne funkcije na strukturama podataka,0.3986024,,,,,,,,,,
+Očekivani ispis ovog programa je riječ „Ovo“ u prvom retku, zatim „je“ u drugom i „recenica“ u trećem.",9,Pretraga u nizu,0.13532495,,,,,,,,,,
 MI|2015-04-21|3,MI,2015-04-21,3,"Napisati program koji pomoću rekurzivne funkcije nalazi, a u glavnom programu ispisuje najmanji zajednički 
 višekratnik i najveći zajednički djelitelj dva prirodna broja. Brojevi se učitavaju putem standardnog ulaza u glavnom 
-programu.",8,Rekurzivne funkcije na strukturama podataka,0.32862294,,,,,,,,,,
+programu.",9,Pretraga u nizu,0.10921316,,,,,,,,,,
 MI|2015-04-21|4,MI,2015-04-21,4,"a) Napisati rekurzivnu funkciju okreni_oduzmi koja ispisuje prvih n članova cjelobrojnog polja, gdje se svaki 
 član polja ispisuje umanjen za element na mjestu s indeksom 0. Ispis treba biti u obrnutom redoslijedu, tj. 
 prvo treba ispisati element s indeskom n-1. Npr. za polje 
@@ -2695,7 +2517,7 @@ uz ispravne argumente (tj. za n=5) ispis prvih 5 članova obrnutim redoslijedom 
 (člana s indeksom 0) je: 
 -5 9 6 4 0 
 b) Nadopuniti funkciju main s ispravnim pozivom 
-funkcije okreni_oduzmi:",4,Rekurzivni algoritmi,0.2423015,,,,,,,,,,
+funkcije okreni_oduzmi:",9,Pretraga u nizu,0.105467394,,,,,,,,,,
 MI|2015-04-21|5,MI,2015-04-21,5,"U polje cijelih brojeva pohranjen je sljedeći niz brojeva: 
 3, 1, 2, 5, 8, 6, 4, 10, 9, 7 
 a) (2 boda) Ilustrirati uzlazno sortiranje algoritmom Bubblesort. 
@@ -2944,7 +2766,7 @@ Sortiranje ranije desne strane
 1 2 3 5 4 6 7 9 10 8
 Insertion sort – 9 ubačen
 1 2 3 5 4 6 7 8 9 10 
-Insertion sort – 8 ubačen",6,Rasuto adresiranje,0.09389244,,,,,,,,,,
+Insertion sort – 8 ubačen",5,Red i stog,0.06410239,,,,,,,,,,
 MI|2014-04-23|1,MI,2014-04-23,1,"Svaki zapis datoteke podaci.dat organizirane po načelu raspršenog adresiranja sadrži podatke o jednom studentu i 
 njegovoj ocjeni na kolegiju Algoritmi i strukture podataka: šifru studenta (znakovni niz duljine 10 znakova), ime 
 studenta (duljine do 20 znakova), prezime studenta (duljine do 30 znakova) te ocjenu (int). 
@@ -2960,13 +2782,13 @@ Primjer: Neka je prosječna ocjena 3,64. Student Ivan Novak ima ocjenu 4 i šifr
 se u preljevu. Funkcija na zaslon mora ispitati njegove podatke u sljedećem formatu (prva linija označava znakovna 
 mjesta pri ispisu): 
 1234567890123456789012345678901234567890123456789012345678901234567890 
-0036123456 Novak Ivan 4",13,Raspršeno adresiranje datoteka,0.20710573,,,,,,,,,,
+0036123456 Novak Ivan 4",1,Binarno stablo,0.071792305,,,,,,,,,,
 MI|2014-04-23|2,MI,2014-04-23,2,"Kvazi-binomni koeficijenti K(n,m) su definirani sa 
 K(n, m) = K(n-1, m-1) + m ∙ K(n-1, m+1) ; 
 K(n, n) = K(n, 0) = 1 . 
 Ako je n < 0 ili m > n, onda je K(n, m) = 0. 
 Napišite rekurzivnu funkciju kvazi_binomni koja će za bilo koji n i m izračunati vrijednost kvazi-binomnog 
-koeficijenta K(n,m).",4,Rekurzivni algoritmi,0.32891726,,,,,,,,,,
+koeficijenta K(n,m).",9,Pretraga u nizu,0.14741114,,,,,,,,,,
 MI|2014-04-23|3,MI,2014-04-23,3,"Svaki prirodni broj N ≥ 2 može se napisati u obliku rastava na proste faktore: 
 N=p1
 n1 ∙ p2
@@ -2980,7 +2802,7 @@ pri čemu je m trenutačni djelitelj (pi). Početni poziv funkcije za zadani n j
 Primjeri: 
 Za N = 6, funkcija treba vratiti 1 jer 6 = 21 ∙ 31. 
 Za N = 8, funkcija treba vratiti 3 jer 8 = 23. 
-Za N = 36, funkcija treba vratiti 2 jer 36 = 22 ∙ 32.",4,Rekurzivni algoritmi,0.3015098,,,,,,,,,,
+Za N = 36, funkcija treba vratiti 2 jer 36 = 22 ∙ 32.",9,Pretraga u nizu,0.12330003,,,,,,,,,,
 MI|2014-04-23|4,MI,2014-04-23,4,"Napišite funkciju prototipa 
 int trazi_visestruke (int *polje, int brojElemenata) 
 koja u zadanom polju pozitivnih cijelih brojeva (vrijednost svakog pojedinog broja je manja od 101) provjerava ima li 
@@ -2988,7 +2810,7 @@ brojeva koji se ponavljaju. Funkcija vraća logičku vrijednost istina (1) ako p
 logičku vrijednost laž (0) u suprotnom. Dozvoljena složenost tražene funkcije je O(n), gdje je n = 
 brojElemenata. 
 Napomena: Rješenje složenosti veće od O(n) nositi će značajno manje bodova. 
-Naputak: Koristite pomoćno polje za utvrđivanje učestalosti brojeva.",4,Rekurzivni algoritmi,0.22756429,,,,,,,,,,
+Naputak: Koristite pomoćno polje za utvrđivanje učestalosti brojeva.",0,Stog operacije,0.11784277,,,,,,,,,,
 MI|2014-04-23|5,MI,2014-04-23,5,"Zadano je polje brojeva s elementima: 91, 7, 8, 20, 5, 18, 4, 9. Ilustrirajte uzlazno sortiranje zadanog niza 
 brojeva (ispišite polje nakon svake promjene i potcrtajte sve brojeve relevantne za sljedeći korak) algoritmom 
 shellsort uz korake k = 4, 2, 1 
@@ -3302,7 +3124,7 @@ Korak = 1
 9
 18
 20
-91",6,Rasuto adresiranje,0.14568004,,,,,,,,,,
+91",4,Uzlazno sortiranje,0.07392168,,,,,,,,,,
 MI|2013-04-23|1,MI,2013-04-23,1,"Jedan zapis datoteke organizirane po načelu raspršenog adresiranja sadrži matični broj 
 studenta (int), ime i prezime (50+1 znak), godinu studija (int) te trenutni prosjek ocjena 
 (float). Prazni se zapis prepoznaje po matičnom broju jednakom nula (0). Veličina bloka 
@@ -3314,14 +3136,14 @@ Napisati funkciju koja će odrediti u koji je pretinac izvorno (prilikom upisa u
 bilo upućeno najviše zapisa i potom vratiti broj zapisa upućenih u taj pretinac, a koji su 
 završili u preljevu. Ako ima više takvih pretinaca vratiti rezultat za bilo koji od njih. 
  Funkcija treba imati prototip: 
-int fun(FILE *f);",13,Raspršeno adresiranje datoteka,0.24418283,,,,,,,,,,
+int fun(FILE *f);",1,Binarno stablo,0.07662237,,,,,,,,,,
 MI|2013-04-23|2,MI,2013-04-23,2,"Napišite rekurzivnu funkciju prototipa: 
 int prebroji_znamenke(int broj, int znamenka); 
 koja će odrediti učestalost (broj pojavljivanja) zadane znamenke u zadanom broju. 
  
 Napišite glavni program koji od korisnika (putem tipkovnice) prima broj i traženu 
 znamenku, poziva funkciju prebroji_znamenke i ispisuje dobiveni rezultat. 
-Napomena: Nerekurzivno rješenje neće se priznavati.",8,Rekurzivne funkcije na strukturama podataka,0.2207016,,,,,,,,,,
+Napomena: Nerekurzivno rješenje neće se priznavati.",9,Pretraga u nizu,0.11557498,,,,,,,,,,
 MI|2013-04-23|3,MI,2013-04-23,3,"Neka je zadano polje a koje se sastoji od n cijelih brojeva. Napišite rekurzivnu funkciju 
 maxRekurzivno prototipa: 
  
@@ -3329,7 +3151,7 @@ int maxRekurzivno(int a[],int n, int *brojPojavljivanja)
  
  koja će pronaći najveći element u polju a te njegovu učestalost (koliko puta se taj element 
 pojavljuje u a). 
-Napomena: Nerekurzivno rješenje neće se priznavati.",8,Rekurzivne funkcije na strukturama podataka,0.2606082,,,,,,,,,,
+Napomena: Nerekurzivno rješenje neće se priznavati.",9,Pretraga u nizu,0.10616405,,,,,,,,,,
 MI|2013-04-23|4,MI,2013-04-23,4,"a) (4 boda) Napišite funkciju prototipa 
 int trazi_element(int* polje, int brojElemenata, int element) 
 koja u zadanom polju cijelih brojeva binarnim pretraživanjem traži određeni 
@@ -3344,7 +3166,7 @@ prethodno dinamički stvorenom polju cijelih brojeva. Za provjeru pripadnosti
 elementa polju koristite svoju funkciju trazi_element. 
 b) 
 (1 bod) Kolika je apriorna složenost cijelog postupka pod pretpostavkom da 
-funkcija sortiraj_polje primjenjuje merge sort algoritam?",8,Rekurzivne funkcije na strukturama podataka,0.19669572,,,,,,,,,,
+funkcija sortiraj_polje primjenjuje merge sort algoritam?",0,Stog operacije,0.10409106,,,,,,,,,,
 MI|2013-04-23|5,MI,2013-04-23,5,"Neka je definiran tip podatka: 
 typedef struct{ 
 int prvi; 
@@ -4197,8 +4019,8 @@ elemenata u particije
 2 
 1 
 2 
-4",6,Rasuto adresiranje,0.28825432,,,,,,,,,,
-MI|25.travnja 2012|1,MI,25.travnja 2012,1,"Zadana je tablica raspršenog adresiranja s 8472 zapisa pohranjena u datoteci 
+4",5,Red i stog,0.08706148,,,,,,,,,,
+MI|2012-04-25|1,MI,2012-04-25,1,"Zadana je tablica raspršenog adresiranja s 8472 zapisa pohranjena u datoteci 
 ""podaci.dat"" koja sadrži zapise definirane strukturom 
 typedef struct { 
  
@@ -4225,21 +4047,21 @@ b) Napišite funkciju za dodavanje zapisa koja će zapis upisati na mjesto prvog
 praznog zapisa ili logički obrisanog zapisa u pretincu. Funkcija vraća 1 ako je 
 uspješno dodala zapis a 0 inače. Funkcija ima prototip: 
  
-int upisi(int sifra, zapis novi, FILE *f)",13,Raspršeno adresiranje datoteka,0.26825172,,,,,,,,,,
-MI|25.travnja 2012|2,MI,25.travnja 2012,2,"a) Napišite rekurzivnu funkciju koja će tehnikom raspolavljanja izračunati i vratiti 
+int upisi(int sifra, zapis novi, FILE *f)",1,Binarno stablo,0.07285104,,,,,,,,,,
+MI|2012-04-25|2,MI,2012-04-25,2,"a) Napišite rekurzivnu funkciju koja će tehnikom raspolavljanja izračunati i vratiti 
 sumu članova polja. 
 b) Napišite glavni program u kojem ćete učitati elemente polja s tipkovnice. Broj 
 elemenata polja nije unaprijed poznat, a učitavanje se prekida kada se učita broj 
 0. Za pohranu elemenata potrebno je koristiti dinamički alocirano polje, a 
 elementi se smiju učitati samo jednom. 
-Napomena: Nerekurzivno rješenje neće se priznavati.",8,Rekurzivne funkcije na strukturama podataka,0.2387023,,,,,,,,,,
-MI|25.travnja 2012|3,MI,25.travnja 2012,3,"a) Napišite bilo kakvu funkciju vremenske složenosti O(2n). n neka bude neki 
+Napomena: Nerekurzivno rješenje neće se priznavati.",9,Pretraga u nizu,0.10139438,,,,,,,,,,
+MI|2012-04-25|3,MI,2012-04-25,3,"a) Napišite bilo kakvu funkciju vremenske složenosti O(2n). n neka bude neki 
 cjelobrojni ulazni argument. 
 b) Kolika je vremenska složenost izračunavanja faktorijela nekog broja n u O 
 notaciji? 
 c) Kolika je vremenska složenost pronalaska svih permutacija nekog niza u O 
-notaciji (u ovisnosti o n, duljini niza )?",0,Rasuto adresiranje,0.28316206,,,,,,,,,,
-MI|25.travnja 2012|4,MI,25.travnja 2012,4,"a) Napišite matematičku definiciju algoritma quicksort u 4 koraka (quicksort(S)) 
+notaciji (u ovisnosti o n, duljini niza )?",6,Hash tablice,0.11324884,,,,,,,,,,
+MI|2012-04-25|4,MI,2012-04-25,4,"a) Napišite matematičku definiciju algoritma quicksort u 4 koraka (quicksort(S)) 
 b) Napišite rekurzivnu funkciju prototipa: 
 int qsort(int* niz, int lijevo, int desno); 
 koja će sortirati ulazni niz quicksort metodom. Na raspolaganju sljedeće funkcije: 
@@ -4250,8 +4072,8 @@ stožernog elementa (medijana).
 int preslozi(int* niz, int stozerInd, int lijevo, int desno); 
 Funkcija kao argumente prima niz, indeks stožera te indekse krajnjeg lijevog i 
 krajnjeg desnog elementa podniza unutar kojega se radi preslagivanje. Funkcija 
-vraća indeks novog stožera.",6,Rasuto adresiranje,0.2998969,,,,,,,,,,
-MI|25.travnja 2012|5,MI,25.travnja 2012,5,"Zadano je polje brojeva s elementima: 9, 6, 7, 2, 1, 8, 4, 5, 0, 3. Ilustrirajte uzlazno 
+vraća indeks novog stožera.",12,Složenost algoritama,0.13197592,,,,,,,,,,
+MI|2012-04-25|5,MI,2012-04-25,5,"Zadano je polje brojeva s elementima: 9, 6, 7, 2, 1, 8, 4, 5, 0, 3. Ilustrirajte uzlazno 
 sortiranje zadanog niza brojeva (ispišite polje nakon svake promjene i označite sve 
 brojeve relevantne za sljedeći korak) algoritmom mergesort i algoritmom shellsort za 
 niz koraka {4,3,1}. 
@@ -4617,13 +4439,8 @@ t=1
 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 
  
 
-1. međuispit iz predmeta Algoritmi i strukture podataka 
-21. ožujka 2011. 
- 
-Odgovore na prva tri pitanja napišite na svojim papirima i predajte ih u košuljici. 
-Odgovore na ostala pitanja napišite na za to predviđenom mjestu uz zadatke. 
-Nije dopušteno korištenje globalnih i statičkih varijabli te naredbe goto.",6,Rasuto adresiranje,0.10125977,,,,,,,,,,
-MI|25.travnja 2012|1,MI,25.travnja 2012,1,"Napišite glavni program koji dinamički alocira matricu mat i puni je pseudoslučajnim cijelim 
+1. međuispit iz predmeta",5,Red i stog,0.065131545,,,,,,,,,,
+MI|2011-03-21|1,MI,2011-03-21,1,"Napišite glavni program koji dinamički alocira matricu mat i puni je pseudoslučajnim cijelim 
 brojevima te funkciju izbaci_redak koja briše zadani redak matrice. 
 U glavnom programu učitajte broj redaka brred, broj stupaca matrice brstup te donju i 
 gornju granicu intervala iz kojeg se generiraju preudoslučajni cijeli brojevi matrice. Nakon 
@@ -4722,8 +4539,8 @@ printf(""\n"");
 free(mat); 
  
 return 0; 
-}",8,Rekurzivne funkcije na strukturama podataka,0.31400657,,,,,,,,,,
-MI|25.travnja 2012|2,MI,25.travnja 2012,2,"Zadana je tablica raspršenog adresiranja s 8472 zapisa pohranjena u datoteci ""podaci.dat"" 
+}",0,Stog operacije,0.123017475,,,,,,,,,,
+MI|2011-03-21|2,MI,2011-03-21,2,"Zadana je tablica raspršenog adresiranja s 8472 zapisa pohranjena u datoteci ""podaci.dat"" 
 koja sadrži zapise s podacima o šifri studenta, prosjeku i broju položenih ispita (sami 
 odaberite odgovarajuće tipove podataka!). 
 Preljevi su realizirani ciklički, upisom u prvi sljedeći slobodni pretinac. Pretinci su usklađeni 
@@ -4777,8 +4594,8 @@ int main() {
  } 
  close(fh); 
  
-}",13,Raspršeno adresiranje datoteka,0.28782076,,,,,,,,,,
-MI|25.travnja 2012|3,MI,25.travnja 2012,3,"Napišite rekurzivnu funkciju prototipa: 
+}",1,Binarno stablo,0.07515456,,,,,,,,,,
+MI|2011-03-21|3,MI,2011-03-21,3,"Napišite rekurzivnu funkciju prototipa: 
 int prebroji_neparne(int broj); 
 koja će odrediti broj neparnih znamenaka zadanog broja. 
  
@@ -4831,8 +4648,8 @@ broj,
 prebroji_neparne(broj)); 
  
 return 0; 
-}",8,Rekurzivne funkcije na strukturama podataka,0.17761883,,,,,,,,,,
-MI|25.travnja 2012|4,MI,25.travnja 2012,4,"Odredite apriornu i asimptotsku složenost sljedećeg programskog odsječka i obrazložite oba 
+}",0,Stog operacije,0.14389917,,,,,,,,,,
+MI|2011-03-21|4,MI,2011-03-21,4,"Odredite apriornu i asimptotsku složenost sljedećeg programskog odsječka i obrazložite oba 
 odgovora: 
  
 int suma = 0, i = 0, j, k, m, n; 
@@ -4851,8 +4668,8 @@ Rješenje: apriorna složenost: O(n*m)
 Asimptotska složenost: n*m + min(n,m)*n 
 Obrazloženje: Vanjska petlja vrti do n, a unutarnja do m i u svakom koraku imamo 
 provjeravanje je li i==j pa je to sigurno n*m. K petlja se desi samo minimalno od n i m puta a 
-vrti se do n, znači da se k petlja obavi min(n,m)*n",0,Rasuto adresiranje,0.17371461,,,,,,,,,,
-MI|25.travnja 2012|5,MI,25.travnja 2012,5,"Prikažite sadržaj stoga u trenutku neposredno prije prvog izlaska iz funkcije f2 i naznačite 
+vrti se do n, znači da se k petlja obavi min(n,m)*n",12,Složenost algoritama,0.11581351,,,,,,,,,,
+MI|2011-03-21|5,MI,2011-03-21,5,"Prikažite sadržaj stoga u trenutku neposredno prije prvog izlaska iz funkcije f2 i naznačite 
 veličine svih varijabli na stogu. 
  
 void f2(double *a, int *b, int n) { 
@@ -4915,18 +4732,8 @@ polje
 4 
 100 
  
-(ili n) 
- 
- 
- 
-
-Algoritmi i strukture podataka ­ 2. međuispit 
-2. svibnja 2011. 
- 
-Odgovore na prva četiri pitanja napišite na svojim papirima i predajte ih u košuljici. Odgovore na ostala 
-pitanja napišite na za to predviđenom mjestu uz zadatke. 
-Nije dopušteno korištenje globalnih i statičkih varijabli te naredbe goto.",0,Rasuto adresiranje,0.3157434,,,,,,,,,,
-MI|25.travnja 2012|1,MI,25.travnja 2012,1,"Zadan je tip podatka Stog za koji su definirane funkcije za inicijalizaciju stoga, dodavanje elementa u 
+(ili n)",0,Stog operacije,0.13739926,,,,,,,,,,
+MI|2011-05-02|1,MI,2011-05-02,1,"Zadan je tip podatka Stog za koji su definirane funkcije za inicijalizaciju stoga, dodavanje elementa u 
 stog te za skidanje elementa iz stoga. Prototipovi navedenih funkcija su: 
 void init_stog(Stog *stog); 
 int dodaj(double element, Stog *stog); 
@@ -4939,8 +4746,8 @@ elementa stavi na dno stoga, dok se poredak ostalih elemenata ne mijenja.
 Napišite i glavni program koji iz neformatirane datoteke ""podaci.dat"" čita brojeve i pohranjuje ih u 
 stog te poziva funkciju preurediStog. 
 Primjer: Stog s elementima (od vrha prema dnu) 3.1, 2.7, 4.5, 4.8, 4.5, 3.1, 2.7, 4.9 
-funkcija će promijeniti u 3.1, 4.5, 4.8, 4.5, 3.1, 4.9, 2.7, 2.7.",9,Implementacija stoga,0.09764751,,,,,,,,,,
-MI|25.travnja 2012|2,MI,25.travnja 2012,2,"Zadan je tip podatka Red za koji su definirane funkcije za inicijalizaciju reda, dodavanje elementa u 
+funkcija će promijeniti u 3.1, 4.5, 4.8, 4.5, 3.1, 4.9, 2.7, 2.7.",8,Dinamička alokacija,0.09961285,,,,,,,,,,
+MI|2011-05-02|2,MI,2011-05-02,2,"Zadan je tip podatka Red za koji su definirane funkcije za inicijalizaciju reda, dodavanje elementa u 
 red te za skidanje elementa iz reda. Prototipovi navedenih funkcija su: 
  
 void init_red(Red *red); 
@@ -4955,8 +4762,8 @@ Napišite i dio glavnog programa u kojem ćete definirati redove i ispravno pozv
 Dio koda u kojem se puni red nije potrebno pisati. 
 Primjer: Za ulazni red sadržaja 3, 8, 2, 5, 35, 2, 24, 15 poziv funkcije 
 izdvojiVisekratnike za broj=3 stvara novi red sadržaja 3, 24, 15 dok u starom redu ostaju 8, 
-2, 5, 35, 2.",5,Rasuto adresiranje,0.022460412,,,,,,,,,,
-MI|25.travnja 2012|3,MI,25.travnja 2012,3,"Zadan je stog u kojem su pohranjeni podaci o točkama koordinatnog sustava tipa Tocka, koji će 
+2, 5, 35, 2.",8,Dinamička alokacija,0.056355238,,,,,,,,,,
+MI|2011-05-02|3,MI,2011-05-02,3,"Zadan je stog u kojem su pohranjeni podaci o točkama koordinatnog sustava tipa Tocka, koji će 
 sadržavati dvije realne vrijednosti x i y. Definirajte tip podataka Tocka. 
 Napišite rekurzivnu funkciju tockeNaPravcu koja će sa zadanog stoga stog u red red kopirati sve 
 elemente koji leže na pravcu definiranom koeficijentom smjera a i odsječkom na osi y b. Prototip 
@@ -4965,15 +4772,15 @@ funkcije je:
 int tockeNaPravcu (Stog *stog, Red *red, float a, float b); 
 Funkcija treba vratiti broj točaka koje leže na zadanom pravcu. Nakon izlaska iz funkcije stog mora 
 ostati očuvan, a poredak elemenata u redu nije bitan. 
-Napomena: Nerekurzivno rješenje neće se priznavati.",10,Rasuto adresiranje,0.34013087,,,,,,,,,,
-MI|25.travnja 2012|4,MI,25.travnja 2012,4,"Zadano je polje brojeva s elementima: 8, 6, 4, 9, 2, 7, 5, 0, 3, 1. Ilustrirajte sortiranje 
+Napomena: Nerekurzivno rješenje neće se priznavati.",8,Dinamička alokacija,0.10784169,,,,,,,,,,
+MI|2011-05-02|4,MI,2011-05-02,4,"Zadano je polje brojeva s elementima: 8, 6, 4, 9, 2, 7, 5, 0, 3, 1. Ilustrirajte sortiranje 
 zadanog niza brojeva (ispišite polje nakon svake promjene i označite sve brojeve relevantne za sljedeći 
 korak – zamjene, stožere, aproksimacije medijana) algoritmom quicksort. Stožer odaberite metodom 
-aproksimacije medijana temeljem prvog, srednjeg i zadnjeg člana polja.",6,Rasuto adresiranje,0.09699993,,,,,,,,,,
-MI|25.travnja 2012|5,MI,25.travnja 2012,5,"Napišite dio programskog koda kojim se deklarira struktura atoma linearne liste koji u podatkovnom 
+aproksimacije medijana temeljem prvog, srednjeg i zadnjeg člana polja.",4,Uzlazno sortiranje,0.041135896,,,,,,,,,,
+MI|2011-05-02|5,MI,2011-05-02,5,"Napišite dio programskog koda kojim se deklarira struktura atoma linearne liste koji u podatkovnom 
 dijelu sadrži realni broj dvostruke preciznosti. Skicirajte red realiziran linearnom listom koji sadrži tri 
-atoma s vrijednostima 2.4, 3.4 i 5.0.",6,Rasuto adresiranje,0.36190206,,,,,,,,,,
-MI|25.travnja 2012|6,MI,25.travnja 2012,6,"Što radi zadana funkcija? Koja je njena apriorna složenost u ovisnosti o broju elemenata stoga n? 
+atoma s vrijednostima 2.4, 3.4 i 5.0.",8,Dinamička alokacija,0.14931436,,,,,,,,,,
+MI|2011-05-02|6,MI,2011-05-02,6,"Što radi zadana funkcija? Koja je njena apriorna složenost u ovisnosti o broju elemenata stoga n? 
 void misterija(int element, Stog *stog){ 
  
 int x; 
@@ -5206,13 +5013,8 @@ struct at *sljed;
 6. 
 Na dno stoga stavlja element, O(n) 
 
-1. međuispit iz predmeta Algoritmi i strukture podataka 
-29. ožujka 2010. 
- 
-Odgovore na prva tri pitanja napišite na svojim papirima i predajte ih u košuljici. 
-Odgovore na ostala pitanja napišite na za to predviđenom mjestu uz zadatke. 
-Nije dopušteno korištenje globalnih i statičkih varijabli te naredbe goto.",0,Rasuto adresiranje,0.26794598,,,,,,,,,,
-MI|25.travnja 2012|1,MI,25.travnja 2012,1,"Jedan zapis datoteke organizirane po načelu raspršenog adresiranja definiran je strukturom: 
+1. međuispit iz predmeta",5,Red i stog,0.08563723,,,,,,,,,,
+MI|2010-03-29|1,MI,2010-03-29,1,"Jedan zapis datoteke organizirane po načelu raspršenog adresiranja definiran je strukturom: 
 typedef struct{ 
 int sifra; 
 char naziv[50+1]; 
@@ -5238,14 +5040,14 @@ predviđene pretince ako tamo ima mjesta. Dovoljno je kroz sve pretince proći s
 provjerene preljeve ne treba ponovno provjeravati). Funkcija treba vratiti broj prebačenih preljeva. 
 Prototip funkcije treba biti: 
  
-int urediHash(FILE *f);",13,Raspršeno adresiranje datoteka,0.15208223,,,,,,,,,,
-MI|25.travnja 2012|2,MI,25.travnja 2012,2,"Napisati rekurzivnu funkciju za određivanje je li broj prost. 
+int urediHash(FILE *f);",1,Binarno stablo,0.0701897,,,,,,,,,,
+MI|2010-03-29|2,MI,2010-03-29,2,"Napisati rekurzivnu funkciju za određivanje je li broj prost. 
 Prototip funkcije je: 
 short jeProst(int broj, int djelitelj); 
  
 Funkcija vraća 1 ako je broj prost, inače vraća 0. Pri prvom pozivu funkcije djelitelj je postavljen na 2. 
-Napomena: Nerekurzivno rješenje neće se priznavati.",8,Rekurzivne funkcije na strukturama podataka,0.21980865,,,,,,,,,,
-MI|25.travnja 2012|3,MI,25.travnja 2012,3,"Napisati funkciju koja će iz ulaznog polja cijelih brojeva izbaciti sve one manje od prosjeka, a zatim i 
+Napomena: Nerekurzivno rješenje neće se priznavati.",9,Pretraga u nizu,0.112229064,,,,,,,,,,
+MI|2010-03-29|3,MI,2010-03-29,3,"Napisati funkciju koja će iz ulaznog polja cijelih brojeva izbaciti sve one manje od prosjeka, a zatim i 
 dinamički smanjiti veličinu polja na osnovu novog broja članova. Funkcija kao rezultat vraća 
 pokazivač na navedeno polje. Prototip funkcije je: 
  
@@ -5254,8 +5056,8 @@ int *izbaci_podprosj(int *polje, int *br_clanova);
  
 Napisati i glavni program u kojem će se učitati broj elemenata, polje se dinamički alocirati te napuniti 
 slučajno odabranim vrijednostima iz raspona [10, 1000], pozvati funkcija i ispisati novo polje te 
-osloboditi dinamički stvorena memorija.",8,Rekurzivne funkcije na strukturama podataka,0.21051803,,,,,,,,,,
-MI|25.travnja 2012|4,MI,25.travnja 2012,4,"Odredite apriornu složenost sljedećeg 
+osloboditi dinamički stvorena memorija.",0,Stog operacije,0.1044239,,,,,,,,,,
+MI|2010-03-29|4,MI,2010-03-29,4,"Odredite apriornu složenost sljedećeg 
 programskog odsječka i obrazložite odgovor: 
 int i, j, n, s=0; 
 ... 
@@ -5278,8 +5080,8 @@ Obrazloženje:
  
  
 Rješenje: 
-Obrazloženje:",0,Rasuto adresiranje,0.16600886,,,,,,,,,,
-MI|25.travnja 2012|5,MI,25.travnja 2012,5,"Što će ispisati funkcija main? 
+Obrazloženje:",12,Složenost algoritama,0.10726799,,,,,,,,,,
+MI|2010-03-29|5,MI,2010-03-29,5,"Što će ispisati funkcija main? 
 char *funkcija (char *niz, char znak){
  if (*niz==0) return 0; 
  else { 
@@ -5294,8 +5096,8 @@ int main () {
  return 0; 
 } 
  
-Rješenje: ___________________________________________________________________________________________________________",0,Rasuto adresiranje,0.32258767,,,,,,,,,,
-MI|25.travnja 2012|6,MI,25.travnja 2012,6,"Prikazati sadržaj stoga u trenutku neposredno prije izlaska iz funkcije zamijeni i naznačite veličine 
+Rješenje: ___________________________________________________________________________________________________________",12,Složenost algoritama,0.14053628,,,,,,,,,,
+MI|2010-03-29|6,MI,2010-03-29,6,"Prikazati sadržaj stoga u trenutku neposredno prije izlaska iz funkcije zamijeni i naznačite veličine 
 varijabli. 
 void zamijeni(int *a, int *b) { 
  
@@ -5541,12 +5343,8 @@ polje
 (ili n) 
 
  
-2. međuispit iz predmeta Algoritmi i strukture podataka 
-10. svibnja 2010. 
-Odgovore na prva tri pitanja napišite na svojim papirima i predajte ih u košuljici. 
-Odgovore na ostala pitanja napišite na za to predviđenom mjestu uz zadatke. 
-Nije dopušteno korištenje globalnih i statičkih varijabli te naredbe goto.",0,Rasuto adresiranje,0.31685874,,,,,,,,,,
-MI|25.travnja 2012|1,MI,25.travnja 2012,1,"Zadan je tip podatka Stog za koji su definirane funkcije za inicijalizaciju stoga, dodavanje elementa u 
+2. međuispit iz predmeta",5,Red i stog,0.10937762,,,,,,,,,,
+MI|2010-05-10|1,MI,2010-05-10,1,"Zadan je tip podatka Stog za koji su definirane funkcije za inicijalizaciju stoga, dodavanje elementa u 
 stog te za brisanje elementa iz stoga. Prototipovi navedenih funkcija su: 
  
 void init_stog(Stog *stog); 
@@ -5574,8 +5372,8 @@ koji se pojavljuju više ili jednako od brPojavljivanja.
  
 Primjer: nakon poziva funkcije ostaviVisestruke (stog, 3) stog s početnim vrijednostima 
  
-3 3 5 6 3 5 3 2 5 4 2 8 5 sadržavat će 3 3 5 3 5 3 5 5 jer se ti elementi pojavljuju tri ili više puta.",9,Implementacija stoga,0.090949096,,,,,,,,,,
-MI|25.travnja 2012|2,MI,25.travnja 2012,2,"Zadan je tip podatka Red za koji su definirane funkcije za inicijalizaciju reda, dodavanje elementa u red 
+3 3 5 6 3 5 3 2 5 4 2 8 5 sadržavat će 3 3 5 3 5 3 5 5 jer se ti elementi pojavljuju tri ili više puta.",8,Dinamička alokacija,0.061088573,,,,,,,,,,
+MI|2010-05-10|2,MI,2010-05-10,2,"Zadan je tip podatka Red za koji su definirane funkcije za inicijalizaciju reda, dodavanje elementa u red 
 te za brisanje elementa iz reda. Prototipovi navedenih funkcija su: 
  
 void init_red(Red *red); 
@@ -5587,15 +5385,15 @@ Napišite funkciju čiji je prototip:
  
 void izbaciDuple(Red *red); 
 koja će iz zadanog sortiranog reda ukloniti sva dodatna pojavljivanja pojedinog elementa. 
-Primjer: Red brojeva 3 3 3 5 6 6 7 7 8 9 9 9 funkcija će promijeniti u 3 5 6 7 8 9.",5,Rasuto adresiranje,0.021455908,,,,,,,,,,
-MI|25.travnja 2012|3,MI,25.travnja 2012,3,"Zadan je niz brojeva: 1, 5, 7, 4, 3, 6, 8, 2, 9, 0 
+Primjer: Red brojeva 3 3 3 5 6 6 7 7 8 9 9 9 funkcija će promijeniti u 3 5 6 7 8 9.",8,Dinamička alokacija,0.054366708,,,,,,,,,,
+MI|2010-05-10|3,MI,2010-05-10,3,"Zadan je niz brojeva: 1, 5, 7, 4, 3, 6, 8, 2, 9, 0 
 Ilustrirajte uzlazno sortiranje zadanog niza brojeva (ispišite niz nakon svake zamjene dvaju 
 elemenata): 
 a) (2 boda) Algoritmom shell sort za slijed koraka {4, 2, 1}. Kako izgledaju 4-, 2- i 1-sortirani 
 nizovi? 
 b) (2 boda) Algoritmom quicksort. Stožer odaberite metodom aproksimacije medijana 
-temeljem početnog, krajnjeg i središnjeg člana polja.",6,Rasuto adresiranje,0.09099796,,,,,,,,,,
-MI|25.travnja 2012|4,MI,25.travnja 2012,4,"Ispišite vrijednosti (od izlaza prema ulazu reda) koje se nalaze u redu nakon što se obavi funkcija 
+temeljem početnog, krajnjeg i središnjeg člana polja.",4,Uzlazno sortiranje,0.032399036,,,,,,,,,,
+MI|2010-05-10|4,MI,2010-05-10,4,"Ispišite vrijednosti (od izlaza prema ulazu reda) koje se nalaze u redu nakon što se obavi funkcija 
 func. Funkcija func kao parametar prima red s vrijednostima: 1, 2, 3, 4, 5, 6, 7, 8. Funkcija dodajURed 
 dodaje vrijednost argumenta el u red. 
  
@@ -5607,8 +5405,8 @@ if (skiniIzReda(&el, red)) func(red);
  
 if (el % 2) dodajURed(el, red); 
 } 
-_______________________________________________________________________________________",0,Rasuto adresiranje,0.32014838,,,,,,,,,,
-MI|25.travnja 2012|5,MI,25.travnja 2012,5,"Koristeći prostor nad crtama, napišite naredbe silaznog Insertion sorta koje nedostaju. 
+_______________________________________________________________________________________",12,Složenost algoritama,0.101669386,,,,,,,,,,
+MI|2010-05-10|5,MI,2010-05-10,5,"Koristeći prostor nad crtama, napišite naredbe silaznog Insertion sorta koje nedostaju. 
 void InsertionSort (tip A [], int N) { 
  int i, j; 
  tip pom; 
@@ -5620,8 +5418,8 @@ void InsertionSort (tip A [], int N) {
  _____________________________________________________________________ 
  A[j] = pom; 
  } 
-}",0,Rasuto adresiranje,0.25769195,,,,,,,,,,
-MI|25.travnja 2012|6,MI,25.travnja 2012,6,"Stog je definiran na sljedeći način: 
+}",12,Složenost algoritama,0.13578469,,,,,,,,,,
+MI|2010-05-10|6,MI,2010-05-10,6,"Stog je definiran na sljedeći način: 
 typedef struct { 
  int vrh, polje[MAXSTOG]; 
  
@@ -5901,15 +5699,8 @@ for (j = i; j <= 1 && A[j-1] > pom; j--)
 6. zadatak 
 stog->vrh++; 
  
-stog->polje[stog->vrh] = stavka; 
-
-Algoritmi i strukture podataka 
-2. međuispit 
-22. svibnja 2009. 
- 
- Napomena za sve zadatke: 
-  Nije dopušteno korištenje naredbe goto te statičkih i globalnih varijabli.",0,Rasuto adresiranje,0.25327826,,,,,,,,,,
-MI|25.travnja 2012|1,MI,25.travnja 2012,1,"Neka je zadan tip podatka Stog za koji su definirane funkcije za inicijalizaciju stoga, 
+stog->polje[stog->vrh] = stavka;",8,Dinamička alokacija,0.10829123,,,,,,,,,,
+MI|2009-05-22|1,MI,2009-05-22,1,"Neka je zadan tip podatka Stog za koji su definirane funkcije za inicijalizaciju stoga, 
 dodavanje elementa na stog te brisanje elementa sa stoga. Elementi stoga su podaci tipa 
 Student koji sadrže prezime studenta (40 znakova), ime studenta (30 znakova) te broj 
 položenih ispita. Prototipovi navedenih funkcija su: 
@@ -5928,16 +5719,16 @@ Napomena:
 Nerekurzivno rješenje neće se priznavati. 
  
 b) (1 bod) Napišite definicije odgovarajućih struktura (tipovi podataka Student, Stog i 
-atom) za stog realiziran vezanom listom.",9,Implementacija stoga,0.20118518,,,,,,,,,,
-MI|25.travnja 2012|2,MI,25.travnja 2012,2,"Zadan je niz brojeva: 6, 4, 10, 5, 8, 2, 1, 9, 3, 7. 
+atom) za stog realiziran vezanom listom.",8,Dinamička alokacija,0.06451666,,,,,,,,,,
+MI|2009-05-22|2,MI,2009-05-22,2,"Zadan je niz brojeva: 6, 4, 10, 5, 8, 2, 1, 9, 3, 7. 
 Ilustrirajte uzlazno sortiranje zadanog niza brojeva (ispišite niz nakon svake zamjene dvaju 
 elemenata): 
  
 a) (3 boda) Algoritmom quicksort. Stožer odaberite metodom aproksimacije medijana 
 temeljem početnog, krajnjeg i srednjeg člana polja. 
  
-b) (2 boda) Algoritmom selection sort.",6,Rasuto adresiranje,0.06711628,,,,,,,,,,
-MI|25.travnja 2012|3,MI,25.travnja 2012,3,"Neka je zadan tip podatka Red za koji su definirane funkcije za inicijalizaciju reda, 
+b) (2 boda) Algoritmom selection sort.",4,Uzlazno sortiranje,0.03345723,,,,,,,,,,
+MI|2009-05-22|3,MI,2009-05-22,3,"Neka je zadan tip podatka Red za koji su definirane funkcije za inicijalizaciju reda, 
 dodavanje elementa u red te za brisanje elementa iz reda. Prototipovi navedenih funkcija su: 
 void init_red(Red *red); 
 int dodaj(int element, Red *red); 
@@ -5954,8 +5745,8 @@ element se ne izbacuje. Primjerice, ako je red sadržavao sljedeće elemente:
 6, 7, 4, 9, 2, 5, 3, 3, 2, 5, 4, 2 nakon poziva funkcije red će imati elemente 7, 9, 5, 3, 5, 4, 2. 
  
 Napomena: možete pretpostaviti da ulazni red neće biti prazan, ali npr. može imati 
-samo jedan element.",5,Rasuto adresiranje,0.0217605,,,,,,,,,,
-MI|25.travnja 2012|4,MI,25.travnja 2012,4,"Neka je zadan tip podatka Stog za koji su definirane funkcije za inicijalizaciju stoga, 
+samo jedan element.",8,Dinamička alokacija,0.067062415,,,,,,,,,,
+MI|2009-05-22|4,MI,2009-05-22,4,"Neka je zadan tip podatka Stog za koji su definirane funkcije za inicijalizaciju stoga, 
 dodavanje elementa na stog te za brisanje elementa sa stoga. Prototipovi navedenih funkcija 
 su: 
 void init_stog(Stog *stog); 
@@ -6154,17 +5945,8 @@ while(skini_iz_reda(&el, &pom))
  
  
 dodaj_u_red(el, red); 
-} 
- 
- 
-
-Algoritmi i strukture podataka 
-1. međuispit 
-9. travnja 2009. 
- 
- Napomena za sve zadatke: 
-  Nije dopušteno korištenje naredbe goto te statičkih i globalnih varijabli.",9,Implementacija stoga,0.09434867,,,,,,,,,,
-MI|25.travnja 2012|1,MI,25.travnja 2012,1,"Jedan zapis datoteke organizirane po načelu raspršenog adresiranja definiran je strukturom: 
+}",5,Red i stog,0.066069186,,,,,,,,,,
+MI|2009-04-09|1,MI,2009-04-09,1,"Jedan zapis datoteke organizirane po načelu raspršenog adresiranja definiran je strukturom: 
 typedef struct{ 
 int sifra; 
 char naziv[50+1]; 
@@ -6187,8 +5969,8 @@ Napišite funkciju koja će u pretincu x pronaći i vratiti prvi zapis koji je p
 završiti u pretincu y (ali je zbog preljeva završio u pretincu x). Funkcija preko svog imena 
 vraća 1 ili 0 ovisno o tome postoji li takav zapis u pretincu x ili ne. Prototip funkcije je: 
  
-int pronadji(FILE *f, zapis *z, int x, int y);",13,Raspršeno adresiranje datoteka,0.14604367,,,,,,,,,,
-MI|25.travnja 2012|2,MI,25.travnja 2012,2,"Napišite rekurzivnu funkciju za izbacivanje znamenki iz zadanog niza. Prototip funkcije 
+int pronadji(FILE *f, zapis *z, int x, int y);",1,Binarno stablo,0.067616954,,,,,,,,,,
+MI|2009-04-09|2,MI,2009-04-09,2,"Napišite rekurzivnu funkciju za izbacivanje znamenki iz zadanog niza. Prototip funkcije 
 treba biti: 
  int IzbaciZnamenke (char *niz); 
  
@@ -6198,8 +5980,8 @@ Primjer: za ulazni niz ""Godine 2008. je"" funkcija mijenja niz u ""Godine . je"
 vraća 4 jer su izbačene 4 znamenke. 
  
 Napomena: 
-Nerekurzivno rješenje neće se priznavati.",8,Rekurzivne funkcije na strukturama podataka,0.26151758,,,,,,,,,,
-MI|25.travnja 2012|3,MI,25.travnja 2012,3,"Odredite apriornu složenost (u ovisnosti od m, n i k) sljedećih programskih odsječaka i 
+Nerekurzivno rješenje neće se priznavati.",9,Pretraga u nizu,0.11616121,,,,,,,,,,
+MI|2009-04-09|3,MI,2009-04-09,3,"Odredite apriornu složenost (u ovisnosti od m, n i k) sljedećih programskih odsječaka i 
 detaljno obrazložite svoje odgovore. 
  
 a) 
@@ -6216,8 +5998,8 @@ int i = 64;
 while (i > 1){ 
 n /= i; 
 i /= 2; 
-}",0,Rasuto adresiranje,0.16598228,,,,,,,,,,
-MI|25.travnja 2012|4,MI,25.travnja 2012,4,"Napišite funkciju koja će stvoriti skalarnu matricu reda n (matrica od n x n elemenata kojoj 
+}",12,Složenost algoritama,0.11800834,,,,,,,,,,
+MI|2009-04-09|4,MI,2009-04-09,4,"Napišite funkciju koja će stvoriti skalarnu matricu reda n (matrica od n x n elemenata kojoj 
 su svi elementi osim glavne dijagonale 0, a elementi na glavnoj dijagonali međusobno su 
 jednaki). Funkcija kao rezultat vraća pokazivač na stvorenu matricu. U glavnom programu 
 učitajte dimenziju n i vrijednost elemenata na glavnoj dijagonali el, pozovite funkciju, 
@@ -6373,13 +6155,8 @@ el 2
 n 4 
  
 
-1. međuispit iz predmeta Algoritmi i strukture podataka 
-1. međuispit iz predmeta Algoritmi i strukture podataka 
-19. ožujka 2008. 
- 
- Napomena za sve zadatke: 
-  Nije dopušteno korištenje goto naredbe, te statičkih i globalnih varijabli.",8,Rekurzivne funkcije na strukturama podataka,0.26045653,,,,,,,,,,
-MI|25.travnja 2012|1,MI,25.travnja 2012,1,"Zadana je funkcija Zbroj koja vraća zbroj elemenata polja veličine brojElemenata čiji je prototip: 
+1. međuispit iz predmeta",0,Stog operacije,0.11456542,,,,,,,,,,
+MI|2008-03-19|1,MI,2008-03-19,1,"Zadana je funkcija Zbroj koja vraća zbroj elemenata polja veličine brojElemenata čiji je prototip: 
 int Zbroj (int poljeZbroj[], int brojElemenata); 
  
 Napisati funkciju IzborParnih koja u zadanom polju cijelih brojeva polje pronalazi prvih 5 
@@ -6399,8 +6176,8 @@ Izgled glavnog programa (nije potrebno pisati):
  } 
  
 acrtati sistemski stog u trenutku neposredno prije završetka izvođenja funkcije Zbroj (prije 
-poziva naredbe return).",8,Rekurzivne funkcije na strukturama podataka,0.20649691,,,,,,,,,,
-MI|25.travnja 2012|2,MI,25.travnja 2012,2,"Napišite funkciju čiji je prototip: 
+poziva naredbe return).",0,Stog operacije,0.12077515,,,,,,,,,,
+MI|2008-03-19|2,MI,2008-03-19,2,"Napišite funkciju čiji je prototip: 
  int *vratiPolje (int *brelem); 
 koja će dinamički alocirati prostor za polje od 200 elemenata i napuniti ga slučajno odabranim cijelim 
 brojevima iz intervala [-200,300]. Ako je broj elemenata s vrijednošću 0 manji od 10, polje treba 
@@ -6418,8 +6195,8 @@ ispisati dobiveno polje.
  
  
 
-1. međuispit iz predmeta Algoritmi i strukture podataka",8,Rekurzivne funkcije na strukturama podataka,0.169274,,,,,,,,,,
-MI|25.travnja 2012|3,MI,25.travnja 2012,3,"a) (1 bod) Odredite složenost O i Ω sljedećeg dijela kôda. Obrazložite svoje odgovore. 
+1. međuispit iz predmeta Algoritmi i strukture podataka",12,Složenost algoritama,0.14574185,,,,,,,,,,
+MI|2008-03-19|3,MI,2008-03-19,3,"a) (1 bod) Odredite složenost O i Ω sljedećeg dijela kôda. Obrazložite svoje odgovore. 
  
  for (i = 0; i < n; i++) { 
  if (p[i][i] == i){ 
@@ -6441,8 +6218,8 @@ odgovor.
  else 
  rezultat = strcat(rezultat, ""0""); 
  n = n/2; 
- }",0,Rasuto adresiranje,0.18213338,,,,,,,,,,
-MI|25.travnja 2012|4,MI,25.travnja 2012,4,"Jedan zapis datoteke organizirane po načelu raspršenog adresiranja definiran je strukturom: 
+ }",12,Složenost algoritama,0.10897255,,,,,,,,,,
+MI|2008-03-19|4,MI,2008-03-19,4,"Jedan zapis datoteke organizirane po načelu raspršenog adresiranja definiran je strukturom: 
 typedef struct{ 
 int sifra; 
 char naziv[50+1]; 
@@ -6656,12 +6433,8 @@ br++;
 return br; 
 } 
 
-2. meñuispit iz predmeta Algoritmi i strukture podataka 
-2. meñuispit iz predmeta Algoritmi i strukture podataka 
-7. svibnja 2008. 
- Napomena za sve zadatke: 
-  Nije dopušteno korištenje naredbe goto, te statičkih i globalnih varijabli.",13,Raspršeno adresiranje datoteka,0.14611538,,,,,,,,,,
-MI|25.travnja 2012|1,MI,25.travnja 2012,1,"Napišite rekurzivnu funkciju za sortiranje polja algoritmom sortiranja biranjem (selection sort). 
+2. meñuispit iz predmeta",1,Binarno stablo,0.08386747,,,,,,,,,,
+MI|2008-05-07|1,MI,2008-05-07,1,"Napišite rekurzivnu funkciju za sortiranje polja algoritmom sortiranja biranjem (selection sort). 
 Prototip funkcije treba biti: 
  void RSort (int *polje, int n); 
  
@@ -6673,8 +6446,8 @@ a za zamjenu vrijednosti dva elementa polja funkciju Zamijeni:
  
 Napomene: 
 Funkcije Najmanji i Zamijeni ne trebate implementirati. 
-Nerekurzivno rješenje neće se priznavati.",6,Rasuto adresiranje,0.31056982,,,,,,,,,,
-MI|25.travnja 2012|2,MI,25.travnja 2012,2,"Neka je zadan tip podatka Stog za koji su definirane funkcije za inicijalizaciju stoga, dodavanje 
+Nerekurzivno rješenje neće se priznavati.",9,Pretraga u nizu,0.11286147,,,,,,,,,,
+MI|2008-05-07|2,MI,2008-05-07,2,"Neka je zadan tip podatka Stog za koji su definirane funkcije za inicijalizaciju stoga, dodavanje 
 elementa na stog te za brisanje elementa sa stoga. Prototipovi navedenih funkcija su: 
 void init_stog(Stog *stog); 
 int dodaj(int element, Stog *stog); 
@@ -6699,16 +6472,16 @@ Nakon završetka funkcije Armstrong sadržaj ulaznog stoga mora ostati nepromije
  
  
 
-2. meñuispit iz predmeta Algoritmi i strukture podataka",9,Implementacija stoga,0.09371612,,,,,,,,,,
-MI|25.travnja 2012|3,MI,25.travnja 2012,3,"Zadan je niz brojeva: 10, 8, 6, 3, 5, 9, 1, 2, 4, 7. 
+2. meñuispit iz predmeta Algoritmi i strukture podataka",8,Dinamička alokacija,0.074602984,,,,,,,,,,
+MI|2008-05-07|3,MI,2008-05-07,3,"Zadan je niz brojeva: 10, 8, 6, 3, 5, 9, 1, 2, 4, 7. 
  
 Ilustrirajte (ispišite niz nakon svake zamjene dvaju elemenata) uzlazno sortiranje zadanog niza 
 brojeva 
 a) (2,5 boda) algoritmom quicksort. Stožer odaberite metodom aproksimacije medijana 
 temeljem početnog, krajnjeg i srednjeg člana polja. 
  
-b) (2,5 boda) algoritmom shellsort za niz koraka {4, 3, 1}",6,Rasuto adresiranje,0.06570923,,,,,,,,,,
-MI|25.travnja 2012|4,MI,25.travnja 2012,4,"Neka je zadan tip podatka Red za koji su definirane funkcije za inicijalizaciju reda, dodavanje 
+b) (2,5 boda) algoritmom shellsort za niz koraka {4, 3, 1}",4,Uzlazno sortiranje,0.029975856,,,,,,,,,,
+MI|2008-05-07|4,MI,2008-05-07,4,"Neka je zadan tip podatka Red za koji su definirane funkcije za inicijalizaciju reda, dodavanje 
 elementa u red te za brisanje elementa iz reda. Prototipovi navedenih funkcija su: 
 void init_red(Red *red); 
 int dodaj(int element, Red *red); 
@@ -7315,1017 +7088,7 @@ novi->Stavi(el);
 printf(""Prosjek = %.2f"", prosjek); 
  
 return novi; 
-} 
- 
-
-Algoritmi i strukture podataka 
-1. međuispit 
-27.03.2007. 
- 
- 
-1. (4 boda) Napisati funkciju čiji je prototip: 
- 
-int *duplikat(int *polje, int br_clanova); 
- 
-koja će stvoriti novo polje koje je duplikat ulaznog polja. Funkcija kao rezultat vraća 
-pokazivač na navedeno polje. 
-Osim toga, napisati i glavni program u kojem će se definirati polje od 50 elemenata, a zatim 
-napuniti slučajno odabranim cijelim brojevima u intervalu [1, 20], pozvati funkcija, ispisati 
-tako dobiveno polje te osloboditi dinamički stvorena memorija. 
- 
-2. (4 boda) Jedan zapis datoteke organizirane po načelu raspršenog adresiranja definiran je 
-sljedećom strukturom: 
- 
-typedef struct{ 
-int sifra; 
-char naziv[50+1]; 
-int kolicina; 
-float cijena; 
-} zapis; 
- 
-Zapis je prazan ako je na mjestu šifre vrijednost nula. Parametri za raspršeno adresiranje 
-nalaze se u datoteci parametri.h i oni su: 
- 
-- 
-BLOK : veličina bloka na disku 
-- 
-MAXZAP : očekivani maksimalni broj zapisa 
-- 
-C : broj zapisa u jednom pretincu 
-- 
-M : broj pretinaca 
- 
-Ključ zapisa je šifra artikla, a transformacija ključa u adresu obavlja se zadanom funkcijom: 
- 
-int adresa(int sifra); 
- 
-Napisati funkciju koja će pronaći zapis koji je najviše „udaljen“ od predviđenog pretinca. Ako 
-pojedini zapis nije spremljen kao preljev, njegova je udaljenost 0; inače se udaljenost definira 
-kao broj dodatnih pretinaca koje je potrebno pročitati da bi se zapis pronašao. (Primjerice, 
-ako je M=15, adresa nekog zapisa 13, a zapis se nalazi u pretincu broj 4, udaljenost je 6). 
-Funkcija vraća 0 ako nijedan zapis nije zapisan kao preljev; inače vraća najveću udaljenost. 
-Ako postoji više takvih zapisa, vratiti bilo koji. Funkcija treba imati prototip: 
- 
- 
-int max_udaljenost(FILE *f, zapis *z); 
- 
- 
- 
- 
-
-3. (4 boda) Napisati rekurzivnu funkciju koja za zadane x i y 
-koordinate lijeve gornje točke kvadrata, duljinu stranice i 
-brojKvadrata crta ""koncentrične kvadrate"" kao na slici. 
-Točka (0, 0) koordinatnog sustava se nalazi u gornjem lijevom 
-kutu. 
- 
-Svaki kvadrat ima središte kao i prethodni, a stranicu duljine 20 
-piksela veću od prethodnog. 
- 
-Za crtanje koristite funkciju DrawRectangle koja iscrtava pravokutnik s gornjim lijevim 
-kutom u (x, y) i duljinom stranica sirina i visina, koja ima prototip: 
- 
-DrawRectangle(int x, int y, int sirina, int visina) 
- 
-Funkciju DrawRectangle ne treba implementirati! 
- 
-Na slici je zadan brojKvadrata = 6. 
- 
-Funkcija koju treba napisati ima prototip: 
- 
-void KoncentricniKvadrati(int x, int y, int stranica, int brojKvadrata); 
- 
- 
-4. (3 boda) Odredite apriornu složenost sljedećih programskih odsječaka i detaljno obrazložite 
-svoje odgovore. 
- 
-a) int Funkcija1(int *mat, int n, int maxstu){ 
-int i, j, suma = 0; 
- 
-for (i = 0; i < n; i++) 
- 
- 
-for (j = 0; j < n; j++){ 
- 
- 
- 
-printf(""%d\n"", mat[i*maxstu + j]); 
-if (i + j == 2) suma += mat[i*maxstu + j]; 
- 
- 
- 
-} 
- 
-return suma; 
-} 
- 
-b) int Funkcija2(int *mat, int n, int maxstu){ 
- 
-int i, j; 
- 
-for (i = 0; i < n; i++) 
- 
- 
-for (j = 0; j < n; j++){ 
-printf(""%d\n"", mat[i*maxstu + j]); 
- 
- 
- 
-if (i + j == 2) return mat[i*maxstu + j]; 
- 
- 
-} 
-} 
- 
-c) int Funkcija3(int *mat, int n, int maxstu){ 
- 
-int i, j; 
- 
-for (i = 0; i < n; i++) 
- 
- 
-for (j = 0; j < n; j++){ 
-printf(""%d\n"", mat[i*maxstu + j]); 
- 
- 
- 
-if (i == 2) return mat[i*maxstu + j]; 
-} 
-} 
- 
-
-RJEŠENJA: 
- 
-1. 
-int *duplikat(int *polje, int br_clanova){ 
- 
-int i, *novo; 
- 
-novo = (int*) malloc(br_clanova * sizeof(int)); 
- 
-for(i=0; i < br_clanova ; i++) 
- 
- 
-novo[i] = polje[i]; 
- 
-return novo; 
-} 
-int main(){ 
- 
-int polje[50], *novo, i, br_clanova = 50; 
- 
-srand((unsigned) time(NULL)); 
- 
- 
-for(i=0; i<br_clanova ; i++){ 
- 
- 
-polje[i] = 1+rand()%20; 
- 
-} 
- 
- 
-novo = duplikat(polje, br_clanova); 
- 
-for(i=0; i<br_clanova ; i++){ 
- 
- 
-printf(""%d\n"", novo[i]); 
- 
-} 
- 
-free(novo); 
- 
-return 0; 
-} 
- 
-2. 
-int max_udaljenost(FILE *f, zapis *z){ 
- 
-zapis pretinac[C]; 
- 
-int i, j; 
- 
- 
-int udaljenost, max = 0; 
- 
- 
- 
-for (i = 0; i < M; i++) { 
- 
- 
- 
- 
-fseek (f, i*BLOK, SEEK_SET); 
- 
- 
-fread (pretinac, sizeof (pretinac), 1, f); 
- 
- 
-for (j = 0; j < C; j++) { 
- 
- 
- 
-if (pretinac[j].sifra != 0) { 
- 
- 
- 
- 
-/* Ako zapis nije prazan */ 
- 
- 
- 
- 
-if (adresa(pretinac[j].sifra) != i){ 
- 
- 
- 
- 
- 
-udaljenost = i - adresa(pretinac[j].sifra); 
- 
- 
- 
- 
- 
-if (udaljenost < 0) 
- 
- 
- 
- 
- 
- 
-udaljenost += M; 
- 
- 
- 
- 
- 
-if (udaljenost > max){ 
- 
- 
- 
- 
- 
- 
-*z = pretinac[j]; 
- 
- 
- 
- 
- 
- 
-max = udaljenost; 
- 
- 
- 
- 
- 
-} 
- 
- 
- 
- 
-} 
- 
- 
- 
-} 
- 
- 
- 
- 
- 
-} 
- 
- 
- 
-} 
- 
-return max; 
-} 
- 
- 
-3. 
-void KoncentricniKvadrati(int x, int y, int stranica, int brojKvadrata) 
-{ 
- 
-DrawRectangle(x, y, stranica, stranica); 
- 
-if (brojKvadrata > 1) 
- 
-{ 
-
- 
- 
-brojKvadrata = brojKvadrata - 1; 
- 
- 
-KoncentricniKvadrati(x-10, y-10, stranica+20, brojKvadrata); 
- 
-} 
-} 
- 
- 
-4. 
-a) Bez obzira koji je rezultat naredbe (i + j == 2) program će proći kroz cijelu 
-matricu koja ima n2 elemenata, pa je zato složenost O(n2). 
-b) Uvjet (i + j == 2) prvi put je ispunjen točno kada je i = 0 i j = 2. Do tada 
-smo samo 2 puta prošli naredbu if (i + j == 2) suma += mat[i*maxstu + j];, 
-a treći put izlazimo iz petlji. 
-Složenost je 6 brojimo li naredbu printf(...) i if(...), dakle konstantna, odnosno O(1). 
-c) Uvjet (i == 2) prvi put je ispunjen točno kada je i = 2 i j = 0. Do tada smo 
-samo 2*n puta prošli naredbu if (i + j == 2), a onda izlazimo iz petlji. 
-Složenost je 2*n*2 brojimo li naredbu printf(...) i if(...), odnosno O(n). 
- 
- 
-
-Algoritmi i strukture podataka 
-2. međuispit 
- 
- 
-1. (4 bodova) Za zadani niz brojeva: 3, 2, 8, 6, 4, 10, 2, 1, 5, 7, 9, ilustrirati sortiranje 
-postupkom quicksort tako da se kao stožer odabire prvi element u polju. Rješenje mora 
-sadržavati izgled polja nakon svake zamjene dvaju elemenata. 
- 
-Jedan način 
-3 2 8 6 4 10 2 1 5 7 9 
-3 2 1 6 4 10 2 8 5 7 9 
-3 2 1 2 4 10 6 8 5 7 9 
-2 2 1 3 4 10 6 8 5 7 9 
-1 2 2 3 4 10 6 8 5 7 9 
-1 2 2 3 4 9 6 8 5 7 10 
-1 2 2 3 4 7 6 8 5 9 10 
-1 2 2 3 4 7 6 5 8 9 10 
-1 2 2 3 4 5 6 7 8 9 10 
- 
- 
-Drugi način (razlika je u 
-zasjenjenom retku) 
-3 2 8 6 4 10 2 1 5 7 9 
-3 2 1 6 4 10 2 8 5 7 9 
-3 2 1 2 4 10 6 8 5 7 9 
-2 2 1 3 4 10 6 8 5 7 9 
-2 1 2 3 4 10 6 8 5 7 9 
-1 2 2 3 4 10 6 8 5 7 9 
-1 2 2 3 4 9 6 8 5 7 10 
-1 2 2 3 4 7 6 8 5 9 10 
-1 2 2 3 4 7 6 5 8 9 10 
-1 2 2 3 4 5 6 7 8 9 10 
- 
- 
-2. (4 bodova) Za zadani niz brojeva: 3, 2, 8, 6, 4, 10, 2, 1, 5, 7, 9, ilustrirati sortiranje 
-postupkom shellsort sa nizom koraka {4,2,1}. Rješenje mora sadržavati izgled polja 
-nakon svake zamjene dvaju elemenata. 
- 
- 
-3
-2
-8
-6
-4 10
-2
-1
-5
-7
-9
-3
-2
-2
-6
-4 10
-8
-1
-5
-7
-9
-3
-2
-2
-1
-4 10
-8
-6
-5
-7
-9
-3
-2
-2
-1
-4
-7
-8
-6
-5 10
-9
-2
-2
-3
-1
-4
-7
-8
-6
-5 10
-9
-2
-1
-3
-2
-4
-7
-8
-6
-5 10
-9
-2
-1
-3
-2
-4
-6
-8
-7
-5 10
-9
-2
-1
-3
-2
-4
-6
-5
-7
-8 10
-9
-1
-2
-3
-2
-4
-6
-5
-7
-8 10
-9
-1
-2
-2
-3
-4
-6
-5
-7
-8 10
-9
-1
-2
-2
-3
-4
-5
-6
-7
-8 10
-9
-1
-2
-2
-3
-4
-5
-6
-7
-8
-9 10
- 
- 
- 
- 
- 
- 
- 
- 
- 
-
-3. (7 bodova) Na stog realiziran poljem spremaju se podaci o točkama iz koordinatnog 
-sustava. Svaka točka predstavljena je sljedećom strukturom: 
- 
-struct tocka{ 
- 
- 
-float x, y; 
-} 
-Napisati funkciju za stavljanje točke na stog i funkciju za skidanje točke sa stoga. Obje 
-funkcije trebaju vratiti 1 ako su uspješno obavile posao, a 0 inače. 
-Također, napisati rekurzivnu funkciju koja će korištenjem gore napisanih funkcija, bez 
-korištenja pomoćnih polja ili stogova, ispisati sadržaj stoga na način da se prvo ispiše 
-točka koja se nalazi na dnu stoga, a tek na kraju točka koja se nalazila na vrhu stoga. 
-Nakon završetka rekurzivne funkcije, poredak točaka na stogu mora ostati nepromijenjen. 
- 
- 
-int skini(struct tocka *stavka, struct tocka stog[], int *vrh){ 
- 
-if (*vrh < 0) return 0; 
- 
-*stavka = stog[*vrh]; 
- 
-(*vrh)--; 
- 
-return 1; 
-} 
- 
-int dodaj (struct tocka stavka, struct tocka stog[], int n, int *vrh) { 
- if (*vrh >= n-1) return 0; 
- (*vrh)++; 
- stog[*vrh] = stavka; 
- return 1; 
-} 
- 
-void ispis(struct tocka stog[], int n, int *vrh){ 
- 
-struct tocka t; 
- 
-if (skini(&t, stog, vrh)){ 
- 
- 
-ispis(stog, n, vrh); 
- 
- 
-printf(""%.2f %.2f\n"", t.x , t.y); 
- 
- 
-dodaj(t, stog, n, vrh); 
- 
-} 
-} 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-
-4. (5 bodova) Za spremanje cijelih brojeva na stog definirana je klasa Stog koja ima 
-jedan konstruktor i tri javne funkcije: 
- 
-Stog::Stog(); 
- 
-void Stog::Stavi(int element); 
- 
-void Stog::Skini(int *element); 
-int Stog::Prazan(); 
-Funkcija Prazan vraća 1 ukoliko je stog prazan, a 0 inače. 
- 
-Napisati funkciju koja će stvoriti novi stog koji će sadržavati sve one brojeve iz zadanog 
-stoga koji su veći ili jednaki prosječnoj vrijednosti elemenata iz zadanog stoga. Poredak 
-tih brojeva u novom stogu nije bitan. Redoslijed podataka na zadanom stogu mora ostati 
-nepromijenjen. Funkcija mora imati prototip: 
- 
- 
-Stog *veci_od_prosjeka(Stog *zadani); 
- 
-Napomena: Za klasu Stog nije definiran copy konstruktor. Možete pretpostaviti da u 
-svakom objektu klase Stog ima dovoljno mjesta za dodavanje novih elemenata za stog. 
-Smijete koristiti pomoćne stogove. 
- 
-Stog *veci_od_prosjeka(Stog *zadani){ 
- 
-Stog *novi = new Stog(), pom; 
- 
-int suma=0, el, br=0; float prosjek; 
- 
-while(!zadani->Prazan()){ 
- 
- 
-zadani->Skini(&el); 
- 
- 
-pom.Stavi(el); 
- 
- 
-suma+=el; br++; 
- 
-} 
- 
-if (br>0) 
- 
- 
-prosjek = (float) suma / br; 
- 
-while(!pom.Prazan()){ 
- 
- 
-pom.Skini(&el); 
- 
- 
-zadani->Stavi(el); 
- 
- 
-if (el >= prosjek) 
- 
- 
- 
-novi->Stavi(el); 
- 
-} 
- 
-printf(""Prosjek = %.2f"", prosjek); 
- 
-return novi; 
-} 
- 
-
-OKRENI 
- 
-Algoritmi i strukture podataka 
-1. međuispit 
- 4.4.2006. 
- 
-Napomene za sve zadatke: 
- Nije dopušteno korištenje goto naredbe, te statičkih i globalnih varijabli. 
- U svakom zadatku u kojem se koristi struktura, strukturu treba i definirati 
- 
-1. (4 boda) Jedan zapis datoteke organizirane po principu raspršenog adresiranja sadrži matični 
-broj studenta (int), ime i prezime (50+1 znak), godinu na kojoj trenutno studira (int) te 
-trenutni prosjek ocjena (float). Prazni se zapis prepoznaje po matičnom broju jednakom 0. 
-Veličina bloka na disku je 2048. Očekuje se najviše 120000 zapisa, a tablica je dimenzionirana za 
-25% veći kapacitet. Kod upisa se primjenjuje metoda cikličkog preljeva. Ključ zapisa je matični 
-broj, a transformacija ključa u adresu se obavlja zadanom funkcijom 
-int adresa(int matbr); 
-Napisati funkciju koja će pronaći i vratiti zapis o studentu sa zadanim matičnim brojem. Funkcija 
-preko imena treba vratiti 1 ako se zapis nalazi u „svom“ pretincu, 2 ako je zapisan kao preljev, a 0 
-ako zapis ne postoji u datoteci. Funkcija treba imati prototip: 
- 
-int fun(FILE *f, int matbr, zapis *student); 
- 
-#define N 120000 
-#define BLOK 2048 
-#define C BLOK/sizeof(zapis) 
-#define M (int)(N*1.25/C) 
- 
-typedef struct z { 
- int matbr; 
- char ipr[50+1]; 
- int godina; 
- float prosjek; 
-} zapis; 
- 
-int fun(FILE *f, int matbr, zapis *student) { 
- zapis pretinac[C]; 
- int i, j, poc; 
- 
- i = poc = adresa(matbr); 
- do { 
- fseek(f, i*BLOK, SEEK_SET); 
- fread(pretinac, sizeof(zapis), C, f); 
- for (j=0; j<C; j++) { 
- if (pretinac[j].matbr == 0) return 0; // ako nema brisanja 
- if (pretinac[j].matbr == matbr) { 
- *student = pretinac[j]; 
- if (i == poc) return 1; // u svom pretincu 
- else return 2; // preljev 
- } 
- } 
- i = (i+1)%M; 
- }while (i!=poc); 
- 
- return 0; // zapis ne postoji 
-} 
- 
-
-OKRENI 
- 
-2. (4 boda) Funkcija koja u sortiranom polju cijelih brojeva (int) traži zadani element i ima 
-složenost O(log2n) glasi: 
-int BinTraz (tip a[], int x, int n) { 
- int donji, srednji, gornji; 
- donji = 0; gornji = n - 1; 
- while (donji <= gornji) { 
- srednji = (donji + gornji) / 2; // ""prepolovi"" (pod)polje 
- if (a [srednji] < x) 
- donji = srednji + 1; 
- // trazeni u desnom dijelu 
- else if (a [srednji] > x) 
- gornji = srednji - 1; 
- // trazeni u lijevom dijelu 
- else 
- return srednji; 
- // nadjen 
- } 
- return -1; // nije nadjen 
-} 
- 
-Napisati novu REKURZIVNU funkciju BinTraz2, koja će imati isti prototip, istu složenost i raditi 
-isto što i gornja funkcija. 
- 
- 
-int BinTraz2 (int a[], int x, int n) { 
- int srednji; 
- int pom; 
- 
- if (n == 0) return -1; // zapis ne postoji 
- srednji = (n-1)/2; 
- if (a[srednji] > x) return BinTraz2(a, x, srednji); 
- else if (a[srednji] < x) { 
- pom = BinTraz2(a+srednji+1, x, n-srednji-1); 
- if (pom == -1) return -1; 
- else return srednji + 1 + pom; 
- } 
- else return srednji; 
-} 
- 
- 
-3. (4 boda) Napisati funkciju koja će napraviti i vratiti duplikat zadanog polja realnih brojeva. 
-Memoriju za duplikat potrebno je zauzeti unutar funkcije. Funkcija mora imati prototip: 
- 
-float *duplikat(float *polje, int n); 
- 
-Odrediti apriornu složenost funkcije za najgori, najbolji i prosječni slučaj u ovisnosti o broju 
-elemenata polja. 
- 
-float *duplikat(float *polje, int n) { 
- float *polje2; 
- int i; 
- 
- polje2 = (float *)malloc(n*sizeof(float)); 
- if (polje2) { 
- for (i=0; i<n; i++) polje2[i] = polje[i]; 
- } 
- 
- return polje2; 
-} 
- 
-Sve složenosti su O(n) 
- 
-
-OKRENI 
-4. (3 boda) Dana su dva odsječka programa. Svaki od njih traži zadani zapis na glavnoj dijagonali 
-kvadratnog 2D polja: 
- 
-I. 
-nasao = 0; 
-for (i=0; i<n; i++) { 
- if (polje[i][i] == zadani) { 
- nasao = 1; 
- break; 
- } 
-} 
- 
-II. 
-nasao = 0; 
-for (i=0; i<n; i++) { 
- for (j=0; j<n; j++) { 
- if (i==j && polje[i][j]==zadani) 
- nasao = 1; 
- } 
-} 
- 
-Odrediti apriornu složenost oba odsječka za najbolji, najgori i prosječni slučaj u ovisnosti o broju 
-redaka 2D polja (n). Detaljno objasniti svoje odgovore. 
- 
- 
-I 
-Najbolji: O(1) 
-Najgori: O(n) 
-Prosječni: O(n) 
- 
-II 
-Najbolji: O(n2) 
-Najgori: O(n2) 
-Prosječni: O(n2) 
- 
- 
-
- 
-Drugi međuispit iz Algoritama i struktura podataka 
-16.5.2006. 
- 
- 
-Napomene za sve zadatke: 
- Nije dopušteno korištenje goto naredbe, te statičkih i globalnih varijabli. 
- U svakom zadatku u kojem se koristi struktura, strukturu treba i definirati 
- Studentima na pitanja ne smiju odgovarati asistenti koji ih čuvaju u učionici. Na 
-pitanja će odgovarati isključivo asistenti koji za vrijeme ispita obilaze prostorije 
- 
-1. Zadan je niz brojeva: 5, 4, 9, 1, 7, 10, 8, 2, 3, 6. Ilustrirati sortiranje zadanog niza brojeva 
-postupkom quicksort tako da se kao stože odabire: 
- 
-a) prvi element u polju 
- 
-b) zadnji element u polju 
- 
-Obavezno ispisati sadržaj polja nakon svake zamjene dvaju elemenata. Nije dopušteno koristiti 
-drugi algoritam za polja manja od neke zadane veličine (cutoff, npr. 3 ili 5). 
- 
-a) 
-5 – stožer 
- 
-5 – element koji se zamjenjuje 
- 
-5 4 9 1 7 10 8 2 3 6 
-5 4 3 1 7 10 8 2 9 6 
-5 4 3 1 2 10 8 7 9 6 
-2 4 3 1 5 10 8 7 9 6 
-2 1 3 4 5 10 8 7 9 6 
-1 2 3 4 5 10 8 7 9 6 
-1 2 3 4 5 6 8 7 9 10 
-1 2 3 4 5 6 7 8 9 10 
- 
-b) 
-5 – stožer 
- 
-5 – element koji se zamjenjuje 
- 
-5 4 9 1 7 10 8 2 3 6 
-5 4 3 1 7 10 8 2 9 6 
-5 4 3 1 2 10 8 7 9 6 
-5 4 3 1 2 6 8 7 9 10 
-1 4 3 5 2 6 8 7 9 10 
-1 2 3 5 4 6 8 7 9 10 
-1 2 3 4 5 6 8 7 9 10 
-1 2 3 4 5 6 7 8 9 10 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-
-2. Napisati funkciju koja će od dva zadana sortirana niza cijelih brojeva, napraviti treći sortirani 
-niz koji sadrži sve elemente iz prva dva niza. Dva zadana niza moraju ostati nepromijenjena. 
-Memoriju za treći niz potrebno je zauzeti u funkciji i preko imena (return) vratiti u glavni program. 
-Funkcija treba imati prototip: 
-int *merge(int *niz1, int N1, int *niz2, int N2, int *NMerge); 
- 
-Preko argumenta NMerge, u glavni program treba vratiti broj elemenata trećeg niza (N1 + N2). 
- 
-Primjer: Neka je prvi niz: 1, 3, 5, 6, a drugi niz: 2, 4, 5, 7. Treći niz mora biti: 1, 2, 3, 4, 5, 5, 6, 7 i 
-preko varijable NMerge treba vratiti vrijednost 8. 
- 
- 
-int *merge(int *niz1, int N1, int *niz2, int N2, int *NMerge) { 
- int i,j,k; 
- int *niz3; 
- 
- i = j = k = 0; 
- *NMerge = N1 + N2; 
- 
- niz3 = (int *)malloc(*NMerge * sizeof(int)); 
- if (niz3 == NULL) return NULL; 
- 
- while (i<N1 && j<N2) { 
- if (niz1[i] < niz2[j]) { 
- niz3[k] = niz1[i]; 
- i++; 
- k++; 
- } 
- else { 
- niz3[k] = niz2[j]; 
- j++; 
- k++; 
- } 
- } 
- 
- while (i<N1) { 
- niz3[k] = niz1[i]; 
- i++; 
- k++; 
- } 
- 
- while (j<N2) { 
- niz3[k] = niz2[j]; 
- j++; 
- k++; 
- 
- } 
- 
- return niz3; 
-} 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-
-3. Na stog realiziran poljem spremaju se cjelobrojni podaci (int). Napisati funkciju za stavljanje 
-elementa na stog, i funkciju za skidanje elementa sa stoga. Obje funkcije trebaju vratiti 1 ako su 
-uspješno obavile posao, a 0 inače. 
- 
-Napisati i glavni program u kojem se sa tipkovnice učitava 10 brojeva i stavlja ih se na stog 
-koristeći prije napisanu funkciju. 
- 
- 
-int stavi(int *stog, int *vrh, int N, int element) { 
- if (*vrh >= N-1) return 0; 
- 
- (*vrh)++; 
- stog[*vrh] = element; 
- return 1; 
-} 
- 
-int skini(int *stog, int *vrh, int *element) { 
- if (*vrh < 0) return 0; 
- 
- *element = stog[*vrh]; 
- (*vrh)--; 
- return 1; 
-} 
- 
-void main() { 
- int stog[20]; 
- int vrh = -1; 
- int element; 
- 
- for (int i=0; i<10; i++) { 
- scanf(""%d"", &element); 
- stavi(stog, &vrh, 20, element); 
- } 
- 
- printf(""\n\n Elementi stoga:""); 
- while (skini(stog, &vrh, &element)) { 
- printf("" %d "", element); 
- } 
-} 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-
-4. Za spremanje cijelih brojeva na stog definirana je klasa Stog koja ima jedan konstruktor i dvije 
-javne funkcije: 
- 
-Stog::Stog(); 
- 
-int Stog::Stavi(int element); 
- 
-int Stog::Skini(int *element); 
-Funkcije Skini i Stavi vraćaju 1 ako je operacija uspješno obavljena, a 0 inače. 
- 
-Napisati funkciju koja će napraviti i vratiti duplikat zadanog stoga (isti takav stog, isti elementi koji 
-imaju isti redoslijed). Zadani stog mora na kraju ostati nepromijenjen. Funkcija mora imati prototip: 
- 
-Stog *duplikat(Stog *zadani); 
- 
-Napomene: 
-- dopušteno je koristiti pomoćni stog 
-- 
-možete pretpostaviti da u svakom objektu klase Stog ima dovoljno mjesta 
-- 
-za klasu Stog NIJE definiran copy konstruktor 
- 
- 
-Stog *duplikat(Stog *zadani) { 
- Stog *dup = new Stog; 
- Stog pom; 
- int element; 
- 
- while(zadani->Skini(&element)) { 
- pom.Stavi(element); 
- } 
- 
- while (pom.Skini(&element)) { 
- dup->Stavi(element); 
- zadani->Stavi(element); 
- } 
- 
- return dup; 
-}",5,Rasuto adresiranje,0.022560824,,,,,,,,,,
+}",5,Red i stog,0.06855335,,,,,,,,,,
 ZI|2026-02-06|1,ZI,2026-02-06,1,"Zadan je razred BStablo kojim se implementira binarno stablo za traženje (za svaki čvor vrijedi: lijevo su upisani 
 elementi koji su manji od elementa zapisanog u tom čvoru, a desno veći): 
 template <typename T> class BStablo { 
@@ -8355,7 +7118,7 @@ nije dozvoljeno koristiti pomoćne strukture podataka (polja, liste, itd.).
 Potrebno je napisati odsječak glavnog programa u kojemu se definiraju potrebne varijable i poziva funkcijski član 
 dodajNove. 
 Napomena: Pretpostavite da su definirani svi potrebni operatori za tip T (za usporedbu itd.). Nijedna se vrijednost u 
-stablu ne može pojaviti više puta, tj. u stablo ne mogu biti upisani duplikati.",1,Binarno stablo implementacija,0.05902028,ZI_svi_do_2026.pdf,1.0,10.0,30.0,0.3333333333,3.0,core,6.0,bst|queue,Zadatak 1. (10 bodova) Zadan je razred BStablo...
+stablu ne može pojaviti više puta, tj. u stablo ne mogu biti upisani duplikati.",7,Grafovi,0.055154838,ZI_svi_do_2026.pdf,1.0,10.0,30.0,0.3333333333,3.0,core,6.0,bst|queue,Zadatak 1. (10 bodova) Zadan je razred BStablo...
 ZI|2026-02-06|2,ZI,2026-02-06,2,"RJEŠENJE b) DIJELA ZADATKA UPISATI U PREDVIĐENI PROSTOR NA OVOME PAPIRU 
 
 Zadan je usmjereni graf G = (V, E), čiji je skup vrhova V = {1, 2, 3, 4, 5}. 
@@ -8386,7 +7149,7 @@ postaviti oznake kada se obiđe pojedini vrh (vector obidjeni). Vrhovi navedeni 
 poredani rastućim redoslijedom. Prototip funkcije je: 
 void DFSR(vector<int> listaSusjedstva[], vector<bool>& obidjeni, int vrh); 
 b) Počevši od vrha 1, napišite redoslijed obilaska vrhova rekurzivnim DFS algoritmom (neobiđene susjede vrhova 
-grafa odabirati rastućim redoslijedom) za graf zadan u glavnom programu:",10,Rasuto adresiranje,0.23570693,ZI_svi_do_2026.pdf,1.0,10.0,30.0,0.3333333333,3.0,core,6.0,graph|linked_list|queue,Zadatak 2. (10 bodova) Zadan je usmjereni graf...
+grafa odabirati rastućim redoslijedom) za graf zadan u glavnom programu:",11,Usmereni graf,0.093477584,ZI_svi_do_2026.pdf,1.0,10.0,30.0,0.3333333333,3.0,core,6.0,graph|linked_list|queue,Zadatak 2. (10 bodova) Zadan je usmjereni graf...
 ZI|2026-02-06|3,ZI,2026-02-06,3,"Web shop sadrži proizvode sa sljedećim cijenama: 
 3, 9, 2, 7, 6, 4, 1, 5 
 a) Za zadani niz cijena prikažite stvaranje gomile min-heap gdje se gomila gradi odjednom pozivima funkcije 
@@ -8395,7 +7158,7 @@ treba prikazati polje nakon svake zamjene.
  
 b) Web shop želi prikazati 3 najpovoljnija proizvoda na temelju min‑heap gomile iz a) dijela zadatka, bez potpunog 
 sortiranja cijele liste. Korištenjem algoritma heapsort nad dobivenom min‑heap gomilom potrebno je prikazati 
-sadržaj polja nakon tri uzastopna poziva funkcije podesi nad korijenskim čvorom.",6,Rasuto adresiranje,0.52931297,ZI_svi_do_2026.pdf,2.0,10.0,30.0,0.3333333333,3.0,core,3.0,heap,Zadatak 3. (10 bodova) Web shop sadrži proizvode...
+sadržaj polja nakon tri uzastopna poziva funkcije podesi nad korijenskim čvorom.",10,Gomile,0.099373356,ZI_svi_do_2026.pdf,2.0,10.0,30.0,0.3333333333,3.0,core,3.0,heap,Zadatak 3. (10 bodova) Web shop sadrži proizvode...
 ZI|2026-02-06|4,ZI,2026-02-06,4,"Zadana su sučelja koja služe implementaciji tablice raspršenog adresiranja. 
 template <typename T, typename K> 
 class IHashableValue { 
@@ -8422,7 +7185,7 @@ implementirati funkciju GetLoadFactor kojom se dohvaća trenutni faktor optereć
 Hash-tablicu treba dimenzionirati na 50000 zapisa (konstanta M). Potrebno je napisati glavni program kojim se hash-
 tablica puni nasumičnim brojevima u intervalu [1000, 10000], sve dok se ne dostigne faktor opterećenja 𝛼 koji iznosi 
 0,6. Kao funkciju raspršenja potrebno je koristiti unaprijed definiranu funkciju int Method1(int key).Ovu funkciju 
-nije potrebno implementirati.",14,Raspršeno adresiranje,0.016887594,ZI_svi_do_2026.pdf,2.0,10.0,30.0,0.3333333333,3.0,core,3.0,hashing,Zadatak 4. (10 bodova) Zadana su sučelja...
+nije potrebno implementirati.",1,Binarno stablo,0.034846712,ZI_svi_do_2026.pdf,2.0,10.0,30.0,0.3333333333,3.0,core,3.0,hashing,Zadatak 4. (10 bodova) Zadana su sučelja...
 ZI|2026-02-06|5,ZI,2026-02-06,5,"RJEŠENJA UPISATI NA OVOME PAPIRU 
 
 Za zadane zadatke odgovor upišite u predviđena polja. 
@@ -8647,7 +7410,7 @@ static int GetHash(string s, int startIndex, int length) {
  hash = (D * hash + s[i + startIndex]) % PRIME; 
  } 
  return hash; 
-}",10,Rasuto adresiranje,0.19520296,ZI_svi_do_2026.pdf,2.0,5.0,10.0,0.5,2.0,detail,6.0,hashing|queue|string_algos,Zadatak 5. (5 bodova) Izračunati LPS polje...
+}",5,Red i stog,0.07024069,ZI_svi_do_2026.pdf,2.0,5.0,10.0,0.5,2.0,detail,6.0,hashing|queue|string_algos,Zadatak 5. (5 bodova) Izračunati LPS polje...
 ZI|2025-02-07|1,ZI,2025-02-07,1,"Zadan je razred BStablo kojim se implementira binarno stablo za traženje (za svaki čvor: lijevo su upisani elementi 
 koji su manji od elementa zapisanog u tom čvoru, a desno veći): 
 template <typename T> class BStablo 
@@ -8689,7 +7452,7 @@ Dozvoljeno je koristiti pomoćni funkcijski član ili članove, koje također tr
 b) Potrebno je napisati odsječak glavnog programa u kojemu se definiraju potrebne varijable i poziva funkcijski član 
 jesuPotomci. 
 Napomena: Pretpostavite da su definirani svi potrebni operatori za tip T (za usporedbu itd.). Nijedna se vrijednost u 
-stablu ne može pojaviti više puta, tj. u stablo ne mogu biti upisani duplikati.",1,Binarno stablo implementacija,0.059813596,ZI_svi_do_2026.pdf,9.0,10.0,30.0,0.3333333333,3.0,core,6.0,bst|queue,Zadatak 1. (10 bodova) Zadan je razred BStablo...
+stablu ne može pojaviti više puta, tj. u stablo ne mogu biti upisani duplikati.",7,Grafovi,0.062096797,ZI_svi_do_2026.pdf,9.0,10.0,30.0,0.3333333333,3.0,core,6.0,bst|queue,Zadatak 1. (10 bodova) Zadan je razred BStablo...
 ZI|2025-02-07|2,ZI,2025-02-07,2,"RJEŠENJA UPISATI U PREDVIĐENI PROSTOR NA OVOM PAPIRU 
 
 Zadan je graf G = (V, E), čiji je skup vrhova V = {A, B, C, D, E, F, G} (vidjeti sliku). 
@@ -8702,7 +7465,7 @@ odrediti Eulerovu stazu, kratko obrazložite zašto nije moguće.
 a) Rješenje (DFS rekurzivni): 
  
  
-b) Rješenje:",10,Rasuto adresiranje,0.17379932,ZI_svi_do_2026.pdf,9.0,10.0,30.0,0.3333333333,3.0,core,6.0,graph|queue,Zadatak 2. (10 bodova) Zadan je graf...
+b) Rješenje:",11,Usmereni graf,0.07929166,ZI_svi_do_2026.pdf,9.0,10.0,30.0,0.3333333333,3.0,core,6.0,graph|queue,Zadatak 2. (10 bodova) Zadan je graf...
 ZI|2025-02-07|3,ZI,2025-02-07,3,"Zadan je niz brojeva: 
 3, 9, 2, 7, 6, 4, 1, 5 
 Za zadani niz brojeva prikažite stvaranje gomile max-heap pomoću algoritma čije je vrijeme izvođenja O(n log2 n) (za 
@@ -8710,7 +7473,7 @@ n članova polja). U svakom koraku algoritma u kojemu se obavlja zamjena trebaju
 zamijenjeni te treba prikazati polje nakon svake zamjene. 
 Nakon toga je potrebno korištenjem algoritma heapsort sortirati elemente polja uzlazno. Prikazati sadržaj polja 
 nakon svakog poziva funkcije podesi nad korijenskim čvorom. Prikaz rada algoritma zaustaviti nakon trećeg poziva 
-funkcije podesi nad korijenskim čvorom.",2,Rekurzivni algoritmi,0.13038988,ZI_svi_do_2026.pdf,10.0,10.0,30.0,0.3333333333,3.0,core,5.0,complexity|heap,Zadatak 3. (10 bodova) Zadan je niz brojeva...
+funkcije podesi nad korijenskim čvorom.",10,Gomile,0.048994947,ZI_svi_do_2026.pdf,10.0,10.0,30.0,0.3333333333,3.0,core,5.0,complexity|heap,Zadatak 3. (10 bodova) Zadan je niz brojeva...
 ZI|2025-02-07|4,ZI,2025-02-07,4,"Zadana su sučelja koja služe implementaciji tablice raspršenog adresiranja. 
 template <typename T, typename K> 
 class IHashableValue { 
@@ -8743,7 +7506,7 @@ omogući obilazak svih pozicija (pretinaca) u tablici.
 Kao funkcije raspršenja potrebno je koristiti unaprijed definirane funkcije 
 int Method1(int key) 
 i 
-int Method2(int key). Ove funkcije nije potrebno implementirati.",14,Raspršeno adresiranje,0.017608155,ZI_svi_do_2026.pdf,10.0,10.0,30.0,0.3333333333,3.0,core,3.0,hashing,Zadatak 4. (10 bodova) Zadana su sučelja...
+int Method2(int key). Ove funkcije nije potrebno implementirati.",1,Binarno stablo,0.036034785,ZI_svi_do_2026.pdf,10.0,10.0,30.0,0.3333333333,3.0,core,3.0,hashing,Zadatak 4. (10 bodova) Zadana su sučelja...
 ZI|2025-02-07|5,ZI,2025-02-07,5,"RJEŠENJA UPISATI NA OVOME PAPIRU 
 
 Za zadane zadatke odgovor upišite u predviđena polja. 
@@ -8944,7 +7707,7 @@ A A A B B B A A A B
 b) (2 boda) Izračunajte Levenshteinovu udaljenost riječi 
 „algoritmi“ i „al-khwarizmi“. 
  
-Rezultat: LD = 6 ______________________",10,Rasuto adresiranje,0.1777052,ZI_svi_do_2026.pdf,10.0,5.0,10.0,0.5,2.0,detail,6.0,queue|string_algos,Zadatak 5. (5 bodova) Izračunati LPS polje...
+Rezultat: LD = 6 ______________________",5,Red i stog,0.068950914,ZI_svi_do_2026.pdf,10.0,5.0,10.0,0.5,2.0,detail,6.0,queue|string_algos,Zadatak 5. (5 bodova) Izračunati LPS polje...
 ZI|2023-02-02|1,ZI,2023-02-02,1,"Zadan je razred BStablo kojim se implementira binarno stablo: 
 template <typename T> class BStablo { 
 public: 
@@ -8984,7 +7747,7 @@ b) Potrebno je napisati odsječak glavnog programa u kojemu se definiraju potreb
 brojPuteva. 
 c) Za svoju implementaciju funkcijskog člana brojPuteva navedite, ako je moguće, vrijeme izvođenja u Θ notaciji, a 
 ako nije moguće, navedite vremena izvođenja u O i Ω notaciji. 
-Napomena: Pretpostavite da su definirani svi potrebni operatori za tip T (za usporedbu itd.).",1,Binarno stablo implementacija,0.052922882,ZI_svi_do_2026.pdf,14.0,10.0,30.0,0.3333333333,3.0,core,6.0,bst|queue,Zadatak 1. (10 bodova) Zadan je razred BStablo...
+Napomena: Pretpostavite da su definirani svi potrebni operatori za tip T (za usporedbu itd.).",7,Grafovi,0.06345817,ZI_svi_do_2026.pdf,14.0,10.0,30.0,0.3333333333,3.0,core,6.0,bst|queue,Zadatak 1. (10 bodova) Zadan je razred BStablo...
 ZI|2023-02-02|2,ZI,2023-02-02,2,"RJEŠENJA UPISATI NA OVOME PAPIRU 
 
 Zadan je graf G = (V, E), čiji je skup vrhova V = {A, B, C, D, E, F} (vidjeti sliku). Počevši od vrha A, napišite redoslijed 
@@ -8995,7 +7758,7 @@ a) nerekurzivni obilazak grafa u dubinu (DFS)
 Rješenje: 
 b) nerekurzivni obilazak grafa u širinu (BFS) 
  
-Rješenje:",10,Rasuto adresiranje,0.1727222,ZI_svi_do_2026.pdf,14.0,10.0,30.0,0.3333333333,3.0,core,6.0,graph|queue,Zadatak 2. (10 bodova) Zadan je graf...
+Rješenje:",11,Usmereni graf,0.09119817,ZI_svi_do_2026.pdf,14.0,10.0,30.0,0.3333333333,3.0,core,6.0,graph|queue,Zadatak 2. (10 bodova) Zadan je graf...
 ZI|2023-02-02|3,ZI,2023-02-02,3,"Zadan je niz brojeva: 
 1, 7, 5, 4, 1, 2, 8 
 Za zadani niz brojeva prikažite stvaranje gomile minheap pomoću algoritma čije je vrijeme izvođenja O(n) (za n 
@@ -9003,7 +7766,7 @@ Za zadani niz brojeva prikažite stvaranje gomile minheap pomoću algoritma čij
 zamijenjeni te treba prikazati polje nakon svake zamjene. 
 Nakon toga je potrebno korištenjem algoritma heapsort sortirati elemente polja silazno. Prikazati sadržaj polja 
 nakon svakog poziva funkcije podesi nad korijenskim čvorom. Prikaz rada algoritma zaustaviti nakon trećeg poziva 
-funkcije podesi nad korijenskim čvorom.",2,Rekurzivni algoritmi,0.107319556,ZI_svi_do_2026.pdf,15.0,10.0,30.0,0.3333333333,3.0,core,5.0,complexity|heap,Zadatak 3. (10 bodova) Zadan je niz brojeva...
+funkcije podesi nad korijenskim čvorom.",10,Gomile,0.05326886,ZI_svi_do_2026.pdf,15.0,10.0,30.0,0.3333333333,3.0,core,5.0,complexity|heap,Zadatak 3. (10 bodova) Zadan je niz brojeva...
 ZI|2023-02-02|4,ZI,2023-02-02,4,"Zadana su sučelja koja služe implementaciji tablice raspršenog adresiranja. 
 template <typename T, typename K> 
 class IHashableValue { 
@@ -9047,7 +7810,7 @@ Upisana dva elementa (jedna kolizija)
 Napomena: Potrebno je implementirati sve dodatne klase koje nedostaju da bi hash ulančavanjem bio funkcionalan. 
 Konstruktor i destruktor nije potrebno implementirati. 
 Kao funkciju raspršenja potrebno je koristiti unaprijed definiranu funkciju int HashMultiplicationMethod1(int key, 
-int hash_size). Tu funkciju nije potrebno implementirati.",14,Raspršeno adresiranje,0.017859329,ZI_svi_do_2026.pdf,15.0,10.0,30.0,0.3333333333,3.0,core,3.0,hashing,Zadatak 4. (10 bodova) Zadana su sučelja...
+int hash_size). Tu funkciju nije potrebno implementirati.",1,Binarno stablo,0.037110437,ZI_svi_do_2026.pdf,15.0,10.0,30.0,0.3333333333,3.0,core,3.0,hashing,Zadatak 4. (10 bodova) Zadana su sučelja...
 ZI|2023-02-02|5,ZI,2023-02-02,5,"RJEŠENJA UPISATI NA OVOME PAPIRU 
 
 Za zadane zadatke odgovor upišite u predviđena polja. 
@@ -9224,7 +7987,7 @@ Rezultat: LD = 3 ______________________
  
 
  
-e",10,Rasuto adresiranje,0.17929295,ZI_svi_do_2026.pdf,15.0,5.0,10.0,0.5,2.0,detail,6.0,queue|string_algos,Zadatak 5. (5 bodova) Izračunati LPS polje...
+e",5,Red i stog,0.086919114,ZI_svi_do_2026.pdf,15.0,5.0,10.0,0.5,2.0,detail,6.0,queue|string_algos,Zadatak 5. (5 bodova) Izračunati LPS polje...
 ZI|2023-01-27|1,ZI,2023-01-27,1,"Zadan je razred BStablo kojim se implementira binarno stablo i razred Stog kojim se implementira stog: 
 template <typename T> class BStablo{ 
 public: 
@@ -9273,7 +8036,7 @@ Ispis u glavnom programu nakon poziva odrediPut
 4 
 4 
 -4 
-Element nije u stablu.",1,Binarno stablo implementacija,0.08591596,,,,,,,,,,
+Element nije u stablu.",7,Grafovi,0.06874627,,,,,,,,,,
 ZI|2023-01-27|2,ZI,2023-01-27,2,"RJEŠENJA UPISATI NA OVOME PAPIRU 
 
 Zadan je graf G = (V, E), skup vrhova V = {A, B, C, D, E} te matrica susjedstva vrhova M. Počevši od vrha A, napišite 
@@ -9307,12 +8070,12 @@ Rješenje:
 1 
 2 
 10 
-8",10,Rasuto adresiranje,0.22098427,,,,,,,,,,
+8",11,Usmereni graf,0.07872778,,,,,,,,,,
 ZI|2023-01-27|3,ZI,2023-01-27,3,"Zadan je niz brojeva: 
 8, 5, 7, 2, 1, 4, 4, 9 
 Ilustrirajte uzlazno sortiranje algoritmom quicksort. Stožer se odabire metodom aproksimacije medijana temeljem 
 prvog, srednjeg i zadnjeg člana. Zadan je cutoff = 3 nakon čega se sortira bez navođenja koraka. 
-Potrebno je prikazati sadržaj polja nakon svake promjene.",6,Rasuto adresiranje,0.084895395,,,,,,,,,,
+Potrebno je prikazati sadržaj polja nakon svake promjene.",4,Uzlazno sortiranje,0.041548036,,,,,,,,,,
 ZI|2023-01-27|4,ZI,2023-01-27,4,"Zadana su sučelja koja služe implementaciji tablice raspršenog adresiranja. 
 template <typename T, typename K> 
 class IHashableValue { 
@@ -9365,7 +8128,7 @@ e
 Upisan je bez kolizije 
 Napomena: Konstruktor i destruktor nije potrebno implementirati. 
 Kao funkcije raspršenja potrebno je koristiti unaprijed definirane funkcije int HashMultiplicationMethod1(int key) i 
-int HashMultiplicationMethod2(int key). Ove funkcije nije potrebno implementirati.",14,Raspršeno adresiranje,0.017859329,,,,,,,,,,
+int HashMultiplicationMethod2(int key). Ove funkcije nije potrebno implementirati.",1,Binarno stablo,0.048264325,,,,,,,,,,
 ZI|2023-01-27|5,ZI,2023-01-27,5,"Zadana je funkcija za izmjenu sažetka (hasha) ReHash koja se koristi u algoritmu Rabin-Karp za pretraživanje znakovnih 
 nizova. Nadopunite linije koje nedostaju. 
 Napomena: currentHash je trenutna hash-vrijednost, oldFirst stara prva znamenka niza, newLast nova 
@@ -9537,7 +8300,7 @@ newHash
  
 PRIM 
  
-newHash",10,Rasuto adresiranje,0.47725993,,,,,,,,,,
+newHash",5,Red i stog,0.084621176,,,,,,,,,,
 ZI|2022-01-28|1,ZI,2022-01-28,1,"Zadan je razred BStablo kojim se implementira binarno stablo: 
 template <typename T> class BStablo { 
 public: 
@@ -9574,18 +8337,18 @@ Napomene: članske funkcije unos (dvije funkcije s modifikatorima vidljivosti pu
 alocira memorijski prostor za novi čvor i u njega pohranjuje vrijednost elem. 
 Za realizaciju članske funkcije zamijeniVecim dozvoljeno je koristiti i pomoćne funkcijske članove i pomoćne 
 funkcije. Pretpostavite da su definirani operatori usporedbe i operator pridruživanja za tip T. 
-b) Napišite odsječak glavnog programa u kojemu se poziva funkcijski član zamijeniVecim.",1,Binarno stablo implementacija,0.06826395,,,,,,,,,,
+b) Napišite odsječak glavnog programa u kojemu se poziva funkcijski član zamijeniVecim.",7,Grafovi,0.05747664,,,,,,,,,,
 ZI|2022-01-28|2,ZI,2022-01-28,2,"Zadan je niz brojeva: 
 9, 0, 8, 4, 1, 3, 4, 2 
 Ilustrirajte uzlazno sortiranje algoritmom Shellsort s koracima {5, 2, 1}. Potrebno je prikazati sadržaj polja nakon 
-svake promjene.",6,Rasuto adresiranje,0.10274173,,,,,,,,,,
+svake promjene.",4,Uzlazno sortiranje,0.12578566,,,,,,,,,,
 ZI|2022-01-28|3,ZI,2022-01-28,3,"Zadan je niz brojeva: 
 2, 3, 6, 4, 5, 2 
 Za zadani niz brojeva prikažite stvaranje gomile maxheap pomoću algoritma čije je vrijeme izvođenja O(n) (za n 
 članova polja). U svakom koraku algoritma u kojemu se obavlja zamjena trebaju biti označeni članovi polja koji su 
 zamijenjeni te treba prikazati polje nakon svake zamjene. 
 Počevši od gomile kreirane u prvome dijelu zadatka, prikažite uzlazno sortiranje zadanog niza heapsortom, 
-prikazujući svaki korak sortiranja (navedite sadržaj polja nakon svake promjene).",2,Rekurzivni algoritmi,0.105151914,,,,,,,,,,
+prikazujući svaki korak sortiranja (navedite sadržaj polja nakon svake promjene).",10,Gomile,0.04760642,,,,,,,,,,
 ZI|2022-01-28|4,ZI,2022-01-28,4,"Potrebno je napisati rekurzivnu člansku funkciju zadane klase DGraph koja će, nakon što je izvršen Dijkstrin algoritam 
 za početni čvor v0, ispisati najkraći put od čvora v0 do čvora zadanog argumentom funkcije. Funkcija treba imati 
 prototip: void PrintPath(Vertex<int>* v);. Zadane su klase Vertex i DGraph. 
@@ -9616,7 +8379,7 @@ Klasa Vertex modelira čvor grafa: next je vektor susjednih čvorova, weights ud
 Dijkstrin algoritam, distance je najkraća udaljenost do čvora nakon što je obavljen Dijkstrin algoritam, te traversed 
 varijabla koja govori je li čvor već obiđen tijekom izvršavanja Dijkstgrinog algoritma. Klasa DGraph modelira graf nad 
 kojim se pokreće Dijkstrin algoritam. v0 je početni čvor Dijkstrinog algoritma, allVertices vektor koji pohranjuje sve 
-čvorove grafa, DGraph() konstruktor, a Dijkstra() implementacija Dijkstrinog algoritma (koju ne treba pisati).",7,Rasuto adresiranje stoga,0.3827332,,,,,,,,,,
+čvorove grafa, DGraph() konstruktor, a Dijkstra() implementacija Dijkstrinog algoritma (koju ne treba pisati).",11,Usmereni graf,0.13127744,,,,,,,,,,
 ZI|2022-01-28|5,ZI,2022-01-28,5,"Izračunati LPS polje koje se koristi u Knuth-Morris-Pratt algoritmu za niz AACCBAAACCBAAC. 
 A 
 A 
@@ -9631,7 +8394,7 @@ C
 B 
 A 
 A 
-C",10,Rasuto adresiranje,0.2194498,,,,,,,,,,
+C",4,Uzlazno sortiranje,0.11013031,,,,,,,,,,
 ZI|2022-01-28|6,ZI,2022-01-28,6,"Zadana su sučelja koja služe implementaciji tablice raspršenog adresiranja. 
 … 
 template <typename T, typename K> class IHashableValue { 
@@ -9822,7 +8585,7 @@ template <typename T, typename K> class HashChaining : public IHash<T, K> {
  return nullptr; 
  return head->value; 
  } 
-};",14,Raspršeno adresiranje,0.045598924,,,,,,,,,,
+};",1,Binarno stablo,0.069898784,,,,,,,,,,
 ZI|2021-01-29|1,ZI,2021-01-29,1,"Zadan je razred BStablo kojim se implementira binarno stablo: 
 template <typename T> class BStablo { 
 public: 
@@ -9850,7 +8613,7 @@ a) Potrebno je napisati javni funkcijski član brJednoDijete razreda BStablo, ko
 čvorova koji imaju samo jedno dijete, a koji je zadan prototipom: 
 int brJednoDijete(); 
 Dozvoljeno je koristiti pomoćni funkcijski član i pomoćne funkcije. 
-b) Napišite odsječak glavnog programa u kojemu se poziva funkcijski član brJednoDijete.",1,Binarno stablo implementacija,0.050480604,,,,,,,,,,
+b) Napišite odsječak glavnog programa u kojemu se poziva funkcijski član brJednoDijete.",7,Grafovi,0.06885421,,,,,,,,,,
 ZI|2021-01-29|2,ZI,2021-01-29,2,"Potrebno je napisati konstruktor zadane klase Graph koji će inicijalizirati objekt, te rekurzivnu DFS metodu za obilazak 
 i ispis grafa u dubinu počevši od zadanog vrha. Susjedi svakoga vrha su spremljeni u polje listi susjeda *listeSusjeda. 
 Polju se pristupa pomoću indeksa vrha. Informacija je li pojedini vrh obiđen sprema se u polje obidjen. Napomena: 
@@ -9879,7 +8642,7 @@ void DFS(int vrh);
 // Inicijaliziraj graf 
 Graph::Graph(int vrhovi) … 
 // DFS algorithm 
-void Graph::DFS(int vrh) … // vrh od kojeg se kreće u grafu",10,Rasuto adresiranje,0.37639356,,,,,,,,,,
+void Graph::DFS(int vrh) … // vrh od kojeg se kreće u grafu",11,Usmereni graf,0.11708585,,,,,,,,,,
 ZI|2021-01-29|3,ZI,2021-01-29,3,"Izračunati LPS polje koje se koristi u Knuth-Morris-Pratt algoritmu za niz AACAAACAAAACA. 
 A 
 A 
@@ -9893,7 +8656,7 @@ A
 A 
 A 
 C 
-A",10,Rasuto adresiranje,0.22839603,,,,,,,,,,
+A",4,Uzlazno sortiranje,0.11094079,,,,,,,,,,
 ZI|2021-01-29|4,ZI,2021-01-29,4,"Zadana su sučelja koja služe implementaciji tablice raspršenog adresiranja. 
 … 
 template <typename T, typename K> class IHashableValue { 
@@ -9916,7 +8679,7 @@ adresiranja s dvostrukim raspršenim adresiranjem. Klasa HashDoubleHashing treba
 Add i Get. 
 Napomena: Konstruktor i destruktor nije potrebno implementirati. 
 Kao funkcije raspršenja potrebno je koristiti unaprijed definirane funkcije int HashMultiplicationMethod1(int key) i 
-int HashMultiplicationMethod2(int key).",14,Raspršeno adresiranje,0.036899447,,,,,,,,,,
+int HashMultiplicationMethod2(int key).",1,Binarno stablo,0.034107912,,,,,,,,,,
 ZI|2021-01-29|5,ZI,2021-01-29,5,"Zadan je niz brojeva: 
 8, 7, 2, 1, 3, 4, 6, 5 
 Ilustrirajte uzlazno sortiranje algoritmom Quicksort. Stožer za Quicksort bira se metodom aproksimacije medijana 
@@ -10065,7 +8828,7 @@ template <typename T, typename K> class HashDoubleHashing : public IHash<T, K>
 1, 2, 3, 4, 5, 7, 6, 8 L: lijevi dio od 5 je sortiran (nema više posla) 
 1, 2, 3, 4, 5, 7, 6, 8 D: desno dio se sortira Insertion sortom 
 1, 2, 3, 4, 5, 7, 7, 8 
-1, 2, 3, 4, 5, 6, 7, 8",6,Rasuto adresiranje,0.1131829,,,,,,,,,,
+1, 2, 3, 4, 5, 6, 7, 8",5,Red i stog,0.061758317,,,,,,,,,,
 ZI|2020-01-31|1,ZI,2020-01-31,1,"Zadan je razred BStablo kojim se implementira binarno stablo: 
 template <typename T> class BStablo { 
 public: 
@@ -10090,18 +8853,18 @@ najvećim elementom u njegovim podstablima (vidjeti sliku), a zadan je prototipo
 void zamijeniSMax(); 
 Dozvoljeno je koristiti pomoćni funkcijski član i pomoćne funkcije. 
 b) Napišite odsječak glavnog programa u kojemu se poziva funkcijski član zamijeniSMax. 
-c) Odredite složenost vaše implementacije zamijeniSMax u O, Ω i, ako je moguće, Θ notaciji.",1,Binarno stablo implementacija,0.052098356,,,,,,,,,,
+c) Odredite složenost vaše implementacije zamijeniSMax u O, Ω i, ako je moguće, Θ notaciji.",7,Grafovi,0.061855365,,,,,,,,,,
 ZI|2020-01-31|2,ZI,2020-01-31,2,"Zadan je graf prikazan slikom: 
  
 Korištenjem Dijkstrinog algoritma odredite najkraću udaljenost od vrha A do ostalih vrhova u grafu. Prikažite sadržaj 
 pratećih pomoćnih struktura (vektora prethodni i udaljenost te pomoćnog prioritetnog reda) u svakom koraku 
 algoritma. 
-Napomena: Za svaki vrh, njemu susjedne vrhove promatramo abecednim redoslijedom.",10,Rasuto adresiranje,0.31867853,,,,,,,,,,
+Napomena: Za svaki vrh, njemu susjedne vrhove promatramo abecednim redoslijedom.",11,Usmereni graf,0.11659187,,,,,,,,,,
 ZI|2020-01-31|3,ZI,2020-01-31,3,"Zadan je niz brojeva: 
 9, 8, 6, 4, 1, 3, 2 
 Za zadani niz brojeva prikažite stvaranje gomile minheap pomoću algoritma čije je vrijeme izvođenja O(n) (za n 
 članova polja). U svakom koraku algoritma u kojemu se obavlja zamjena trebaju biti označeni članovi polja koji su 
-zamijenjeni te treba prikazati polje nakon svake zamjene.",2,Rekurzivni algoritmi,0.11167951,,,,,,,,,,
+zamijenjeni te treba prikazati polje nakon svake zamjene.",10,Gomile,0.05710275,,,,,,,,,,
 ZI|2020-01-31|4,ZI,2020-01-31,4,"Zadana su sučelja koja služe implementaciji tablice raspršenog adresiranja. 
 #define c1 0.5 
 #define c2 0.5 
@@ -10125,12 +8888,12 @@ Potrebno je napisati klasu HashQuadraticProbing koja implementira sučelje IHash
 adresiranja s kvadratnim ispitivanjem. Klasa HashQuadraticProbing treba imati implementiran konstruktor (u kojem 
 se inicijalizira tablica raspršenog adresiranja veličine size) te metodu Get. 
 Napomena: Metodu Add i destruktor nije potrebno implementirati. 
-Kao funkciju raspršenja potrebno je koristiti unaprijed definiranu funkciju int HashMultiplicationMethod(int key).",14,Raspršeno adresiranje,0.10767452,,,,,,,,,,
+Kao funkciju raspršenja potrebno je koristiti unaprijed definiranu funkciju int HashMultiplicationMethod(int key).",1,Binarno stablo,0.043694366,,,,,,,,,,
 ZI|2020-01-31|5,ZI,2020-01-31,5,"Zadan je niz brojeva: 
 4, 1, 12, 7, 11, 10 
 Ilustrirajte uzlazno sortiranje algoritmom Quicksort. Stožer za Quicksort bira se metodom aproksimacije medijana 
 temeljem prvog, srednjeg i zadnjeg člana, pri čemu vrijedi da je cutoff = 3 nakon čega se sortira bez navođenja koraka. 
-Potrebno je prikazati sadržaj polja nakon svake promjene.",6,Rasuto adresiranje,0.10296546,,,,,,,,,,
+Potrebno je prikazati sadržaj polja nakon svake promjene.",4,Uzlazno sortiranje,0.04215901,,,,,,,,,,
 ZI|2020-01-31|6,ZI,2020-01-31,6,"Algoritam Rabin-Karp, koji služi pronalasku podniza u nizu, koristi u svojem radu izračun sažetka (hash-a) podniza. 
 Napisati funkciju ReHash koja se koristi u algoritmu Rabin-Karp i koja temeljem sažetka trenutnog podniza duljine m 
 računa sažetak idućeg podniza duljine m. Funkcija mora imati složenost O(1) i prototip: 
@@ -10613,7 +9376,7 @@ void HeapSort (int A[], int n) {
 Zamijeni (&A[1], &A[i]);
  Podesi (A, 1, i-1);
  }
-}",10,Rasuto adresiranje,0.35015035,,,,,,,,,,
+}",5,Red i stog,0.089477375,,,,,,,,,,
 ZI|2017-06-13|1,ZI,2017-06-13,1,"Potrebno je provjeriti je li binarno stablo balansirano s obzirom na visinu. Prazno stablo je balansirano, a neprazno 
 binarno stablo T je balansirano ako vrijedi: 
 1) Lijevo i desno podstablo od T je balansirano 
@@ -10630,14 +9393,14 @@ typedef struct cv{
 int podatak; 
 struct cv *lijevo_dijete; 
 struct cv *desno_dijete; 
-} cvor;",11,Binarno stablo,0.3208378,,,,,,,,,,
+} cvor;",7,Grafovi,0.13200377,,,,,,,,,,
 ZI|2017-06-13|2,ZI,2017-06-13,2,"Zadan je niz brojeva: 12, 48, 54, 22, 81, 62, 71, 32. 
  
 a) (5 bodova) Ilustrirajte (nacrtajte stablo nakon svake promjene) stvaranje gomile (max heap) od zadanog polja 
 brojeva algoritmom čija je složenost za najgori slučaj O(n). 
  
 b) (5 bodova) Ilustrirajte (nacrtajte stablo nakon svake promjene) stvaranje gomile (max heap) od zadanog polja 
-brojeva algoritmom čija je složenost za najgori slučaj O(nlogn).",2,Rekurzivni algoritmi,0.061982237,,,,,,,,,,
+brojeva algoritmom čija je složenost za najgori slučaj O(nlogn).",10,Gomile,0.030047417,,,,,,,,,,
 ZI|2017-06-13|3,ZI,2017-06-13,3,"Podatke o studentima potrebno je organizirati u memorijski rezidentnu tablicu raspršenog adresiranja veličine 10000 
 zapisa. Memorija za tablicu raspršenog adresiranja rezervira se u glavnom programu (nije ga potrebno pisati). Kolizija 
 se rješava linearnim ispitivanjem. 
@@ -10650,7 +9413,7 @@ zapisa upućenih na nju (lokacija u tablici), a koji su završili u preljevu. Š
 ima više takvih adresa vratiti rezultat za bilo koju od njih. 
 int Provjera(zapis* hash, int *brojPreljeva); 
 Prilikom realizacije funkcije za upis koristiti predefiniranu hash-funkciju: 
-int Adresa(int sifra);",13,Raspršeno adresiranje datoteka,0.23950735,,,,,,,,,,
+int Adresa(int sifra);",1,Binarno stablo,0.08002585,,,,,,,,,,
 ZI|2017-06-13|4,ZI,2017-06-13,4,"Zadan je tip podatka Red za koji su definirane funkcije za inicijalizaciju reda, dodavanje elementa u red te za 
 skidanje elementa iz reda. Prototipovi navedenih funkcija su: 
  
@@ -10965,8 +9728,8 @@ init_red(&red);
 novi_red = IzdvojiVisekratnike(&red, 3); 
  
 ... 
-}",5,Rasuto adresiranje,0.022460401,,,,,,,,,,
-ZI|2016-06-21|1,ZI,2016-06-21,1,Za zadani graf nacrtajte matrice susjedstva i incidencije te listu susjedstva.,10,Rasuto adresiranje,0.4321948,,,,,,,,,,
+}",8,Dinamička alokacija,0.06997143,,,,,,,,,,
+ZI|2016-06-21|1,ZI,2016-06-21,1,Za zadani graf nacrtajte matrice susjedstva i incidencije te listu susjedstva.,12,Složenost algoritama,0.13556683,,,,,,,,,,
 ZI|2016-06-21|2,ZI,2016-06-21,2,"Potrebno je sortirati zadano polje cijelih brojeva na način da ga se prvo prepiše u binarno stablo za pretraživanje, a 
 zatim ga se, inorder postupkom, prepiše natrag u polje. Možete pretpostaviti da već postoji funkcija 
 cvor *dodaj(int br, cvor *korijen) 
@@ -10985,13 +9748,13 @@ memoriju koju su elementi stabla zauzeli.
 b) Napisati funkciju koja će sortirati zadano polje cijelih brojeva pomoću binarnog stabla za pretraživanje. 
 Funkcija treba imati prototip: 
  
-void mojsort(int *polje, int n);",11,Binarno stablo,0.24760517,,,,,,,,,,
+void mojsort(int *polje, int n);",3,Rekurzija,0.123074606,,,,,,,,,,
 ZI|2016-06-21|3,ZI,2016-06-21,3,"Napišite funkciju koja će za zadano polje prirodnih brojeva provjeriti je li gomila. U polju su s -1 označeni elementi 
 koji se ne koriste. Funkcija treba vratiti 1 ako je zadano polje gomila, a -1 ako nije. Funkcija treba imati prototip: 
 int jeliGomila(int *polje, int n, int vrstaGomile); 
 Pomoću varijable vrstaGomile, određuje se za koju vrstu gomile se obavlja ispitivanje. Ako je 
 vrstaGomile = 1 roditelj treba biti veći od djece, inače roditelj treba biti manji od djece. Možete pretpostaviti 
-da gomila kreće od indeksa 1.",8,Rekurzivne funkcije na strukturama podataka,0.27773485,,,,,,,,,,
+da gomila kreće od indeksa 1.",10,Gomile,0.12202636,,,,,,,,,,
 ZI|2016-06-21|4,ZI,2016-06-21,4,"Podatke o djelatnicima potrebno je organizirati u memorijski rezidentnu tablicu raspršenog adresiranja veličine 5000 
 zapisa. Memorija za tablicu raspršenog adresiranja rezervira se u glavnom programu (nije ga potrebno pisati). Kolizija 
 se rješava dvostrukim raspršenim adresiranjem. 
@@ -11012,7 +9775,7 @@ return sifra%M;
 int Adresa2(int sifra) { 
  
 return 1 + sifra%(M - 1); 
-}",13,Raspršeno adresiranje datoteka,0.30966982,,,,,,,,,,
+}",1,Binarno stablo,0.0973988,,,,,,,,,,
 ZI|2016-06-21|5,ZI,2016-06-21,5,"Za tip podatka Stog definirane su funkcije za inicijalizaciju stoga, dodavanje elementa na stog i skidanje elementa sa 
 stoga: 
 void init_stog(Stog *stog); 
@@ -11312,7 +10075,65 @@ while(skini(&s2, &x)) dodaj(stog, x);
 } 
  
 while(skini(&s1, &el)) dodaj(stog, el); 
-}",9,Implementacija stoga,0.15956971,,,,,,,,,,
+}",8,Dinamička alokacija,0.076915845,,,,,,,,,,
+ZI|2015-06-16|1,ZI,2015-06-16,1,"Za tip podatka Stog definirane su funkcije za inicijalizaciju stoga, dodavanje elementa na stog te skidanje elementa 
+sa stoga. Elementi stoga su realni brojevi. Prototipovi navedenih funkcija su: 
+void init_stog(Stog *stog); 
+int dodaj(double element, Stog *stog); 
+int skini(double *element, Stog *stog); 
+Funkcije dodaj i skini vraćaju 1, ako je operacija dodavanja ili skidanja uspjela, a 0 inače. Potrebno je napisati 
+funkciju otpadnici čiji je prototip: 
+Stog otpadnici(Stog *S, double d); 
+Funkcija otpadnici iz stoga S uklanja sve elemente koji su od aritmetičke sredine elemenata stoga S udaljeni barem 
+za d > 0 (ne treba provjeravati je li d > 0). Uklonjeni elementi se stavljaju na stog T i to tako da su prvo, ako postoje, 
+stavljeni oni elementi koji su manji od aritmetičke sredine (poredak nije bitan), a onda, ako postoje, oni elementi 
+koji su veći od aritmetičke sredine (poredak nije bitan). Na stogu S, poredak elemenata koji nisu uklonjeni treba 
+ostati isti. 
+Funkcija treba biti neovisna o implementaciji tipa podataka Stog, a dozvoljeno je korištenje pomoćnih stogova. 
+Primjer: 
+Zadan je stog S: (dno stoga) 4 < 5 < 6 < 4 < 1 (vrh stoga). Aritmetička sredina elemenata na stogu je 4. 
+Ako je funkcija pozvana za d = 2, na izlazu iz funkcije stog S treba biti 4 < 5 < 4, a stog T 1 < 6. Ako je funkcija 
+pozvana za d = 4, na izlazu iz funkcije, stog S se ne mijenja, a stog T je prazan.",8,Dinamička alokacija,0.09275164,,,,,,,,,,
+ZI|2015-06-16|2,ZI,2015-06-16,2,"Koja je složenost sljedećeg odsječka u O i Ω notaciji u ovisnosti o argumentu n? 
+void funct(int n) { 
+ int i,j; 
+ for (i=n;i>0;i/=2) { 
+ for (j=0;j<i;j++) { 
+ printf(“%d\n”,j%2); 
+ } 
+ } 
+} 
+O notacija 
+(2 boda): 
+ 
+void funct(int n) { 
+ int i,j; 
+ if (n<20) 
+ fact(n); 
+ else { 
+ if (n%2) { 
+ for (i=0;i<n;++i) { 
+ for (j=0;j<i;++j) { 
+ printf(“%d\n”,j%2); 
+ } 
+ } 
+ } 
+ else { 
+ for (i=0;i<n;++i) { 
+ printf(“%d\n”,i%2); 
+ } 
+ } 
+ } 
+} 
+O notacija 
+(2 boda): 
+ 
+Ω notacija 
+(1 bod): 
+Ω notacija 
+(1 bod): 
+ (napomena: funkcija fact računa faktorijel argumenta, a modulo operator u argumentu printf-a osigurava jednako vrijeme 
+izvođenja printf-a bez obzira na veličinu argumenta)",6,Hash tablice,0.12432115,,,,,,,,,,
 ZI|2015-06-16|3,ZI,2015-06-16,3,"U jednostruko povezanu nesortiranu listu spremljeni su podaci studentima. Lista je zadana sljedećim strukturama: 
 struct zapis { 
  char imeprezime[80+1]; 
@@ -11334,8 +10155,8 @@ Listu (od početka prema kraju):
 (“ivo”,'M',19);(“ana”,'Z',18);(“mara”,'Z',18);(“mate”,'M',19);(“sasa”,'Z',21); 
 funkcija transformira u: 
  
-(“ana”,'Z',18);(“mara”,'Z',17);(“sasa”,'Z',21);(“ivo”,'M',19);(“mate”,'M',19); 
-Čvor stabla je zadan je strukturom: 
+(“ana”,'Z',18);(“mara”,'Z',17);(“sasa”,'Z',21);(“ivo”,'M',19);(“mate”,'M',19);",2,Linearne liste,0.07871692,,,,,,,,,,
+ZI|2015-06-16|4,ZI,2015-06-16,4,"Čvor stabla je zadan je strukturom: 
 typedef struct cv { 
  
 int vrijednost; 
@@ -11351,10 +10172,8 @@ int preuredi (cvor* korijen, int razina, int paritet);
 (napomena: argumentom paritet iz skupa {1,0} se funkciji zadaje uvećava li vrijednosti na neparnim ili na parnim razinama stabla; npr. ako 
 je paritet 1, onda za zadanu razina koja je neparan broj, treba uvećati razinu korijena te svaku drugu od nje, a ako je paritet 0,onda ostale. 
 Crtež pokazuje primjer transformacije za poziv s argumentom 1.) 
-b) Napisati dio koda koji postiže da je cijelo stablo promijenjeno na način naveden u a) dijelu zadatka. 
- 
-Zadatak 5. ( 4 boda) 
-Prioritetni red P realiziran je gomilom s relacijom manji od (min. heap). Gomila je implementirana poljem 
+b) Napisati dio koda koji postiže da je cijelo stablo promijenjeno na način naveden u a) dijelu zadatka.",3,Rekurzija,0.11248853,,,,,,,,,,
+ZI|2015-06-16|5,ZI,2015-06-16,5,"Prioritetni red P realiziran je gomilom s relacijom manji od (min. heap). Gomila je implementirana poljem 
 cjelobrojnih elemenata. Polje može imati najviše 15 članova, a sadržaj polja na početku izvođenja je: 
 6 
 10 
@@ -11385,357 +10204,7 @@ SkiniIzReda(&P, &e);
 DodajURed(&P, 21); 
  
 
-Rješenja:",3,Implementacija lista,0.08123493,,,,,,,,,,
-ZI|2015-06-16|1,ZI,2015-06-16,1,"Stog otpadnici(Stog *stog, double d){ 
- 
-int stavka, suma; 
- 
-double prosjek; 
- 
-int broj; 
- 
-Stog pomStog, stogManjih, stogVecih; 
- 
- 
-init_stog(&pomStog); 
- 
-if(!skini(&stavka, stog)) { 
- 
- 
-return pomStog; 
- 
-} 
- 
-dodaj(stavka,&pomStog); 
- 
- 
- suma=stavka; 
- 
-broj=1; 
- 
-/* dok je elemenata na stogu */ 
- 
-while(skini(&stavka,stog)){ 
- 
- /* računaj sumu svih */ 
- 
- suma+=stavka; 
- 
- broj++; 
- 
- /* i stavi elemente na pomoćni stog (obrnuti poredak): */ 
- 
- dodaj(stavka,&pomStog); 
- 
-} 
- 
-prosjek=(double)(suma)/broj; 
- 
-init_stog(&stogManjih); 
- 
-init_stog(&stogVecih); 
-/* vraćam sa pomStog na stog, a one koji su udaljeni bacam u pomoćne stogove */ 
- 
-while(skini(&stavka,&pomStog)){ 
- 
- 
-if (stavka <= prosjek-d){ 
- 
- 
- 
-dodaj(stavka,&stogManjih); 
- 
- 
-} 
- 
- 
-else if(stavka>= prosjek+d){ 
- 
- 
- 
-dodaj(stavka,&stogVecih); 
- 
- 
-} 
- 
- 
-else dodaj(stavka,stog); 
- 
-} /* stog je u pravom poretku, a stogManjih i stogVecih su u obrnutom poretku, 
- ali to nije bitno */ 
- 
-/* prepiši stogManjih na pomStog */ 
- 
-while(skini(&stavka,&stogManjih)){ 
- 
- 
-dodaj(stavka,&pomStog); 
- 
-} 
- 
-/* prepiši stogVecih na pomStog */ 
- 
-while(skini(&stavka,&stogVecih)){ 
- 
- 
-dodaj(stavka,&pomStog); 
- 
-} 
- 
-return pomStog; 
-}",0,Rasuto adresiranje,0.29135787,,,,,,,,,,
-ZI|2015-06-16|2,ZI,2015-06-16,2,"O(n) (2B)
-(jer (N+N/2+N/4+...+1) = 2N, pa je i 
-dolje omega od N) 
-O(n^2) (2B)
-(poziv fact ne ulazi u računicu za velike n-ove, pa tako 
-ni u O notaciju) 
-Ω(n) (1B) 
-Ω(n) (1B)",4,Rekurzivni algoritmi,0.3436688,,,,,,,,,,
-ZI|2015-06-16|3,ZI,2015-06-16,3,"void obradiListu(atom **glava) { 
- 
-atom *prvi = NULL, *prva = NULL, 
- 
- 
-*zadnji = NULL, *zadnja, *trenutni, 
- 
- 
-*sljedeci; 
- 
- 
-trenutni = (*glava); 
- 
- 
-while (trenutni) { 
- 
- 
-sljedeci = trenutni->sljed; 
- 
- 
-if (trenutni->element.spol == 'Z') { 
- 
- 
- 
-if (!prva) { 
- 
- 
- 
- 
-prva = zadnja = trenutni; 
- 
- 
- 
-} 
- 
- 
- 
-else { 
- 
- 
- 
- 
-zadnja = zadnja->sljed = trenutni; 
- 
- 
- 
- 
- 
- 
- 
-} 
- 
- 
-} 
- 
- 
-else { 
- 
- 
- 
-if (!prvi) { 
- 
- 
- 
- 
-prvi = zadnji = trenutni; 
- 
- 
- 
-} 
- 
- 
- 
-else { 
- 
- 
- 
- 
-zadnji = zadnji->sljed = trenutni; 
- 
- 
- 
-} 
- 
- 
-} 
- 
- 
-trenutni = sljedeci; 
- 
-} 
- 
-if (zadnji) { 
- 
- 
-zadnji->sljed = NULL; 
- 
-} 
- 
-if (prva) { 
- 
- 
-zadnja->sljed = prvi; 
- 
- 
-*glava = prva; 
- 
-} 
- 
-else 
- 
- 
-*glava = prvi; 
-} 
- 
- 
-Zadatak 4. ( 6 bodova) 
-a) 
-int preuredi (cvor* korijen, int razina, int paritet) 
-{ 
- if (cvor==NULL) return 0; 
- int resL=preuredi(korijen->lijevo,razina+1,parity); 
- int resR=preuredi(korijen->desno,razina+1,parity); 
- if (razina%2==paritet) 
- { 
- int old=korijen->vrijednost 
- 
- korijen->vrijednost+=resL+resR; 
- return old 
- } 
- return resL+resR; 
-} 
- 
-b) 
-/* korijen stabla je pokazivac korijen*/ 
-cvor * korijen; 
-… 
-preuredi (korijen,1,0); 
-preuredi (korijen,1,1);",0,Rasuto adresiranje,0.24659392,,,,,,,,,,
-ZI|2015-06-16|5,ZI,2015-06-16,5,"(različite razine stabla označene su različitim bojama za lakše snalaženje, elementi koji idu u zamjenu ili brisanje u 
-idućem koraku su potcrtani) 
- 
-6
-10
-9
-11
-20
-25
-19
-24
-16
-6
-10
-9
-11
-20
-25
-19
-24
-16
-5
-6
-10
-9
-11
-5
-25
-19
-24
-16
-20
-6
-5
-9
-11
-10
-25
-19
-24
-16
-20
-5
-6
-9
-11
-10
-25
-19
-24
-16
-20
-20
-6
-9
-11
-10
-25
-19
-24
-16
-6
-20
-9
-11
-10
-25
-19
-24
-16
-6
-10
-9
-11
-20
-25
-19
-24
-16
-16
-10
-9
-11
-20
-25
-19
-24
-9
-10
-16
-11
-20
-25
-19
-24
- 
-9
-10
-16
-11
-20
-25
-19
-24
-21",11,Binarno stablo,0.38707083,,,,,,,,,,
+Rješenja:",10,Gomile,0.1342294,,,,,,,,,,
 ZI|2014-06-17|1,ZI,2014-06-17,1,"U jednostruko povezanu nesortiranu listu spremljeni su podaci o studentima. Lista je zadana sljedećim strukturama: 
 struct zapis { 
  char imeprezime[80+1]; 
@@ -11753,8 +10222,8 @@ Znači, nakon završetka funkcije svi čvorovi sa zapisima o studentima čija je
 trebaju biti u prvom dijelu liste u obrnutom redoslijedu od redoslijeda u zadanoj listi, dok ostali čvorovi trebaju biti u 
 drugom dijelu liste, također u obrnutom redoslijedu. 
 Primjer: prije poziva funkcije lista sadrži sljedeće ocjene: 5, 2, 4, 3, 4, 3, 2, 4, 5, 1. 
-Nakon poziva funkcije podijeliListu sa zadanom ocjenom 3, lista treba biti: 1, 2, 3, 3, 2, 5, 4, 4, 4, 5. 
-Definiran je tip podataka (varijabli) Red koji odgovara strukturi red čiji elementi su riječi (nizovi znakova). Za dohvat 
+Nakon poziva funkcije podijeliListu sa zadanom ocjenom 3, lista treba biti: 1, 2, 3, 3, 2, 5, 4, 4, 4, 5.",2,Linearne liste,0.07944093,,,,,,,,,,
+ZI|2014-06-17|2,ZI,2014-06-17,2,"Definiran je tip podataka (varijabli) Red koji odgovara strukturi red čiji elementi su riječi (nizovi znakova). Za dohvat 
 sljedećeg elementa reda koristi se funkcija: 
 char *redSkini(Red *red); 
 Također je definirana i struktura Stog koja se koristi za LIFO pohranu 
@@ -11772,14 +10241,13 @@ koja ispisuje sve riječi svih redova na stogu na standardni izlaz tako da se tr
 riječi „PREKID“. Riječ „PREKID“ se ne ispisuje, nego se nastavlja ispisivanjem sadržaja sljedećeg reda na stogu. Nakon 
 što je sljedeći red na stogu ispisan, funkcija nastavlja ispisivati ostatak sadržaja prethodnog reda (čiji je ispis bio 
 prekinut). Za stog i redove u primjeru na slici, ispis treba biti 12<abcd>34. 
-Nakon povratka iz funkcije ispis, stog mora ostati sačuvan (iako redovi čije su adrese na stogu ne moraju). 
-
-Binarno stablo jednoznačno je zadano svojim preorder i inorder ispisima. U nacrtanom okviru skicirajte stablo čiji su 
+Nakon povratka iz funkcije ispis, stog mora ostati sačuvan (iako redovi čije su adrese na stogu ne moraju).",8,Dinamička alokacija,0.13896257,,,,,,,,,,
+ZI|2014-06-17|3,ZI,2014-06-17,3,"Binarno stablo jednoznačno je zadano svojim preorder i inorder ispisima. U nacrtanom okviru skicirajte stablo čiji su 
 preorder i inorder ispisi (redom s lijeva na desno) 
 Preorder: 
 97, 3, 51, 37, 44, 33, 22, 61, 83 
 Inorder: 
-51, 44, 37, 3, 97, 22, 33, 83, 61",3,Implementacija lista,0.07393738,,,,,,,,,,
+51, 44, 37, 3, 97, 22, 33, 83, 61",7,Grafovi,0.11169766,,,,,,,,,,
 ZI|2014-06-17|4,ZI,2014-06-17,4,"Čvor stabla definiran je odsječkom: 
 struct cv { 
  int vrijednost; 
@@ -11792,8 +10260,8 @@ Funkcija sirinaRazine treba vratiti broj čvorova na razini razina. Funkcija sir
 svih razina u binarnom stablu, dakle broj čvorova na najširoj razini. Po dogovoru, korijen stabla je na razini 1. 
 U primjeru na slici širina razine dva je 2, što je najveća širina u ovom stablu pa time i vrijednost koju funkcija 
 sirinaStabla mora vratiti. 
-Napišite funkcije sirinaRazine i sirinaStabla. 
-Zadan je niz brojeva: 36, 58, 44, 28, 96, 62, 76, 38. 
+Napišite funkcije sirinaRazine i sirinaStabla.",7,Grafovi,0.11334226,,,,,,,,,,
+ZI|2014-06-17|5,ZI,2014-06-17,5,"Zadan je niz brojeva: 36, 58, 44, 28, 96, 62, 76, 38. 
  
 a) Ilustrirajte (nacrtajte stablo nakon svake promjene) stvaranje gomile s relacijom veći od (max heap) od zadanog 
 polja brojeva algoritmom čija je složenost za najgori slučaj O(n). 
@@ -11804,454 +10272,7 @@ sortiranja (nacrtajte stablo nakon svakog koraka algoritma).
  
  
 
-Rješenja:",11,Binarno stablo,0.22047484,,,,,,,,,,
-ZI|2014-06-17|1,ZI,2014-06-17,1,"void podijeliListu(atom **glava, int element) { 
- 
- 
-atom *lijevo = NULL, *desno = NULL, *sljedeci, *pom = *glava; 
- 
- 
-while (pom != NULL) { 
- 
- 
-sljedeci = pom->sljed; 
- 
- 
-if (pom->element.ocjena <= element) { 
- 
- 
- 
-pom->sljed = lijevo; 
- 
- 
- 
-lijevo = pom; 
- 
- 
- 
- 
- 
-} else { 
- 
- 
- 
-pom->sljed = desno; 
- 
- 
- 
-desno = pom; 
- 
- 
-} 
- 
- 
-pom = sljedeci; 
- 
-} 
- 
-//spoji lijevu i desnu 
- 
-if (lijevo == NULL) { 
- 
- 
-*glava = desno; 
- 
-} else { 
- 
- 
-*glava = lijevo; 
- 
- 
-while (lijevo->sljed != NULL) 
- 
- 
- 
-lijevo = lijevo->sljed; 
- 
- 
-lijevo->sljed = desno; 
- 
- 
- 
-} 
-}",0,Rasuto adresiranje,0.26393908,,,,,,,,,,
-ZI|2014-06-17|2,ZI,2014-06-17,2,"void ispisi( Stog *stog ) { 
- 
-Red *pomRed; 
- 
-char *rijec; 
- 
-Stog ostaci; 
- 
-stogInit( &ostaci ); 
- 
- 
-pomRed = stogSkini( stog ); 
- 
-while( pomRed != NULL ) { 
- 
- 
-rijec = redSkini( pomRed ); 
- 
- 
-if( rijec == NULL ) { 
-stogDodaj( stog, pomRed ); 
- 
- 
- 
-pomRed = stogSkini( &ostaci ); 
- 
- 
-} 
- 
- 
-else if( strcmp( rijec, ""PREKID"" ) == 0 ) { 
- 
- 
- 
-stogDodaj( &ostaci, pomRed ); 
- 
- 
- 
-pomRed = stogSkini( stog ); 
- 
- 
-} 
- 
- 
-else { 
- 
- 
- 
-printf( ""%s"", rijec ); 
- 
- 
-} 
- 
-} 
-}",0,Rasuto adresiranje,0.2860408,,,,,,,,,,
-ZI|2014-06-17|4,ZI,2014-06-17,4,"int sirinaRazine(cvor* korijen, int razina) { 
- 
- 
-if(korijen==NULL || razina<1) return 0; 
- 
-if(razina==1) return 1; 
- 
- 
-return sirinaRazine( 
-korijen->lijevo, razina-1) + 
-sirinaRazine( 
-korijen->desno,razina-1); 
- 
-} 
- 
-int sirinaStabla(cvor* korijen) { 
- 
-int max=0; 
- 
-int razina=1; 
- 
-int temp=0; 
- 
-do { 
- 
- 
-temp=sirinaRazine(korijen, razina); 
- 
- 
- 
-++razina; 
- 
- 
-max=(max>temp)?max:temp; 
- 
-} while (temp>0) 
- 
-return max; 
-}",0,Rasuto adresiranje,0.32712847,,,,,,,,,,
-ZI|2014-06-17|5,ZI,2014-06-17,5,"a) 
-36 
- 58 44 
- 28 96 62 76 
- 38 
- 
- 
-36 
- 58 44 
- 38 96 62 76 
- 28 
- 
- 
-36 
- 58 76 
- 38 96 62 44 
-Način formiranja stabla iz danih ispisa: 
-1. prvi navedeni u preorder-u je glava 
-2. gledajući u inorder ispisu, očito će sve lijevo od glave biti lijevo 
-podstablo, a sve desno od glave desno podstablo 
-3. postupak ponavljam rekurzivno za svaki dobiveni podskup 
-
- 28 
- 
- 
- 36 
- 96 76 
- 38 58 62 44 
- 28 
- 
- 
- 96 
- 36 76 
- 38 58 62 44 
- 28 
- 
- 96 
- 58 76 
- 38 36 62 44 
- 28 
- 
- 
-b) 
- 
- 
- 
- 
-96 
-58 
-76 
-38 
-36 
-62 
-44 
-28 
- 
-Zamjena 
- 
- 
- 
-28 
-58 
-76 
-38 
-36 
-62 
-44 
-96 
- 
-Podešavanje: 
- 
- 
- 
-76 
-58 
-62 
-38 
-36 
-28 
-44 
-96 
- 
-Zamjena 
- 
- 
-44 
-58 
-62 
-38 
-36 
-28 
-76 
-96 
-96
-58
-38
-28
-36
-76
-62
-44
-28
-58
-38
-36
-76
-62
-44
-76
-58
-38
-36
-62
-28
-44
-44
-58
-38
-36
-62
-28
-
- 
-Podešavanje: 
- 
- 
- 
-62
-58
-44
-38
-36
-28
-76
-96
- 
-Zamjena: 
- 
- 
- 
-28 
-58 
-44 
-38 
-36 
-62 
-76 
-96 
- 
- 
-Podešavanje: 
- 
- 
- 
- 
-58 
-38 
-44 
-28 
-36 
-62 
-76 
-96 
- 
- 
-Zamjena 
- 
- 
- 
-36
-38
-44
-28
-58
-62
-76
-96
- 
- 
-Podešavanje 
- 
- 
-44 
-38 
-36 
-28 
-58 
-62 
-76 
-96 
- 
-Zamjena 
- 
- 
-62
-58
-38
-36
-44
-28
-28
-58
-38
-36
-44
-58
-38
-28
-36
-44
-36
-38
-28
-44
-44
-38
-28
-36
-
- 
- 
-28
-38
-36
-44
-58
-62
-76
-96
- 
- 
-Podešavanje 
- 
- 
-38
-28
-36
-44
-58
-62
-76
-96
- 
- 
-Zamjena 
- 
- 
- 
-36 
-28 
-38 
-44 
-58 
-62 
-76 
-96 
- 
- 
-Podešavanje – ok 
- Zamjena 
- 
- 
- 
- 
-28 
-36 
-38 
-44 
-58 
-62 
-76 
-96 
- 
- 
- 
-28
-38
-36
-38
-28
-36
-36
-28",11,Binarno stablo,0.33046818,,,,,,,,,,
+Rješenja:",10,Gomile,0.03641522,,,,,,,,,,
 ZI|2013-06-18|1,ZI,2013-06-18,1,"Za tip podatka Red definirane su funkcije (nije ih potrebno pisati) za inicijalizaciju reda, dodavanje elementa u red te 
 za skidanje elementa iz reda. Prototipovi navedenih funkcija su: 
 void init_red(Red *red); 
@@ -12284,7 +10305,7 @@ Ako npr. zadani red sadrži elemente sa sljededim nizovima znakova: ''234dd6'', 
 traženi podniz je ''34d'', funkcija mora vratiti novi red čiji elementi sadrže nizove ''234dd6'' i ''1234d''. 
 Napomene: Rješenja koja nede koristiti zadane funkcije za rad s redom donijet de 0 bodova. Možete koristiti pomodne 
 redove unutar funkcije trazi. Skredemo pozornost da bi funkcije strcpy i strstr iz standardne programske knjižnice 
-C-a mogle biti od koristi.",5,Rasuto adresiranje,0.06294094,,,,,,,,,,
+C-a mogle biti od koristi.",8,Dinamička alokacija,0.104146555,,,,,,,,,,
 ZI|2013-06-18|2,ZI,2013-06-18,2,"U memoriji postoji jednostruko povezana sortirana lista ostvarena (realizirana) strukturom: 
 struct el { 
  
@@ -12298,14 +10319,14 @@ typedef struct el element;
 Napišite funkciju koja de iz liste ukloniti sva ponavljanja nekog elementa ostavljajudi u listi samo prvi takav element 
 gledano od početka liste. Memoriju koju su zauzimali uklonjeni elementi treba osloboditi. Funkcija prima pokazivač 
 na prvi član liste, a prototip joj je: 
-void izbaci(element* glava);",3,Implementacija lista,0.18953861,,,,,,,,,,
+void izbaci(element* glava);",2,Linearne liste,0.12095334,,,,,,,,,,
 ZI|2013-06-18|3,ZI,2013-06-18,3,"Zadan je niz brojeva: 30, 45, 31, 60, 87, 95, 12, 69 
  
 a) (3 boda) Ilustrirajte (nacrtajte stablo nakon svake promjene) stvaranje gomile od zadanog polja brojeva 
 algoritmom čija je složenost za najgori slučaj O(n). 
  
 b) (3 boda) Ilustrirajte (nacrtajte stablo nakon svake promjene) stvaranje gomile od zadanog polja brojeva 
-algoritmom čija je složenost za najgori slučaj O(nlogn).",2,Rekurzivni algoritmi,0.05869261,,,,,,,,,,
+algoritmom čija je složenost za najgori slučaj O(nlogn).",10,Gomile,0.026911521,,,,,,,,,,
 ZI|2013-06-18|4,ZI,2013-06-18,4,"Binarno stablo za pretraživanje organizirano je po pravilu da su brojevi u lijevom podstablu manji od brojeva u 
 desnom. Postorder ispis binarnog stabla za pretraživanje je: 
 3, 5, 4, 1, 8, 15, 16, 11, 7, 6 
@@ -12324,7 +10345,7 @@ b) (4 boda) Binarno stablo za pretraživanje, zadano postorder ispisom, ostvaren
 polje, pri čemu se prvi element polja (indeks nula) ne koristi, nego je korijen stabla na indeksu 1. Napišite, u 
 odgovarajudem redoslijedu, niz indeksa (i1, i2, i3, ... i10) u polju na kojima se nalaze elementi ispisani 
 postorder obilaskom stabla. Na primjer, i3 je indeks na kojem se u polju nalazi 3. po redu ispisani element 
-stabla. Odgovor napišite na crtu ispod.",11,Binarno stablo,0.26549774,,,,,,,,,,
+stabla. Odgovor napišite na crtu ispod.",7,Grafovi,0.10857332,,,,,,,,,,
 ZI|2013-06-18|5,ZI,2013-06-18,5,"Zadan je tip podatka Stog za koji su definirane funkcije za inicijalizaciju stoga, dodavanje elementa na stog i brisanje 
 elementa sa stoga. Elementi stoga su podaci tipa Student koji sadrže prezime studenta (40 znakova), ime studenta 
 (30 znakova) te broj bodova ostvarenih na predmetu ASP. Prototipovi navedenih funkcija su: 
@@ -12351,267 +10372,7 @@ Izgled stabla:
  
 
  
-Rješenja:",9,Implementacija stoga,0.19848728,,,,,,,,,,
-ZI|2013-06-18|1,ZI,2013-06-18,1,"#include <stdio.h> 
-#include <stdlib.h> 
-#include <string.h> 
- 
-Red* trazi(Red *red, char* podniz){ 
- Red *rezultat = NULL, pom; 
- Element element; 
- /*Inicijaliziraj redove*/ 
- rezultat = (Red*)malloc(sizeof(Red)); 
- init_red(rezultat); 
- init_red(&pom); 
- /*Iteracija po svim elementima reda*/ 
- while(skini(&element, red)){ 
- /*Provjeri sadrzi li element reda zadani podniz*/ 
- if(strstr(element.niz, podniz)){ 
- /*Dodaj novi element u red koji moramo vratiti. 
- 
-Ovdje se pretpostavilo da 'dodaj' radi kopiranje. 
- 
-Rješenje koje to ne pretpostavlja je isto u redu*/ 
- 
-dodaj(element, rezultat); 
- } 
- /*Dodaj element na pomocni red*/ 
- dodaj(element, &pom); 
- } 
- /*Vrati elemente na originalni red*/ 
- while(skini(&element, &pom)){ 
- dodaj(element, red); 
- } 
- return rezultat; 
-}",5,Rasuto adresiranje,0.33214122,,,,,,,,,,
-ZI|2013-06-18|2,ZI,2013-06-18,2,"void izbaci(element *glava){ 
- element *prvi, *drugi, *preth; 
- for(prvi = glava; prvi; prvi = prvi->sljedeci){ 
- drugi = prvi->sljedeci; 
- preth = prvi; 
- while(drugi){ 
- if(drugi->vrijednost == prvi->vrijednost){ 
- preth->sljedeci = drugi->sljedeci; 
- free(drugi); 
- drugi = preth->sljedeci; 
- }else{ 
- break; 
- } 
- } 
- } 
-}",0,Rasuto adresiranje,0.2969397,,,,,,,,,,
-ZI|2013-06-18|3,ZI,2013-06-18,3,"a) 
-30
-45
-31
-60
-87
-95
-12
-69
-30
-45
-31
-69
-87
-95
-12
-60
-30
-45
-95
-69
-87
-31
-12
-60
-30
-87
-95
-69
-45
-31
-12
-60
-95
-87
-30
-69
-45
-31
-12
-60
-95
-87
-31
-69
-45
-30
-12
-60
- 
- 
-b) 
-30
-45
-45
-30
-31
-60
-45
-60
-31
-30
-60
-45
-31
-30
-60
-45
-31
-30
-87
-60
-87
-31
-30
-45
-87
-60
-31
-30
-45
-87
-60
-31
-30
-45
-95
-87
-60
-95
-30
-45
-31
-95
-60
-87
-30
-45
-31
-95
-60
-87
-30
-45
-31
-12
-69
-95
-60
-87
-69
-45
-31
-12
-30
-95
-69
-87
-60
-45
-31
-12
-30
- 
- 
- 
-
- 
-Zadatak 4. (bodova) 
- 
- 
-a) 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-b) (10,11,5,2,14,30,15,7,3,1) 
- 
- 
-Zadatak 5. (bodova) 
- 
- 
-typedef struct 
-{ 
- char Prezime[40+1]; 
- char Ime[30+1]; 
- int Bodova; 
-} Student; 
- 
-struct at { 
- Student element; 
- struct at *sljed; 
-}; 
- 
-typedef struct at atom; 
- 
-typedef struct{ 
- atom *vrh; 
-} Stog; 
- 
-int MakniIspodProsjeka(Stog *stog){ 
- Stog pom; 
- Student el; 
- int br=0; float sum = 0;float pros; 
- init_stog(&pom); 
- while (skini(&el,stog)){ 
- sum+=el.Bodova; 
- br++; 
- dodaj(el, &pom); 
- } 
- pros=sum/br; 
- br = 0; 
- while (skini(&el,&pom)){ 
- if(pros>=el.Bodova){ 
- dodaj(el, stog); 
- }else{ 
- br++; 
- } 
- } 
- return br; 
-} 
-6
-1
-4
-3
-5
-7
-11
-8
-16
-15
-
-48 
-42 
-0 
-26 
-5 
-18 
-0 
-0 
-3 
-0",2,Rekurzivni algoritmi,0.5142719,,,,,,,,,,
+Rješenja:",8,Dinamička alokacija,0.06541139,,,,,,,,,,
 ZI|2012-06-20|1,ZI,2012-06-20,1,"Za red realiziran jednostruko povezanom listom napišite funkciju dodaj za dodavanje elementa u red. 
 Prototip funkcije je: 
 int dodaj(int element, atom **ulaz, atom **izlaz); 
@@ -12621,7 +10382,7 @@ struct at {
  int element; 
  struct at *sljed; 
 }; 
-typedef struct at atom;",9,Implementacija stoga,0.20621343,,,,,,,,,,
+typedef struct at atom;",8,Dinamička alokacija,0.124243036,,,,,,,,,,
 ZI|2012-06-20|2,ZI,2012-06-20,2,"Zadan je niz brojeva 2, 5, 7, 8, 11, 1, 4, 2, 3, 7 koji su spremljeni u čvorove binarnog stabla. Čvor stabla definiran 
 je sljedećim programskim odsječkom: 
 typedef struct cv { 
@@ -12661,12 +10422,12 @@ Slika 2
 7 
 11 
 2 
-3",11,Binarno stablo,0.16761746,,,,,,,,,,
+3",7,Grafovi,0.1037663,,,,,,,,,,
 ZI|2012-06-20|3,ZI,2012-06-20,3,"a)(2 boda) Zadan je inorder (lijevo, korijen, desno) ispis gomile u kojoj je roditelj veći od svoje djece: 
 75, 78, 74, 80, 11, 32, 92, 50, 84, 58. Nacrtajte gomilu. 
  
 b)(2 boda) Zadana je gomila kao na slici. 
-Prikažite sve korake uzlaznog heap sorta",2,Rekurzivni algoritmi,0.43850222,,,,,,,,,,
+Prikažite sve korake uzlaznog heap sorta",10,Gomile,0.1029657,,,,,,,,,,
 ZI|2012-06-20|4,ZI,2012-06-20,4,"Za tip podatka Stog koji je realiziran jednostruko povezanom listom definirane su funkcije za inicijalizaciju 
 stoga, dodavanje elementa na stog te skidanje elementa sa stoga. Zadana su dva stoga stog1 i stog2, a 
 elementi stogova su podaci tipa Osoba koji sadrže informaciju o šifri osobe (cijeli broj) i visini (cijeli broj). Stog 
@@ -12725,169 +10486,8 @@ vrh stoga-> 345, 202 vrh stoga-> 348, 203 vrh stoga-> 348, 203
 6 
 9 
 10 
-5",9,Implementacija stoga,0.37746763,,,,,,,,,,
-ZI|2012-06-20|1,ZI,2012-06-20,1,"int dodaj(int element, atom **ulaz, atom **izlaz){ 
- atom *novi; 
- if (novi = malloc (sizeof (atom))) { 
- novi->element = element; 
- novi->sljed = NULL; 
- if (*izlaz == NULL) 
- *izlaz = novi; // ako je red bio prazan 
- else 
- (*ulaz)->sljed = novi; // inace, stavi na kraj 
- *ulaz = novi; // zapamti zadnjeg 
- return 1; 
- } 
- return 0; 
-}",0,Rasuto adresiranje,0.30256754,,,,,,,,,,
-ZI|2012-06-20|2,ZI,2012-06-20,2,"a) (6 bodova) 
-cvor *upis (cvor *korijen, int broj) { 
- if (korijen == NULL) { 
- korijen = (cvor *) malloc (sizeof (cvor)); 
- if (korijen) { 
- korijen->element = broj; 
- korijen->lijevo = korijen->desno = NULL; 
- } 
- else 
- return NULL; 
- 
- } 
- else if (broj >= korijen->element) 
- korijen->lijevo = upis (korijen->lijevo, broj); 
- else 
- korijen->desno = upis (korijen->desno, broj); 
- return korijen; 
- } 
- 
-b)(3 boda) 
-int zamijeni (cvor *korijen){ 
- 
- int el; 
- if(!korijen) return 0; 
- el = korijen->el; 
- korijen->el = zamijeni (korijen->lijevo)+zamijeni (korijen->desno); 
- return el+korijen->el; 
-} 
- 
-c)(3 boda) 
-int main() { 
- int i; 
- cvor *korijen=NULL; 
- int polje [10]={2,5,7,8,11,1,4,2,3,7}; 
- for (i=0; i<10;i++) 
- korijen = upis (korijen, polje[i]); 
- zamijeni(korijen); 
- return 0; 
-} 
-Zadatak 3. (2 + 2 boda) 
-75, 78, 74, 80, 11, 32, 92, 50, 84, 58. 
-a) 
- 
- 
- 
- 
- 
- 
-92 
-80 
-84 
-50 
-58 
-78 
-74 
-75 
-32 
-11 
-
- 
- 
- 
- 
-b)",0,Rasuto adresiranje,0.27433687,,,,,,,,,,
-ZI|2012-06-20|4,ZI,2012-06-20,4,"a)(1bod) 
-typedef struct { 
- 
-int sifra; 
- 
-int visina; 
-} Osoba; 
- 
-struct at { 
- Osoba element; 
- struct at *sljed; 
-}; 
-typedef struct at atom; 
-typedef struct{ 
- 
-atom *vrh; 
-} Stog; 
- 
-b) (7 bodova) 
-void spoji (Stog *s1, Stog *s2){ 
- Osoba os1, os2, pom; 
- int imas1, imas2; 
- imas1=skini(&os1, s1); 
- imas2=skini(&os2, s2); 
- if (!imas1 && !imas2) return; 
- else if (imas1 && imas2){ 
- if (os1.visina <os2.visina) { 
- dodaj (os1,s1); 
- pom=os2; 
- } 
- else{ 
- dodaj (os2,s2); 
- pom=os1; 
- } 
- } 
- else if (imas1) 
- pom=os1; 
- else 
- pom=os2; 
- 
- spoji (s1,s2); 
- dodaj (pom,s1); 
-} 
-8 
-5 
-7 
-6 
-9 
-10 
-8 
-7 
-6 
-9 
-5 
-8 
-5 
-6 
-7 
-9 
-8 
-5 
-7 
-6 
-6 
-5 
-7 
-8 
-6 
-7 
-5 
-6 
-5 
-7 
-5 
-6 
-5 
-
-Algoritmi i strukture podataka 
-Završni ispit 
-13. lipnja 2011. 
-Rješenja za prva tri zadatka napišite na svojim papirima i predajte ih u košuljici. Rješenja za ostale 
-zadatke napišite na za to predviđenom mjestu. 
-Nije dopušteno korištenje globalnih i statičkih varijabli te naredbe goto.",3,Implementacija lista,0.27812892,,,,,,,,,,
-ZI|2012-06-20|1,ZI,2012-06-20,1,"U dvostruko povezanoj listi nalaze se podaci o studentima opisani sljedećom strukturom: 
+5",8,Dinamička alokacija,0.08235781,,,,,,,,,,
+ZI|2011-06-13|1,ZI,2011-06-13,1,"U dvostruko povezanoj listi nalaze se podaci o studentima opisani sljedećom strukturom: 
 struct student { 
  char imeprezime[80+1]; 
  int godRod; 
@@ -12903,8 +10503,8 @@ typedef struct at atom;
 Lista je sortirana silazno (od glave) po godini rođenja. Napišite funkciju koja će iz liste izbaciti sve 
 studente koji imaju zadani broj godina. Kao trenutačnu godinu uzmite 2011. Prototip funkcije je: 
  
-void izbaci(atom **glava, atom **rep, int brGodina);",3,Implementacija lista,0.1375435,,,,,,,,,,
-ZI|2012-06-20|2,ZI,2012-06-20,2,"Binarno stablo sadrži cjelobrojne elemente, a čvor je definiran sljedećom strukturom: 
+void izbaci(atom **glava, atom **rep, int brGodina);",2,Linearne liste,0.101951145,,,,,,,,,,
+ZI|2011-06-13|2,ZI,2011-06-13,2,"Binarno stablo sadrži cjelobrojne elemente, a čvor je definiran sljedećom strukturom: 
 typedef struct s { 
  
 int vrijednost; 
@@ -12912,15 +10512,15 @@ int vrijednost;
 struct s *lijevo, *desno; 
 } cvor; 
  
-Napišite funkciju Listopad koja briše sve listove zadanog stabla.",11,Binarno stablo,0.16931629,,,,,,,,,,
-ZI|2012-06-20|3,ZI,2012-06-20,3,"Zadan je niz brojeva: 27, 49, 35, 19, 87, 53, 67, 29. 
+Napišite funkciju Listopad koja briše sve listove zadanog stabla.",3,Rekurzija,0.096374966,,,,,,,,,,
+ZI|2011-06-13|3,ZI,2011-06-13,3,"Zadan je niz brojeva: 27, 49, 35, 19, 87, 53, 67, 29. 
  
 a) Ilustrirajte (nacrtajte stablo nakon svake promjene) stvaranje gomile od zadanog polja 
 brojeva algoritmom čija je složenost za najgori slučaj O(n). 
  
 b) Za gomilu iz a) zadatka prikažite postupak uzlaznog heapsorta. Prikažite svaki korak 
-sortiranja (nacrtajte stablo nakon svake zamjene dva elementa).",2,Rekurzivni algoritmi,0.07928232,,,,,,,,,,
-ZI|2012-06-20|4,ZI,2012-06-20,4,"Upišite u prazan prostor s desne strane rezultat izvođenja funkcije radiNesto nad binarnim 
+sortiranja (nacrtajte stablo nakon svake zamjene dva elementa).",10,Gomile,0.030118788,,,,,,,,,,
+ZI|2011-06-13|4,ZI,2011-06-13,4,"Upišite u prazan prostor s desne strane rezultat izvođenja funkcije radiNesto nad binarnim 
 sortiranim stablom stvorenim iz ulaznog niza brojeva: 9, 4, 2, 6, 12, 11, 5, 19, 7, 10. 
  
 int radiNesto(cvor *korijen){ 
@@ -12931,8 +10531,8 @@ if (!korijen->lijevo && !korijen->desno) return korijen->broj;
 t = radiNesto(korijen->desno) + radiNesto(korijen->lijevo); 
 printf(""%d "",t); 
 return t; 
-}",0,Rasuto adresiranje,0.28193328,,,,,,,,,,
-ZI|2012-06-20|5,ZI,2012-06-20,5,"Dopunite programski odsječak tako da funkcija f rekurzivno zbraja neparne elemente u 
+}",3,Rekurzija,0.12476379,,,,,,,,,,
+ZI|2011-06-13|5,ZI,2011-06-13,5,"Dopunite programski odsječak tako da funkcija f rekurzivno zbraja neparne elemente u 
 jednostruko povezanoj listi te vraća dobiveni zbroj. 
  
 int f(cvor *glava){ 
@@ -12956,9 +10556,8 @@ ___________________________________________
 } 
  
 else{ return 0; } 
-} 
- 
-Binarno stablo karakterizirano je sljedećim podacima: 
+}",12,Složenost algoritama,0.11001307,,,,,,,,,,
+ZI|2011-06-13|6,ZI,2011-06-13,6,"Binarno stablo karakterizirano je sljedećim podacima: 
 • 
 ispis inorder: 4,5,7,9,10,11,13,17,18,19 
 • 
@@ -13436,14 +11035,8 @@ Preorder: 11,5,4,9,7,10,19,13,17,18
 19
 13
 17
-18
-
-Algoritmi i strukture podataka 
-Završni ispit 
-2. srpnja 2010. 
- Napomena za sve zadatke: 
-  Nije dopušteno korištenje naredbe goto te statičkih i globalnih varijabli.",0,Rasuto adresiranje,0.2763285,,,,,,,,,,
-ZI|2012-06-20|1,ZI,2012-06-20,1,"U jednostruko povezanoj listi sortiranoj silazno po prosjeku spremljeni su podaci o studentima. Lista je 
+18",7,Grafovi,0.1073872,,,,,,,,,,
+ZI|2010-07-02|1,ZI,2010-07-02,1,"U jednostruko povezanoj listi sortiranoj silazno po prosjeku spremljeni su podaci o studentima. Lista je 
 zadana strukturama: 
 struct zapis { 
  char imeprezime[80+1]; 
@@ -13457,8 +11050,8 @@ struct at {
 typedef struct at atom; 
 Napišite funkciju koja će stvoriti novu listu u kojoj će podaci o studentima biti sortirani uzlazno. Ulazna 
 lista mora ostati očuvana. Prototip funkcije je: 
-atom *okreniListu(atom *glava);",3,Implementacija lista,0.09312464,,,,,,,,,,
-ZI|2012-06-20|2,ZI,2012-06-20,2,"Binarno stablo sadrži cjelobrojne elemente te je čvor definiran sljedećim kodom: 
+atom *okreniListu(atom *glava);",2,Linearne liste,0.08899649,,,,,,,,,,
+ZI|2010-07-02|2,ZI,2010-07-02,2,"Binarno stablo sadrži cjelobrojne elemente te je čvor definiran sljedećim kodom: 
 typedef struct s { 
  int vrijednost; 
  struct s *lijevo, *desno; 
@@ -13497,15 +11090,15 @@ Balansi čvorova stabla
 7 
 17
 9
-18",11,Binarno stablo,0.2110484,,,,,,,,,,
-ZI|2012-06-20|3,ZI,2012-06-20,3,"Zadan je niz brojeva: 15, 8, 14, 35, 60, 6, 39, 37, 1. 
+18",7,Grafovi,0.11492161,,,,,,,,,,
+ZI|2010-07-02|3,ZI,2010-07-02,3,"Zadan je niz brojeva: 15, 8, 14, 35, 60, 6, 39, 37, 1. 
  
 a) Ilustrirajte (nacrtajte stablo nakon svake promjene) stvaranje gomile od zadanog polja brojeva 
 algoritmom čija je složenost za najgori slučaj O(n). 
  
 b) Ilustrirajte (nacrtajte stablo nakon svake promjene) stvaranje gomile od zadanog polja brojeva 
-algoritmom čija je složenost za najgori slučaj O(nlogn).",2,Rekurzivni algoritmi,0.058226444,,,,,,,,,,
-ZI|2012-06-20|4,ZI,2012-06-20,4,"Koristeći prostor nad crtama, napišite naredbe tako da funkcija iz jednostruko povezane liste izbacuje 
+algoritmom čija je složenost za najgori slučaj O(nlogn).",10,Gomile,0.028301824,,,,,,,,,,
+ZI|2010-07-02|4,ZI,2010-07-02,4,"Koristeći prostor nad crtama, napišite naredbe tako da funkcija iz jednostruko povezane liste izbacuje 
 prvih N elemenata. Ako u listi ima manje od N elemenata, funkcija izbacuje sve elemente. 
 void izbaci(atom **glava, int n){ 
 int brojac = 0; 
@@ -13532,9 +11125,9 @@ free (*glava);
 brojac++; 
  
 } 
-}",0,Rasuto adresiranje,0.2489728,,,,,,,,,,
-ZI|2012-06-20|5,ZI,2012-06-20,5,"Nacrtati binarno sortirano stablo za ulazni niz brojeva: 8, 12, 3, 5, 6, 27, 31, 4, 17, 20, 2.",11,Binarno stablo,0.22112064,,,,,,,,,,
-ZI|2012-06-20|6,ZI,2012-06-20,6,"Koristeći prostor nad crtama, napišite naredbe tako da funkcija ubacuje element u gomilu, pri čemu je 
+}",12,Složenost algoritama,0.1010138,,,,,,,,,,
+ZI|2010-07-02|5,ZI,2010-07-02,5,"Nacrtati binarno sortirano stablo za ulazni niz brojeva: 8, 12, 3, 5, 6, 27, 31, 4, 17, 20, 2.",3,Rekurzija,0.109305516,,,,,,,,,,
+ZI|2010-07-02|6,ZI,2010-07-02,6,"Koristeći prostor nad crtama, napišite naredbe tako da funkcija ubacuje element u gomilu, pri čemu je 
 složenost takvog algoritma za najgori slučaj O(nlog2n). 
 void ubaci (tip A[], int j) { 
  int i, k, novi; 
@@ -13720,17 +11313,8 @@ brojac++;
  } 
 A[k] = novi; 
  
-} 
- 
- 
-
-Algoritmi i strukture podataka 
-Završni ispit 
-23. lipnja 2009. 
- 
- Napomena za sve zadatke: 
-  Nije dopušteno korištenje naredbe goto te statičkih i globalnih varijabli.",0,Rasuto adresiranje,0.20739321,,,,,,,,,,
-ZI|2012-06-20|1,ZI,2012-06-20,1,"U jednostruko povezanu nesortiranu listu spremljeni su podaci o studentima. Lista je zadana sljedećim 
+}",10,Gomile,0.08973072,,,,,,,,,,
+ZI|2009-06-23|1,ZI,2009-06-23,1,"U jednostruko povezanu nesortiranu listu spremljeni su podaci o studentima. Lista je zadana sljedećim 
 strukturama: 
 struct zapis { 
  char imeprezime[80+1]; 
@@ -13754,8 +11338,8 @@ Primjer: glava prije poziva funkcije pokazuje na listu čvorova koji sadrže slj
 5, 2, 4, 3, 4, 3, 2, 4, 5, 1. 
 Prosjek ocjena je 3,3 pa nakon poziva funkcije razdvojiListe varijabla glava pokazuje na 
 listu čvorova koji sadrže sljedeće ocjene: 2, 3, 3, 2, 1. Funkcija vraća pokazivač na novu listu koja 
-sadrži čvorove sa sljedećim ocjenama: 5, 4, 4, 4, 5.",3,Implementacija lista,0.088024676,,,,,,,,,,
-ZI|2012-06-20|2,ZI,2012-06-20,2,"Binarno stablo sadrži cjelobrojne elemente te je čvor definiran sljedećim kodom: 
+sadrži čvorove sa sljedećim ocjenama: 5, 4, 4, 4, 5.",2,Linearne liste,0.095293544,,,,,,,,,,
+ZI|2009-06-23|2,ZI,2009-06-23,2,"Binarno stablo sadrži cjelobrojne elemente te je čvor definiran sljedećim kodom: 
  
 typedef struct s{ 
  
@@ -13769,8 +11353,8 @@ koja vraća 1 ako a, b i c čine magičnu trojku, a 0 inače.
 Napišite funkciju koja će vratiti koliko čvorova u stablu čini magičnu trojku sa svojom djecom. 
 Prototip tražene funkcije je: 
  
-int brojMagicnih(cvor *korijen);",11,Binarno stablo,0.218883,,,,,,,,,,
-ZI|2012-06-20|3,ZI,2012-06-20,3,"Zadan je niz brojeva: 12, 5, 7, 1, 50, 22, 5, 43. 
+int brojMagicnih(cvor *korijen);",3,Rekurzija,0.10948666,,,,,,,,,,
+ZI|2009-06-23|3,ZI,2009-06-23,3,"Zadan je niz brojeva: 12, 5, 7, 1, 50, 22, 5, 43. 
  
 a) (3 boda) Ilustrirajte (nacrtajte stablo nakon svake promjene) stvaranje gomile od 
 zadanog polja brojeva algoritmom čija je složenost za najgori slučaj O(n). 
@@ -13788,8 +11372,8 @@ c) (2 boda) Zadana je gomila:
  
  
 Ilustrirajte izgled gomile nakon svake promjene dva čvora, za prva 3 koraka uzlaznog 
-heap sorta.",2,Rekurzivni algoritmi,0.06346555,,,,,,,,,,
-ZI|2012-06-20|4,ZI,2012-06-20,4,"Implementirajte razred Kugla s dvije (privatne) varijable jednostruke preciznosti koje predstavljaju 
+heap sorta.",10,Gomile,0.027901411,,,,,,,,,,
+ZI|2009-06-23|4,ZI,2009-06-23,4,"Implementirajte razred Kugla s dvije (privatne) varijable jednostruke preciznosti koje predstavljaju 
 polumjer kugle i gustoću materijala od kojeg je kugla napravljena. 
  
 Implementirajte metode za dohvat i postavljanje vrijednosti polumjera i gustoće. 
@@ -14195,12 +11779,8 @@ return 0;
 } 
  
 
-Ponovljeni završni ispit iz predmeta Algoritmi i strukture podataka 
-Ponovljeni završni ispit iz predmeta Algoritmi i strukture podataka 
-3. srpnja 2008. 
- Napomena za sve zadatke: 
-  Nije dopušteno korištenje naredbe goto, te statičkih i globalnih varijabli.",8,Rekurzivne funkcije na strukturama podataka,0.4449563,,,,,,,,,,
-ZI|2012-06-20|1,ZI,2012-06-20,1,"Neka je binarno sortirano stablo zadano strukturom: 
+Ponovljeni završni ispit iz predmeta",5,Red i stog,0.12366905,,,,,,,,,,
+ZI|2008-07-03|1,ZI,2008-07-03,1,"Neka je binarno sortirano stablo zadano strukturom: 
  
 struct cv { 
  int broj; 
@@ -14213,14 +11793,14 @@ typedef struct cv cvor;
 a) (4 boda) Napišite funkciju koja će izračunati sumu svih brojeva u onim čvorovima koji nisu listovi. 
 Napišite primjer poziva napisane funkcije. 
 b) (4 boda) Napišite funkciju koja će u binarno sortirano stablo ubaciti novi broj. Ako navedeni broj već 
-postoji u stablu, novi se čvor ne ubacuje. Napišite primjer poziva napisane funkcije.",11,Binarno stablo,0.19479623,,,,,,,,,,
-ZI|2012-06-20|2,ZI,2012-06-20,2,"Zadana je dvostruko povezana lista čija je glava glava, a rep rep. Napišite funkciju koja će iz zadane liste 
+postoji u stablu, novi se čvor ne ubacuje. Napišite primjer poziva napisane funkcije.",3,Rekurzija,0.10526792,,,,,,,,,,
+ZI|2008-07-03|2,ZI,2008-07-03,2,"Zadana je dvostruko povezana lista čija je glava glava, a rep rep. Napišite funkciju koja će iz zadane liste 
 sve čvorove koji sadrže parne brojeve prebaciti (bez stvaranja novih čvorova) u dvostruko povezanu listu 
 čija je glava par_glava, a rep par_rep, nakon čega početna lista, čija je glava glava, a rep rep, 
 treba sadržavati samo neparne brojeve. 
 Prototip funkcije je: 
- void podijeli (atom **glava, atom **rep, atom **par_glava, atom** par_rep);",3,Implementacija lista,0.34918037,,,,,,,,,,
-ZI|2012-06-20|3,ZI,2012-06-20,3,"a) (4 boda) Napišite funkciju za dodavanje jednog elementa u gomilu realiziranu poljem tako da nakon 
+ void podijeli (atom **glava, atom **rep, atom **par_glava, atom** par_rep);",2,Linearne liste,0.11638267,,,,,,,,,,
+ZI|2008-07-03|3,ZI,2008-07-03,3,"a) (4 boda) Napišite funkciju za dodavanje jednog elementa u gomilu realiziranu poljem tako da nakon 
 dodavanja polje i dalje bude gomila. 
  
 Funkcija ima prototip: 
@@ -14236,8 +11816,8 @@ Pretpostavite da je rezervirano dovoljno memorije za polje.
 b) (3 boda) Zadan je niz brojeva: 5, 7, 2, 13, 6, 1, 8. Ilustrirajte (nacrtajte stablo nakon svake promjene) 
 stvaranje gomile od zadanog polja brojeva algoritmom čija je složenost za najgori slučaj O(n). 
 
-Ponovljeni završni ispit iz predmeta Algoritmi i strukture podataka",8,Rekurzivne funkcije na strukturama podataka,0.1859549,,,,,,,,,,
-ZI|2012-06-20|4,ZI,2012-06-20,4,"Objektno orijentirana implementacija reda zadana je klasom: 
+Ponovljeni završni ispit iz predmeta Algoritmi i strukture podataka",10,Gomile,0.07891382,,,,,,,,,,
+ZI|2008-07-03|4,ZI,2008-07-03,4,"Objektno orijentirana implementacija reda zadana je klasom: 
  
 typedef int tip; 
 struct at { 
@@ -14651,1391 +12231,4 @@ t h is -> Do da j( el eme n t) ;
  
  
 r e t u rn n ov i ; 
-} 
-
-Algoritmi i strukture podataka 
-Ponovljeni završni ispit 
- 28.6.2007. 
- 
-Napomene za sve zadatke: 
-• Nije dopušteno korištenje goto naredbe, te statičkih i globalnih varijabli. 
-• U svakom zadatku u kojem se koristi struktura, strukturu treba i definirati 
- 
-1. (8 bodova) Ukoliko je red zadan sljedećom strukturom: 
-typedef struct at atom; 
-struct at { 
- 
-int element; 
- 
-struct at *sljed; 
-}; 
-te, ukoliko su definirane funkcije za dodavanje elementa u red i skidanje elementa iz reda 
-int DodajURed (int element, atom **ulaz, atom **izlaz); 
-int SkiniIzReda (int *element, atom **ulaz, atom **izlaz); 
- 
-napisati funkciju koja će sve elemente reda kopirati u binarno sortirano stablo. Funkcija 
-mora vratiti pokazivač na korijen stabla. Nakon završetka funkcije, sadržaj reda mora 
-ostati očuvan. Smijete koristiti pomoćne funkcije. 
- 
- 
-cvor *dodaj_u_stablo(cvor *korijen, int broj){ 
- 
-if (korijen){ 
- 
- 
-if (broj < korijen->element) 
- 
- 
- 
-korijen->lijevo = 
-dodaj_u_stablo(korijen->lijevo , broj); 
- 
- 
-else 
- 
- 
- 
-korijen->desno = 
-dodaj_u_stablo(korijen->desno , broj); 
- 
- 
-return korijen; 
- 
-} 
- 
-else{ 
- 
- 
-cvor *novi = (cvor *) malloc(sizeof(cvor)); 
- 
- 
-novi->element = broj; 
- 
- 
-novi->lijevo = novi->desno = NULL; 
- 
- 
-return novi; 
- 
-} 
-} 
- 
-cvor *red_u_stablo(atom **ulaz, atom **izlaz){ 
- 
-cvor *korijen = NULL; 
- 
-atom *pom_ulaz = NULL, *pom_izlaz = NULL; 
- 
-int broj; 
- 
-while(SkiniIzReda(&broj, ulaz, izlaz)){ 
- 
- 
-DodajURed(broj, &pom_ulaz, &pom_izlaz); 
- 
- 
-korijen = dodaj_u_stablo(korijen, broj); 
- 
-} 
- 
-while(SkiniIzReda(&broj, &pom_ulaz, &pom_izlaz)){ 
- 
- 
-DodajURed(broj, ulaz, izlaz); 
- 
-
- 
-} 
- 
-return korijen; 
-} 
- 
- 
-2. (7 bodova) Definirati dvostruko povezanu listu koja sadrži točke iz koordinatnog 
-sustava te napisati funkciju za brisanje svih točaka iz nekog kvadranta. Kvadrant (1,2,3 ili 
-4) je zadan kao argument funkcije. Napisati odsječak glavnog programa u kojem se 
-poziva navedena funkcija i definiraju (i postavljaju na inicijalne vrijednosti) sve varijable 
-koje se koriste pri pozivima navedenih funkcija. Smijete koristiti pomoćne funkcije. 
-Napomena: Pretpostavite da točke na koordinatnim osima ne pripadaju niti jednom 
-kvadrantu. 
- 
-struct at { 
- 
-int element; 
- 
-struct at *preth; 
- 
-struct at *sljed; 
-}; 
-typedef struct at atom; 
- 
-void izbaci(atom **glava, int kvadrant){ 
- 
-atom *trenutni; 
- 
-/* prvo izbaci sve s glave koji su u traženom kvadrantu*/ 
- 
-while(*glava){ 
- 
- 
-if ( ((*glava)->x > 0 && (*glava)->y > 0 && kvadrant==1) || 
- 
- 
- ( (*glava)->x < 0 && (*glava)->y > 0 && kvadrant==2) || 
- 
- 
- ( (*glava)->x < 0 && (*glava)->y < 0 && kvadrant==3) || 
- 
- 
- ( (*glava)->x > 0 && (*glava)->y < 0 && kvadrant==4) ){ 
- 
- 
- 
- 
- 
- atom *temp = *glava; 
- 
- 
- 
- 
- if ((*glava)->sljed) 
- 
- 
- 
- 
- 
- (*glava)->sljed->preth = NULL; 
- 
- 
- 
- 
- *glava = (*glava)->sljed; 
- 
- 
- 
- 
- free(temp); 
- 
- 
-} 
- 
-} 
- 
-if (*glava == NULL) return; 
- 
-/* izbaciti one iz sredine */ 
- 
-trenutni = (*glava)->sljed; 
- 
- 
-while(trenutni){ 
- 
- 
-if (( trenutni->x > 0 && trenutni->y > 0 && kvadrant==1) || 
- 
- 
- ( trenutni->x < 0 && trenutni->y > 0 && kvadrant==2) || 
- 
- 
- ( trenutni->x < 0 && trenutni->y < 0 && kvadrant==3) || 
- 
- 
- ( trenutni->x > 0 && trenutni->y < 0 && kvadrant==4) ){ 
- 
- 
- 
- 
- 
- atom *temp = trenutni; 
- 
- 
- 
- 
- 
- 
- 
- trenutni->preth->sljed = trenutni->sljed; 
- 
- 
- 
- 
- if (trenutni->sljed){ 
- 
- 
- 
- 
- 
- trenutni->sljed->preth = 
-trenutni->preth; 
- 
- 
- 
- 
- 
- 
- 
- 
- } 
- 
- 
- 
- 
- trenutni = trenutni->sljed; 
- 
- 
- 
- 
- free(temp); 
-
- 
- 
- 
- } 
- 
-} 
-} 
- 
-Odsječak glavnog programa: 
- 
-atom *glava = NULL;int kvadrant; 
- 
-izbaci(&glava, kvadrant); 
- 
- 
-3. (8 bodova) Napisati funkciju čiji je prototip 
- 
-int prepisi(cvor *korijen, atom **glava) 
-koja će sve elemente stabla (cijeli brojevi) kopirati u vezanu listu tako da vezana lista 
-bude sortirana silazno. Definirati strukture cvor i atom. Smijete koristiti pomoćne 
-funkcije. 
- 
-void prepisi(cvor *korijen, atom **glava){ 
- 
-atom *novi; 
- 
-if (korijen){ 
- 
- 
-prepisi(korijen->lijevo, glava); 
- 
- 
-novi = (atom*) malloc(sizeof(atom)); 
- 
- 
-novi->element = korijen->element; 
- 
- 
-novi->sljed = *glava; 
- 
- 
-*glava = novi; 
- 
- 
-prepisi(korijen->desno, glava); 
- 
-} 
-} 
- 
-4. (7 bodova) Za niz brojeva 3,8,9,1,4,2,6,5,7 ilustrirati nastajanje gomile algoritmom 
-a) složenosti O(n) 
-b) složenosti O(nlogn) 
-Napomena: U rješenjima pažljivo označiti koje rješenje odgovara kojem algoritmu. U 
-slučaju zamjene algoritama maksimalan broj bodova u zadatku je 3.5. 
-
- 
-1. (7 bodova) Ukoliko je red, koji sadrži cijele brojeve, realiziran listom, napisati 
-funkcije za dodavanje novog elementa u red i skidanje elementa iz reda. Također, 
-deklarirati sve potrebne strukture za navedenu implementaciju i napisati odsječak 
-glavnog programa koji demonstrira korištenje navedenih funkcija. 
- 
-Dodavanje 3 boda 
-Skidanje 3 boda 
-glavni prog 1 bod 
- 
-typedef struct at atom; 
-struct at { 
- 
-int element; 
- 
-struct at *sljed; 
-}; 
- 
-int DodajURed (int element, atom **ulaz, atom **izlaz) { 
- atom *novi; 
- if (novi = malloc (sizeof (atom))) { 
- novi->element = element; 
- novi->sljed = NULL; 
- if (*izlaz == NULL) *izlaz = novi; 
- else (*ulaz)->sljed = novi; 
- 
- *ulaz = novi; 
- 
- 
- return 1; 
- } 
- return 0; 
-} 
- 
-int SkiniIzReda (int *element, atom **ulaz, atom **izlaz) { 
- atom *stari; 
- if (*izlaz) { 
- 
- *element = (*izlaz)->element; 
- 
- stari = *izlaz; 
- 
- *izlaz = (*izlaz)->sljed; 
- free (stari); 
- 
- 
- if (*izlaz == NULL) *ulaz = NULL; 
- return 1; 
- } 
- return 0; 
-} 
- 
-Glavni program: 
-Definicija reda i jednog elementa: 
-atom *ulaz = NULL; atom *izlaz = NULL; int broj; 
-Dodavanje broja u red: DodajURed (broj, &ulaz, &izlaz); 
-Skidanje broja u red: SkiniIzReda(broj, &ulaz, &izlaz); 
- 
-2. (8 bodova) Definirati jednostruko povezanu linearnu listu koja sadrži razlomke 
-(brojnik i nazivnik kao cijele brojeve). Ukoliko je lista uzlazno sortirana po vrijednostima 
-razlomaka, napisati: 
-
-a) funkciju za dodavanje novog razlomka u vezanu listu. Ukoliko razlomak 
-(identični i brojnik i nazivnik) već postoji u listi, funkcija ne radi ništa. 
-b) funkciju za izbacivanje svih razlomaka iz liste koji su veći od p, a manji od q, 
-gdje su p i q realni brojevi, argumenti funkcije. 
- 
-Napisati odsječak glavnog programa koji demonstrira korištenje navedenih funkcija 
-Također, deklarirati sve varijable koje se koristi pri pozivima navedenih funkcija. 
- 
-struktura 0.5 
-odsječak glavnog programa 1 
-dodavanje 3 
-izbacivanje 3.5 
- 
- 
-typedef struct{ 
- 
-int br; 
- 
-int naz; 
-} razlomak; 
- 
-typedef struct _atom{ 
- 
-razlomak r; 
- 
-struct _atom *sljed; 
-} atom; 
- 
-/*vraca istinu ako je razlomak r1 manji od r2*/ 
-int manji(razlomak r1, razlomak r2){ 
- 
-return r1.br * r2.naz < r2.br * r1.naz; 
-} 
- 
-/* prema tekstu zadataka, provjerava se samo 
-da li su međusobno jednaki brojnici, odnosno nazivnivi */ 
-int jednaki(razlomak r1, razlomak r2){ 
- 
-return r1.br == r2.br && r1.naz == r2.naz; 
-} 
- 
-void dodaj(atom **glava, razlomak raz){ 
- 
-atom *novi; 
- 
-novi = (atom*) malloc(sizeof(atom)); 
- 
-novi->r = raz; 
- 
-if (*glava == NULL || manji(raz, (*glava)->r)){ 
- 
- 
-novi->sljed = *glava; 
- 
- 
-*glava = novi; 
- 
-} 
- 
-else{ 
- 
- 
-atom *temp; 
- 
- 
-temp = *glava; 
- 
- 
-while(temp->sljed && manji(temp->sljed->r, raz)) 
- 
- 
- 
-temp = temp->sljed; 
- 
- 
-if (temp->sljed && jednaki(temp->sljed->r, raz)) 
- 
- 
- 
-return; 
- 
- 
-novi->sljed = temp->sljed; 
- 
- 
-temp->sljed = novi; 
- 
-} 
-
-} 
-void izbaci(atom **glava, double p, double q){ 
- 
-atom *temp, *preth; 
-//briši glavu dok je ona između p i q 
- 
-while(*glava && (float) (*glava)->r.br / (*glava)->r.naz > p && 
- 
- 
-(float) (*glava)->r.br / (*glava)->r.naz < q){ 
- 
- 
- 
-temp = *glava; 
- 
- 
- 
-*glava = (*glava)->sljed; 
- 
- 
- 
-free(temp); 
- 
-} 
- 
-if (*glava){ 
- 
- 
-preth = *glava; 
- 
- 
-//dođi do prvog koji je veći od p 
- 
- 
-while(preth->sljed && 
- (float) preth->sljed->r.br / preth->sljed->r.naz <= p) 
- 
- 
- 
- 
- 
- 
-preth = preth->sljed; 
- 
- 
- 
-//briši dok ima čvorova i dok su oni manji od q 
- 
- 
-while(preth->sljed && 
- (float) preth->sljed->r.br / preth->sljed->r.naz < q){ 
- 
- 
- 
-temp = preth->sljed; 
- 
- 
- 
-preth->sljed = temp->sljed; 
- 
- 
- 
-free(temp); 
- 
- 
-} 
- 
-} 
-} 
- 
-Glavni program: 
-Definicija liste i razlomka 
-atom *glava = NULL; razlomak r; double p, q; 
-Dodavanje razlomka u listu: 
-dodaj (&glava, r); 
-Brisanje čvorova iz liste: 
- 
-izbaci(&glava, p, q); 
- 
- 
-Napomena: Moglo se riješiti i sa funkcijama čiji su prototipovi 
- 
-atom *dodaj(atom *glava, razlomak raz) 
- 
-atom *izbaci(atom *glava, double p, double q) 
-U tom slučaju je glavni program nešto drugačiji. Nije nužno definirati tip razlomak, već 
-se mogu prenositi dva cijela broja kao brojnik i nazivnik. 
- 
-3. (8 bodova) Binarno stablo sadrži točke iz koordinatnog sustava te je čvor definiran na 
-sljedeći način: 
- 
-typedef struct s{ 
- 
-int x,y; 
- 
-struct s *lijevo, *desno; 
-} cvor; 
- 
-Napisati funkciju čiji je prototip: 
- 
-
- 
-int prebroji(cvor *korijen, int n) 
- 
-koja će vratiti koliko se magičnih čvorova nalazi u binarnom stablu na razini n. Čvor je 
-magičan ukoliko je suma njegovih koordinata magičan broj. Funkcija koja određuje da li 
-je broj magičan ili ne ima sljedeći prototip: int magican(int broj); 
-Napomena: Smijete koristiti pomoćne funkcije 
- 
- 
-int prebroji(cvor *korijen, int n){ 
- 
-if (korijen){ 
- 
- 
-n--; 
- 
- 
-if (n>0) 
-return prebroji(korijen->lijevo, n) + 
- prebroji(korijen->desno, n); 
- 
- 
-else if (n==0) 
- 
- 
- 
-return magican(korijen->x + korijen->y); 
- 
- 
-} 
- 
-return 0; 
-}. 
- 
-4. (7 bodova) Za ulazni niz brojeva 3,8,9,1,4,2,6,5,7 nacrtati 
-a) binarno sortirano stablo (stablo za traženje, uređeno stablo) 
-b) gomilu 
-Napomena: Prilikom crtanja nacrtati stanje stabla nakon svakog dodavanja broja. 
- 
- 
-a) 3,5 
- 
-b) 3,5 
- 
- 
-a) 
-3
- 
- 
- 
- 
- 
-
- 
- 
- 
-8
-3
-9
-1
-4
-2
-6
-5
- 
- 
- 
- 
- 
-b) 
-3
- 
- 
- 
- 
- 
- 
-
- 
-1. (7 bodova) Ukoliko je red, koji sadrži cijele brojeve, realiziran listom, napisati 
-funkcije za dodavanje novog elementa u red i skidanje elementa iz reda. Također, 
-deklarirati sve potrebne strukture za navedenu implementaciju i napisati odsječak 
-glavnog programa koji demonstrira korištenje navedenih funkcija. 
- 
-Dodavanje 3 boda 
-Skidanje 3 boda 
-glavni prog 1 bod 
- 
-typedef struct at atom; 
-struct at { 
- 
-int element; 
- 
-struct at *sljed; 
-}; 
- 
-int DodajURed (int element, atom **ulaz, atom **izlaz) { 
- atom *novi; 
- if (novi = malloc (sizeof (atom))) { 
- novi->element = element; 
- novi->sljed = NULL; 
- if (*izlaz == NULL) *izlaz = novi; 
- else (*ulaz)->sljed = novi; 
- 
- *ulaz = novi; 
- 
- 
- return 1; 
- } 
- return 0; 
-} 
- 
-int SkiniIzReda (int *element, atom **ulaz, atom **izlaz) { 
- atom *stari; 
- if (*izlaz) { 
- 
- *element = (*izlaz)->element; 
- 
- stari = *izlaz; 
- 
- *izlaz = (*izlaz)->sljed; 
- free (stari); 
- 
- 
- if (*izlaz == NULL) *ulaz = NULL; 
- return 1; 
- } 
- return 0; 
-} 
- 
-Glavni program: 
-Definicija reda i jednog elementa: 
-atom *ulaz = NULL; atom *izlaz = NULL; int broj; 
-Dodavanje broja u red: DodajURed (broj, &ulaz, &izlaz); 
-Skidanje broja u red: SkiniIzReda(broj, &ulaz, &izlaz); 
- 
-2. (8 bodova) Definirati jednostruko povezanu linearnu listu koja sadrži razlomke 
-(brojnik i nazivnik kao cijele brojeve). Ukoliko je lista uzlazno sortirana po vrijednostima 
-razlomaka, napisati: 
-
-a) funkciju za dodavanje novog razlomka u vezanu listu. Ukoliko razlomak 
-(identični i brojnik i nazivnik) već postoji u listi, funkcija ne radi ništa. 
-b) funkciju za izbacivanje svih razlomaka iz liste koji su veći od p, a manji od q, 
-gdje su p i q realni brojevi, argumenti funkcije. 
- 
-Napisati odsječak glavnog programa koji demonstrira korištenje navedenih funkcija 
-Također, deklarirati sve varijable koje se koristi pri pozivima navedenih funkcija. 
- 
-struktura 0.5 
-odsječak glavnog programa 1 
-dodavanje 3 
-izbacivanje 3.5 
- 
- 
-typedef struct{ 
- 
-int br; 
- 
-int naz; 
-} razlomak; 
- 
-typedef struct _atom{ 
- 
-razlomak r; 
- 
-struct _atom *sljed; 
-} atom; 
- 
-/*vraca istinu ako je razlomak r1 manji od r2*/ 
-int manji(razlomak r1, razlomak r2){ 
- 
-return r1.br * r2.naz < r2.br * r1.naz; 
-} 
- 
-/* prema tekstu zadataka, provjerava se samo 
-da li su međusobno jednaki brojnici, odnosno nazivnivi */ 
-int jednaki(razlomak r1, razlomak r2){ 
- 
-return r1.br == r2.br && r1.naz == r2.naz; 
-} 
- 
-void dodaj(atom **glava, razlomak raz){ 
- 
-atom *novi; 
- 
-novi = (atom*) malloc(sizeof(atom)); 
- 
-novi->r = raz; 
- 
-if (*glava == NULL || manji(raz, (*glava)->r)){ 
- 
- 
-novi->sljed = *glava; 
- 
- 
-*glava = novi; 
- 
-} 
- 
-else{ 
- 
- 
-atom *temp; 
- 
- 
-temp = *glava; 
- 
- 
-while(temp->sljed && manji(temp->sljed->r, raz)) 
- 
- 
- 
-temp = temp->sljed; 
- 
- 
-if (temp->sljed && jednaki(temp->sljed->r, raz)) 
- 
- 
- 
-return; 
- 
- 
-novi->sljed = temp->sljed; 
- 
- 
-temp->sljed = novi; 
- 
-} 
-
-} 
-void izbaci(atom **glava, double p, double q){ 
- 
-atom *temp, *preth; 
-//briši glavu dok je ona između p i q 
- 
-while(*glava && (float) (*glava)->r.br / (*glava)->r.naz > p && 
- 
- 
-(float) (*glava)->r.br / (*glava)->r.naz < q){ 
- 
- 
- 
-temp = *glava; 
- 
- 
- 
-*glava = (*glava)->sljed; 
- 
- 
- 
-free(temp); 
- 
-} 
- 
-if (*glava){ 
- 
- 
-preth = *glava; 
- 
- 
-//dođi do prvog koji je veći od p 
- 
- 
-while(preth->sljed && 
- (float) preth->sljed->r.br / preth->sljed->r.naz <= p) 
- 
- 
- 
- 
- 
- 
-preth = preth->sljed; 
- 
- 
- 
-//briši dok ima čvorova i dok su oni manji od q 
- 
- 
-while(preth->sljed && 
- (float) preth->sljed->r.br / preth->sljed->r.naz < q){ 
- 
- 
- 
-temp = preth->sljed; 
- 
- 
- 
-preth->sljed = temp->sljed; 
- 
- 
- 
-free(temp); 
- 
- 
-} 
- 
-} 
-} 
- 
-Glavni program: 
-Definicija liste i razlomka 
-atom *glava = NULL; razlomak r; double p, q; 
-Dodavanje razlomka u listu: 
-dodaj (&glava, r); 
-Brisanje čvorova iz liste: 
- 
-izbaci(&glava, p, q); 
- 
- 
-Napomena: Moglo se riješiti i sa funkcijama čiji su prototipovi 
- 
-atom *dodaj(atom *glava, razlomak raz) 
- 
-atom *izbaci(atom *glava, double p, double q) 
-U tom slučaju je glavni program nešto drugačiji. Nije nužno definirati tip razlomak, već 
-se mogu prenositi dva cijela broja kao brojnik i nazivnik. 
- 
-3. (8 bodova) Binarno stablo sadrži točke iz koordinatnog sustava te je čvor definiran na 
-sljedeći način: 
- 
-typedef struct s{ 
- 
-int x,y; 
- 
-struct s *lijevo, *desno; 
-} cvor; 
- 
-Napisati funkciju čiji je prototip: 
- 
-
- 
-int prebroji(cvor *korijen, int n) 
- 
-koja će vratiti koliko se magičnih čvorova nalazi u binarnom stablu na razini n. Čvor je 
-magičan ukoliko je suma njegovih koordinata magičan broj. Funkcija koja određuje da li 
-je broj magičan ili ne ima sljedeći prototip: int magican(int broj); 
-Napomena: Smijete koristiti pomoćne funkcije 
- 
- 
-int prebroji(cvor *korijen, int n){ 
- 
-if (korijen){ 
- 
- 
-n--; 
- 
- 
-if (n>0) 
-return prebroji(korijen->lijevo, n) + 
- prebroji(korijen->desno, n); 
- 
- 
-else if (n==0) 
- 
- 
- 
-return magican(korijen->x + korijen->y); 
- 
- 
-} 
- 
-return 0; 
-}. 
- 
-4. (7 bodova) Za ulazni niz brojeva 3,8,9,1,4,2,6,5,7 nacrtati 
-a) binarno sortirano stablo (stablo za traženje, uređeno stablo) 
-b) gomilu 
-Napomena: Prilikom crtanja nacrtati stanje stabla nakon svakog dodavanja broja. 
- 
- 
-a) 3,5 
- 
-b) 3,5 
- 
- 
-a) 
-3
- 
- 
- 
- 
- 
-
- 
- 
- 
-8
-3
-9
-1
-4
-2
-6
-5
- 
- 
- 
- 
- 
-b) 
-3
- 
- 
- 
- 
- 
- 
-
-Algoritmi i strukture podataka 
-Ponovljeni završni ispit 
- 28.6.2007. 
- 
-Napomene za sve zadatke: 
-• Nije dopušteno korištenje goto naredbe, te statičkih i globalnih varijabli. 
-• U svakom zadatku u kojem se koristi struktura, strukturu treba i definirati 
- 
-1. (8 bodova) Ukoliko je red zadan sljedećom strukturom: 
-typedef struct at atom; 
-struct at { 
- 
-int element; 
- 
-struct at *sljed; 
-}; 
-te, ukoliko su definirane funkcije za dodavanje elementa u red i skidanje elementa iz reda 
-int DodajURed (int element, atom **ulaz, atom **izlaz); 
-int SkiniIzReda (int *element, atom **ulaz, atom **izlaz); 
- 
-napisati funkciju koja će sve elemente reda kopirati u binarno sortirano stablo. Funkcija 
-mora vratiti pokazivač na korijen stabla. Nakon završetka funkcije, sadržaj reda mora 
-ostati očuvan. Smijete koristiti pomoćne funkcije. 
- 
- 
-cvor *dodaj_u_stablo(cvor *korijen, int broj){ 
- 
-if (korijen){ 
- 
- 
-if (broj < korijen->element) 
- 
- 
- 
-korijen->lijevo = 
-dodaj_u_stablo(korijen->lijevo , broj); 
- 
- 
-else 
- 
- 
- 
-korijen->desno = 
-dodaj_u_stablo(korijen->desno , broj); 
- 
- 
-return korijen; 
- 
-} 
- 
-else{ 
- 
- 
-cvor *novi = (cvor *) malloc(sizeof(cvor)); 
- 
- 
-novi->element = broj; 
- 
- 
-novi->lijevo = novi->desno = NULL; 
- 
- 
-return novi; 
- 
-} 
-} 
- 
-cvor *red_u_stablo(atom **ulaz, atom **izlaz){ 
- 
-cvor *korijen = NULL; 
- 
-atom *pom_ulaz = NULL, *pom_izlaz = NULL; 
- 
-int broj; 
- 
-while(SkiniIzReda(&broj, ulaz, izlaz)){ 
- 
- 
-DodajURed(broj, &pom_ulaz, &pom_izlaz); 
- 
- 
-korijen = dodaj_u_stablo(korijen, broj); 
- 
-} 
- 
-while(SkiniIzReda(&broj, &pom_ulaz, &pom_izlaz)){ 
- 
- 
-DodajURed(broj, ulaz, izlaz); 
- 
-
- 
-} 
- 
-return korijen; 
-} 
- 
- 
-2. (7 bodova) Definirati dvostruko povezanu listu koja sadrži točke iz koordinatnog 
-sustava te napisati funkciju za brisanje svih točaka iz nekog kvadranta. Kvadrant (1,2,3 ili 
-4) je zadan kao argument funkcije. Napisati odsječak glavnog programa u kojem se 
-poziva navedena funkcija i definiraju (i postavljaju na inicijalne vrijednosti) sve varijable 
-koje se koriste pri pozivima navedenih funkcija. Smijete koristiti pomoćne funkcije. 
-Napomena: Pretpostavite da točke na koordinatnim osima ne pripadaju niti jednom 
-kvadrantu. 
- 
-struct at { 
- 
-int element; 
- 
-struct at *preth; 
- 
-struct at *sljed; 
-}; 
-typedef struct at atom; 
- 
-void izbaci(atom **glava, int kvadrant){ 
- 
-atom *trenutni; 
- 
-/* prvo izbaci sve s glave koji su u traženom kvadrantu*/ 
- 
-while(*glava){ 
- 
- 
-if ( ((*glava)->x > 0 && (*glava)->y > 0 && kvadrant==1) || 
- 
- 
- ( (*glava)->x < 0 && (*glava)->y > 0 && kvadrant==2) || 
- 
- 
- ( (*glava)->x < 0 && (*glava)->y < 0 && kvadrant==3) || 
- 
- 
- ( (*glava)->x > 0 && (*glava)->y < 0 && kvadrant==4) ){ 
- 
- 
- 
- 
- 
- atom *temp = *glava; 
- 
- 
- 
- 
- if ((*glava)->sljed) 
- 
- 
- 
- 
- 
- (*glava)->sljed->preth = NULL; 
- 
- 
- 
- 
- *glava = (*glava)->sljed; 
- 
- 
- 
- 
- free(temp); 
- 
- 
-} 
- 
-} 
- 
-if (*glava == NULL) return; 
- 
-/* izbaciti one iz sredine */ 
- 
-trenutni = (*glava)->sljed; 
- 
- 
-while(trenutni){ 
- 
- 
-if (( trenutni->x > 0 && trenutni->y > 0 && kvadrant==1) || 
- 
- 
- ( trenutni->x < 0 && trenutni->y > 0 && kvadrant==2) || 
- 
- 
- ( trenutni->x < 0 && trenutni->y < 0 && kvadrant==3) || 
- 
- 
- ( trenutni->x > 0 && trenutni->y < 0 && kvadrant==4) ){ 
- 
- 
- 
- 
- 
- atom *temp = trenutni; 
- 
- 
- 
- 
- 
- 
- 
- trenutni->preth->sljed = trenutni->sljed; 
- 
- 
- 
- 
- if (trenutni->sljed){ 
- 
- 
- 
- 
- 
- trenutni->sljed->preth = 
-trenutni->preth; 
- 
- 
- 
- 
- 
- 
- 
- 
- } 
- 
- 
- 
- 
- trenutni = trenutni->sljed; 
- 
- 
- 
- 
- free(temp); 
-
- 
- 
- 
- } 
- 
-} 
-} 
- 
-Odsječak glavnog programa: 
- 
-atom *glava = NULL;int kvadrant; 
- 
-izbaci(&glava, kvadrant); 
- 
- 
-3. (8 bodova) Napisati funkciju čiji je prototip 
- 
-int prepisi(cvor *korijen, atom **glava) 
-koja će sve elemente stabla (cijeli brojevi) kopirati u vezanu listu tako da vezana lista 
-bude sortirana silazno. Definirati strukture cvor i atom. Smijete koristiti pomoćne 
-funkcije. 
- 
-void prepisi(cvor *korijen, atom **glava){ 
- 
-atom *novi; 
- 
-if (korijen){ 
- 
- 
-prepisi(korijen->lijevo, glava); 
- 
- 
-novi = (atom*) malloc(sizeof(atom)); 
- 
- 
-novi->element = korijen->element; 
- 
- 
-novi->sljed = *glava; 
- 
- 
-*glava = novi; 
- 
- 
-prepisi(korijen->desno, glava); 
- 
-} 
-} 
- 
-4. (7 bodova) Za niz brojeva 3,8,9,1,4,2,6,5,7 ilustrirati nastajanje gomile algoritmom 
-a) složenosti O(n) 
-b) složenosti O(nlogn) 
-Napomena: U rješenjima pažljivo označiti koje rješenje odgovara kojem algoritmu. U 
-slučaju zamjene algoritama maksimalan broj bodova u zadatku je 3.5. 
-
-ASP Završni 
-27.6.2006 
- 
-Napomene: 
-Nisu dopuštene globalne ni statičke varijable i tamo gdje se koristi struktura potrebno ju je i 
-definirati 
- 
-1. U jednostruku povezanu listu spremaju se cjelobrojni podaci (long). Napisati funkciju koja 
-će u listu dodati novi element: 
-a) na početak liste 
-b) tako da lista bude uzlazno sortirana(pretpostavlja se da je sortirana i prije dodavanja) 
-Funkcije moraju imati prototip 
- 
-void dodajnaPocetak(zapis **glava, int novi); 
-void dodajnaSortirano(zapis **glava, int novi); 
- 
- 
-2. U sortirano binarno stablo(lijevo manji, desno veći) spremljeni su cjelobrojni podaci. 
-Napisati funkciju koja će zadano binarno stablo prepisati u jednostruko povezanu listu tako da 
-lista bude uzlazno sortirana. Prilikom prepisivanja obavezno koristiti funkciju iz 1.a 
-zadatka(ne mora biti napisana da biste riješili ovaj zadatak). Stablo mora ostati 
-nepromijenjeno, a funkcija mora imati prototip: 
- 
-void prepisi(cvor *korijen, zapis **glava); 
- 
-Može se pretpostaviti da je lista na početku prazna. 
- 
-3. Napisati funkciju koja će obrisati zadano stablo(osloboditi memoriju za sve čvorove i 
-postaviti korijen na NULL). Funkcija mora vratiti broj čvorova stabla i mora imati prototip: 
- 
-int brisi(cvor **korijen); 
- 
-4. Zadan je niz brojeva: 5, 4, 8, 3, 6, 1, 2, 7, 9, 10. Ilustrirati stvaranje gomile od zadanog niza 
-brojeva: 
-a)postupkom koji za najgori slučaj ima složenost O(n). 
-b) postupkom koji za najgori slučaj ima složenost O(nlog2(n)). (po bazi 2) 
- 
-5. U objektno realizirani red spremljeni su podaci o studentima koji su se prijavili za smještaj 
-u studentskom domu: matični broj(long), broj bodova(int) i oznaka je li student dobio dom ili 
-ne (char koji može biti 'D' ili 'N'). Razred Red je zadan (ne treba ga pisati) i definirane su 
-metode za stavljanje i skidanje jednog zapisa (vraćaju 1 ako je operacija uspjela, a 0 inače), te 
-prazan konstruktor: 
- 
-int Red::Stavi(zapis element); 
-int Red::Skini(zapis *element); 
-Red::Red(); 
- 
- 
-
-Napisati funkciju koja će svim studentima u zadanom radu postaviti oznaku jesu li dobili dom 
-na osnovu zadanog praga(svi koji imaju prag ili više bodova su dobili dom i oznaku im treba 
-postaviti na 'D', inače oznaku treba postaviti na 'N'). Funkcija mora vratiti broj studenata koji 
-su dobili dom i mora imati prototip: 
- 
-Int dobioDom(Red *studenti, int prag); 
- 
-Dopušteno je koristiti pomoćni red. 
- 
- 
- 
- 
- 
- 
-
-Algoritmi i strukture podataka 
-ponovljeni završni ispit 
-4.7.2006. 
- 
- 
-Napomene za sve zadatke: 
- 
-Nije dopušteno korištenje goto naredbe, te statičkih i globalnih varijabli. 
- 
-U svakom zadatku u kojem se koristi struktura, strukturu treba i definirati. 
- 
- 
- 
-1. U jednostruko povezanu listu spremaju se cjelobrojni podaci(long). Napisati funkciju koja 
-će dvije takve uzlazno sortirane liste spojiti u jednu koja sadrži sve elemente obje liste i koja 
-je silazno sortirana. Funkcija mora vratiti pokazivač na početak nove liste(glave zadanih lista 
-treba postaviti na NULL). Obavezno iskoristiti činjenicu da su zadane liste sortirane(funkcija 
-mora imati složenost O(n)). Funkcija mora imati prototip: 
- 
-zapis *merge(zapis **glava1, zapis **glava2); 
- 
- 
-Napomena: Memoriju nije potrebno zauzimati i oslobađati. Dovoljno je novu listu napraviti 
-od postojećih elemenata u zadanim listama. Može se pretpostaviti da zadane liste nemaju istih 
-elemenata. 
- 
- 
- 
-2. U binarno stablo spremaju se cjelobrojni podaci (int). Zadan je niz brojeva: 2, 7, 3, 1, 4, 10, 
-8, 9, 6 i 5. 
- 
- 
-a) Ilustrirati stvaranje sortiranog binarnog stabla (lijevo manji desno veći) od zadanog 
-niza brojeva ako se bojevi u stablu ubacuju redoslijedom kojim su gore navedeni. Nacrtati 
-izgled stabla nakon dodavanja svakog elementa. 
- 
-b) Napisati funkcije za preorder, inorder, i postorder ispis stabla. Obavezno navesti 
-koja funkcija koristi koji način obilaska stabla. 
- 
-c) Napisati što bi svaka od funkcija iz b) ispisala za stablo iz a). 
- 
- 
- 
- 
-3. U objektno realizirani stog i red (razredi Stog i Red) spremaju se cjelobrojni podaci (long). 
-Za oba razreda definirane su samo funkcije za stavljanje i skidanje jednog elementa(vraćaju 1 
-ako su uspješno obavile posao, a 0 inače), te prazan konstruktor. 
-Stog::Stog(); 
- 
- 
-Red::Red(); 
-int Stog::Stavi (long element); 
-int Red::Stavi(long element); 
-int Stog::Skini(long *element); 
-int Red::Skini(long *element); 
- 
- 
-
-Napisati funkciju koja će sve elemente iz zadanog reda prepisati u zadani stog, ali tako da će 
-ti elementi iz stoga izlaziti istim redoslijedom kojim bi izlazili iz reda. Zadani red na kraju 
-funkcije mora ostati nepromijenjen. Funkcija mora vratiti broj prebačenih elemenata i mora 
-imati prototip: 
- 
-int prebaci(Stog *zadaniS, Red *zadaniR); 
- 
-Napomena: Dozvoljeno je korištenje pomoćnog stoga i reda. Razrede Stog i Red ne treba 
-pisati. 
- 
- 
- 
-4. Zadan je niz brojeva: 2, 7, 3, 1, 4, 10, 8, 9, 6 i 5. 
- 
-a) Ilustrirati stvaranje gomile od zadanog niza brojeva postupkom koji za najgori 
-slučaj ima složenost O(n). Ispisati sadržaj polja ili stabla nakon svake zamjene dvaju 
-elemenata. 
- 
-b) Ilustrirati postupak heapsort(počevši od gomile stvorene u a) dijelu zadatka). 
-Obavezno ispisati sadržaj polja (NE STABLA) nakon svake zamjene dvaju elemenata. 
- 
- 
- 
- 
- 
-Svaki zadatak je nosio 7.5 bodova.",3,Implementacija lista,0.3115248,,,,,,,,,,
+}",5,Red i stog,0.11703463,,,,,,,,,,

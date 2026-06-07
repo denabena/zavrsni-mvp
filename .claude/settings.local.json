@@ -17,7 +17,9 @@
       "Bash(xargs -r kill)",
       "Bash(python render_task_images.py)",
       "Bash(python *)",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(curl -s http://localhost:11434/api/tags)",
+      "Bash(echo \"---exit code: $?\")"
     ]
   }
 }

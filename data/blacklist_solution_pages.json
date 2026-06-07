@@ -1,0 +1,74 @@
+{
+  "reason": "PDF parser je stranice samih rješenja (bez teksta zadatka) uzeo kao zadatke. Ovi task_id-ovi nisu legitimni i njihove ocjene treba izuzeti pri agregaciji iz Supabasea.",
+  "solution_pages": [
+    {
+      "exam_type": "MI",
+      "pdf_page": 21
+    },
+    {
+      "exam_type": "MI",
+      "pdf_page": 22
+    },
+    {
+      "exam_type": "MI",
+      "pdf_page": 23
+    },
+    {
+      "exam_type": "ZI",
+      "pdf_page": 56
+    },
+    {
+      "exam_type": "ZI",
+      "pdf_page": 57
+    },
+    {
+      "exam_type": "ZI",
+      "pdf_page": 58
+    },
+    {
+      "exam_type": "ZI",
+      "pdf_page": 61
+    },
+    {
+      "exam_type": "ZI",
+      "pdf_page": 62
+    },
+    {
+      "exam_type": "ZI",
+      "pdf_page": 68
+    },
+    {
+      "exam_type": "ZI",
+      "pdf_page": 69
+    },
+    {
+      "exam_type": "ZI",
+      "pdf_page": 73
+    },
+    {
+      "exam_type": "ZI",
+      "pdf_page": 74
+    }
+  ],
+  "task_ids": [
+    "MI|2021-11-29|1",
+    "MI|2021-11-29|2",
+    "MI|2021-11-29|3",
+    "MI|2021-11-29|4",
+    "MI|2021-11-29|5",
+    "ZI|2012-06-20|1",
+    "ZI|2012-06-20|2",
+    "ZI|2012-06-20|4",
+    "ZI|2013-06-18|1",
+    "ZI|2013-06-18|2",
+    "ZI|2013-06-18|3",
+    "ZI|2014-06-17|1",
+    "ZI|2014-06-17|2",
+    "ZI|2014-06-17|4",
+    "ZI|2014-06-17|5",
+    "ZI|2015-06-16|1",
+    "ZI|2015-06-16|2",
+    "ZI|2015-06-16|3",
+    "ZI|2015-06-16|5"
+  ]
+}

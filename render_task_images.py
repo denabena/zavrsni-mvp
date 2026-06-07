@@ -28,11 +28,25 @@ MANIFEST   = Path("asp-rate/public/tasks.json")
 
 CLUSTERS_CSV    = Path("embeddings/tasks_with_clusters.csv")
 CLUSTER_LABELS  = Path("embeddings/cluster_labels.json")
+BLACKLIST_JSON  = Path("data/blacklist_solution_pages.json")
 
 PDF_BY_TYPE = {
     "MI": MI_PDF_PATH,
     "ZI": ZI_PDF_PATH,
 }
+
+
+def load_blacklist_pages() -> set[tuple[str, int]]:
+    """
+    Učitaj (exam_type, pdf_page) parove koje znamo da su samo stranice
+    rješenja (ručno identificirane). Te stranice ne renderiramo i ne ulaze
+    u manifest, čak i ako parser pronađe "Zadatak N." patterne na njima.
+    """
+    if not BLACKLIST_JSON.exists():
+        return set()
+    with open(BLACKLIST_JSON, encoding="utf-8") as f:
+        data = json.load(f)
+    return {(p["exam_type"], int(p["pdf_page"])) for p in data.get("solution_pages", [])}
 
 
 def load_cluster_map() -> dict[str, tuple[int | None, str | None]]:
@@ -75,7 +89,14 @@ def main():
     print("[1/3] Parsiranje PDF-ova...")
     records  = parse_exam_file(MI_PDF_PATH, "MI")
     records += parse_exam_file(ZI_PDF_PATH, "ZI")
-    print(f"  Ukupno: {len(records)} zadataka")
+    print(f"  Ukupno: {len(records)} zadataka prije filtra")
+
+    # Filtriraj stranice rješenja (parser ih svejedno ulovi po Zadatak markeru).
+    blacklist = load_blacklist_pages()
+    if blacklist:
+        n_before = len(records)
+        records = [r for r in records if (r["exam_type"], r["pdf_page"]) not in blacklist]
+        print(f"  Filtrirano stranica rješenja: {n_before - len(records)} (ostalo {len(records)})")
 
     # Unique (exam_type, pdf_page) -> putanja PNG-a
     unique_pages = sorted({(r["exam_type"], r["pdf_page"]) for r in records})
